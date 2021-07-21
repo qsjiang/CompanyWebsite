@@ -1,9 +1,668 @@
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
+
 <head>
-	<title>Shaper</title>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+   <title>Shaper</title>
+   <style type="text/css">
+   html {
+      scroll-behavior: smooth;
+   }
+
+   body {
+      background-color: #101010;
+      padding: 0;
+      margin: 0;
+      font-family: "Titillium Web";
+      color: white;
+      line-height: 2;
+      text-rendering: optimizeLegibility;
+   }
+
+   .row {
+      margin-right: 0px;
+      margin-left: 0px;
+   }
+
+   .BillboardBackground {
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      background-image: linear-gradient(rgb(10, 25, 49), rgb(16, 16, 16));
+   }
+
+   .Navbar {
+      padding: 0px;
+      margin: 0px;
+      position: relative;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 3;
+   }
+
+   .NavbarContainer {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 30px;
+      padding-right: 30px;
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+   .ButtonSection {
+      display: flex;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-right: 2px;
+      margin: 0px;
+   }
+
+   #HomeButton {
+      color: white;
+      font-size: 17px;
+      line-height: 1.5;
+      text-align: center;
+      text-decoration: none;
+      border: 2px solid white;
+      border-radius: 8px;
+      padding: 8px 36px;
+      box-shadow: 0px 0px 2px #FFF;
+      background-color: transparent;
+      opacity: 0.7;
+      transition: 500ms;
+   }
+
+   #HomeButton:hover {
+      box-shadow: 0px 0px 15px #FFF;
+      text-shadow: 0 0 6px #FFF;
+      opacity: 1;
+
+   }
+
+   #HomeButton:active {
+      box-shadow: 0px 0px 15px #FFF;
+      opacity: 1;
+   }
+
+   .LinkSection {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 2px;
+   }
+
+   #AppleLink {
+      padding-right: 2px;
+      text-decoration: none;
+   }
+
+   #GoogleLink {
+      padding-left: 2px;
+      text-decoration: none;
+   }
+
+   .LinkSectionIcon {
+      padding-top: 2px;
+      padding-bottom: 2px;
+      display: inline-block;
+      border-radius: 8px;
+      opacity: 0.7;
+      transition: 500ms;
+   }
+
+   .LinkSectionIcon:hover {
+      box-shadow: 0px 0px 15px #FFF;
+      opacity: 1;
+   }
+
+   .LinkSectionIcon:active {
+      box-shadow: 0px 0px 15px #FFF;
+      opacity: 1;
+   }
+
+   .Billboard {
+      padding: 80px 0px 40px 0px;
+   }
+
+   .IconSection {
+      margin-bottom: 40px;
+   }
+
+   .BillboardIcon {
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 400px;
+      width: 40%;
+      background-color: transparent;
+      box-shadow: 0 0 80px 10px rgb(0, 0, 0);
+      border-radius: 30px;
+   }
+
+   .BillboardTitle {
+      margin: 30px 10px 30px 10px;
+      text-align: center;
+      font-size: 70px;
+      font-weight: bold;
+      text-shadow: 0 0 6px #FFF;
+   }
+
+   .BillboardSubTitle {
+      padding: 30px 30px 0px 30px;
+      text-align: center;
+      font-size: 22px;
+   }
+
+   .IllustrationSection {
+      margin-bottom: 40px;
+   }
+
+   .IllusImage {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 0 80px 0 80px;
+   }
+
+   #iPhoneImg {
+      vertical-align: bottom;
+      position: relative;
+      z-index: 2;
+      max-height: 357px;
+   }
+
+   #iPadImg {
+      vertical-align: bottom;
+      position: relative;
+      z-index: 1;
+      max-height: 410px;
+   }
+
+   .IllustrationText {
+      padding: 10px 10px 0 10px;
+      font-size: 22px;
+      text-align: center;
+   }
+
+   .Introduction {
+      min-height: 100%;
+      overflow: hidden;
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+   .IntroContainer {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+   .IntroCard {
+      background-color: #000000;
+      justify-content: space-around;
+      margin: 40px 20px 40px 20px;
+      padding: 20px;
+   }
+
+   .CardText {
+      position: relative;
+      text-align: center;
+   }
+
+   .CardTextTitle {
+      font-size: 26px;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      line-height: normal;
+   }
+
+   .CardTextDescription {
+      font-weight: lighter;
+      font-size: 20px;
+      color: #DDDDDD;
+   }
+
+   .left-text {
+      padding: 0px 0px 0px 40px;
+   }
+
+   .left-text::before {
+      content: " ";
+      width: 2px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 10px;
+      box-shadow: 0 0 12px #E99539;
+      background-color: #E99539;
+   }
+
+   .right-text {
+      padding: 0px 40px 0px 0px;
+   }
+
+   .right-text::after {
+      content: " ";
+      width: 2px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 10px;
+      box-shadow: 0 0 12px #E99539;
+      background-color: #E99539;
+   }
+
+   .CardImgContainer {
+      padding: 0px 0px 0px 0px;
+   }
+
+   .CardImgContainerIphone {
+      display: inline-flex;
+      justify-content: space-around;
+   }
+
+   .CardImg {
+      display: block;
+      width: 94%;
+      margin-left: auto;
+      margin-right: auto;
+      z-index: -1;
+   }
+
+   .CardImgIphone {
+      width: 48%;
+   }
+
+   .CardImgIphoneLandscape {
+      display: block;
+      width: 82%;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      margin-left: auto;
+      margin-right: auto;
+      z-index: -1;
+   }
+
+   .Embed {
+      margin: 80px 0 80px 0;
+   }
+
+   .EmbedIntro {
+      text-align: center;
+      font-size: 26px;
+      margin-bottom: 20px;
+   }
+
+   .YoutubeVideo {
+      padding: 20px;
+      height: 450px;
+   }
+
+   @media only screen and (min-width: 1400px) {
+      .NavbarContainer {
+         max-width: 1400px;
+      }
+
+      .Billboard {
+         max-width: 1400px;
+         margin-left: auto;
+         margin-right: auto;
+      }
+
+      .Videos {
+         max-width: 1600px;
+         margin-left: auto;
+         margin-right: auto;
+      }
+   }
+
+   @media only screen and (max-width: 1200px) {
+      .IllusImage {
+         padding: 60px 60px 0 60px;
+      }
+
+      .BillboardIcon {
+         max-width: 240px;
+      }
+
+      .BillboardTitle {
+         font-size: 60px;
+      }
+
+      .BillboardSubTitle {
+         font-size: 22px;
+         padding: 6px 6px 6px 6px;
+      }
+
+      .IllustrationText {
+         font-size: 22px;
+      }
+
+      .CardText {
+         padding: 20px;
+      }
+
+      .left-text::before {
+         width: 100%;
+         height: 2px;
+         top: 5px;
+         left: 0px;
+      }
+
+      .right-text::after {
+         width: 100%;
+         height: 2px;
+         top: 5px;
+         left: 0px;
+      }
+
+      .CardImg {
+         display: block;
+         width: 90%;
+         margin: 0 auto;
+      }
+
+      .YoutubeVideo {
+         display: block;
+         margin: 0 auto;
+         width: 800px;
+         height: 450px;
+      }
+   }
+
+   @media only screen and (max-width: 1000px) {
+      .IllusImage {
+         justify-content: flex-start;
+      }
+
+      #iPadImg {
+         position: absolute;
+         top: 0;
+         right: 60px;
+      }
+
+      .YoutubeVideo {
+         width: 700px;
+         height: 394px;
+      }
+
+   }
+
+   @media only screen and (max-width: 800px) {
+      .BillboardIcon {
+         max-width: 260px;
+      }
+
+      #iPhoneImg {
+         width: 40%;
+      }
+
+      #iPadImg {
+         position: absolute;
+         top: 0;
+         right: 10px;
+         width: 80%;
+      }
+
+      .CardTextTitle {
+         font-size: 22px;
+         margin-top: 0px;
+         margin-bottom: 16px;
+      }
+
+      .CardTextDescription {
+         font-size: 16px;
+      }
+
+      .YoutubeVideo {
+         width: 620px;
+         height: 349px;
+      }
+   }
+
+   @media only screen and (max-width: 500px) {
+      .NavbarContainer {
+         padding-left: 12px;
+         padding-right: 12px;
+      }
+
+      #HomeButton {
+         font-size: 14px;
+         padding: 8px 16px;
+         opacity: 1;
+      }
+
+      .LinkSection {
+         height: 80px;
+      }
+
+      .LinkSectionIcon {
+         height: 40px;
+         opacity: 1;
+      }
+
+      .Billboard {
+         padding-top: 30px;
+      }
+
+      .BillboardTitle {
+         margin: 0;
+         font-size: 50px;
+      }
+
+      .BillboardSubTitle {
+         font-size: 18px;
+      }
+
+      .IllustrationSection {
+         margin: 0;
+      }
+
+      .IllusImage {
+         padding: 30px 30px 0 30px;
+      }
+
+      .IllustrationText {
+         font-size: 18px;
+      }
+
+      .CardTextTitle {
+         font-size: 20px;
+         margin-top: 0px;
+         margin-bottom: 10px;
+      }
+
+      .CardTextDescription {
+         font-size: 14px;
+      }
+
+      .Embed {
+         margin: 60px 0 60px 0;
+      }
+
+      .EmbedIntro {
+         font-size: 18px;
+      }
+
+      .YoutubeVideo {
+         width: 320px;
+         height: 180px;
+      }
+   }
+   </style>
 </head>
+
 <body>
-	Web Page Coming Soon...
+   <div class="BillboardBackground">
+      <div class="Navbar">
+         <div class="NavbarContainer">
+            <div class="ButtonSection">
+               <a id="HomeButton" href="https://autumnrock.dev/" target="_blank">Home</a>
+            </div>
+            <div class="LinkSection">
+               <a id="AppleLink" href="https://apps.apple.com/app/shaper-synthesizer/id1536713443" target="_blank">
+                  <img class="LinkSectionIcon" src="./static/image/app-store-badge.svg">
+               </a>
+               <a id="GoogleLink" href="https://play.google.com/store/apps/details?id=com.autumnrockdev.shaper" target="_blank">
+                  <img class="LinkSectionIcon" src="./static/image/google-play-badge.svg">
+               </a>
+            </div>
+         </div>
+      </div>
+      <div class="row Billboard">
+         <div class="IconSection col-xl-4">
+            <img class="BillboardIcon" src="./static/image/shaper-logo.png"></img>
+            <div class="BillboardTitle">Shaper</div>
+            <div class="BillboardSubTitle">
+               A fully-featured subtractive synthesizer designed for the mobile platform.
+            </div>
+         </div>
+         <div class="IllustrationSection col-xl-8">
+            <div class="IllusImage">
+               <img id="iPhoneImg" src="./static/image/iPhoneX.svg">
+               <img id="iPadImg" src="./static/image/iPadPro.svg">
+            </div>
+            <div class="IllustrationText">
+               Shaper have been designed to run properly on various platforms.
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="Introduction">
+      <div class="IntroContainer">
+         <div class="IntroCard row">
+            <div class="CardText left-text col-xl-4 col-lg-12">
+               <div class="CardTextTitle">
+                  Create Stunning Synth Sound on Mobile Devices
+               </div>
+               <div class="CardTextDescription">
+                  Create Stunning Synth Sound on Mobile Devices
+                  Create Stunning Synth Sound on Mobile Devices
+                  Create Stunning Synth Sound on Mobile Devices
+                  Create Stunning Synth Sound on Mobile Devices
+               </div>
+            </div>
+            <div class="CardImgContainer col-xl-8 col-lg-12">
+               <img class="CardImg" src="./static/image/Create_stunning_synth_sound_on_mobile_devices.png">
+            </div>
+         </div>
+         <div class="IntroCard row">
+            <div class="CardImgContainer col-xl-8 col-lg-12 order-xl-1 order-12">
+               <img class="CardImg" src="./static/image/Fully_customizable_LFO.png">
+            </div>
+            <div class="CardText right-text col-xl-4 col-lg-12 order-xl-12 order-1">
+               <div class="CardTextTitle">
+                  <p>Fully Customizable LFO</p>
+               </div>
+               <div class="CardTextDescription">
+                  Create Stunning Synth Sound on Mobile Devices
+                  Create Stunning Synth Sound on Mobile Devices
+                  Create Stunning Synth Sound on Mobile Devices
+                  Create Stunning Synth Sound on Mobile Devices
+               </div>
+            </div>
+         </div>
+         <div class="IntroCard row">
+            <div class="CardText left-text col-xl-4 col-lg-12">
+               <div class="CardTextTitle">
+                  Easy Drag And Drop Modulation
+               </div>
+               <div class="CardTextDescription">
+                  Create Stunning Synth Sound on Mobile Devices
+                  Create Stunning Synth Sound on Mobile Devices
+                  Create Stunning Synth Sound on Mobile Devices
+                  Create Stunning Synth Sound on Mobile Devices
+               </div>
+            </div>
+            <div class="CardImgContainer col-xl-8 col-lg-12">
+               <img class="CardImg" src="./static/image/Drag_and_drop_modulation.png">
+            </div>
+         </div>
+         <div class="IntroCard row">
+            <div class="CardImgContainer col-xl-8 col-lg-12 order-xl-1 order-12">
+               <img class="CardImg" src="./static/image/Built-in_effect_rack.png">
+            </div>
+            <div class="CardText right-text col-xl-4 col-lg-12 order-xl-12 order-1">
+               <div class="CardTextTitle">
+                  Built-in Effect Rack
+               </div>
+               <div class="CardTextDescription">
+                  Create Stunning Synth Sound on Mobile Devices
+                  Create Stunning Synth Sound on Mobile Devices
+                  Create Stunning Synth Sound on Mobile Devices
+                  Create Stunning Synth Sound on Mobile Devices
+               </div>
+            </div>
+         </div>
+         <div class="IntroCard row">
+            <div class="CardText left-text col-xl-4 col-lg-12">
+               <div class="CardTextTitle">
+                  Overview of Active Routings
+               </div>
+               <div class="CardTextDescription">
+                  Create Stunning Synth Sound on Mobile Devices
+                  Create Stunning Synth Sound on Mobile Devices
+                  Create Stunning Synth Sound on Mobile Devices
+                  Create Stunning Synth Sound on Mobile Devices
+               </div>
+            </div>
+            <div class="CardImgContainer col-xl-8 col-lg-12">
+               <img class="CardImg" src="./static/image/Overview_of_active_routings.png">
+            </div>
+         </div>
+         <div class="IntroCard row">
+            <div class="CardImgContainerIphone col-xl-8 col-lg-12 order-xl-1 order-12">
+               <img class="CardImgIphone" src="./static/image/Shaper_Also Works_on_iPhone_1.png">
+               <img class="CardImgIphone" src="./static/image/Shaper_Also Works_on_iPhone_2.png">
+            </div>
+            <div class="CardText right-text col-xl-4 col-lg-12 order-xl-12 order-1">
+               <div class="CardTextTitle">
+                  Also Works on iPhone
+               </div>
+               <div class="CardTextDescription">
+                  Create Stunning Synth Sound on Mobile Devices
+                  Create Stunning Synth Sound on Mobile Devices
+                  Create Stunning Synth Sound on Mobile Devices
+                  Create Stunning Synth Sound on Mobile Devices
+               </div>
+            </div>
+         </div>
+         <div class="IntroCard row">
+            <div class="CardText left-text col-xl-4 col-lg-12">
+               <div class="CardTextTitle">
+                  Works in Landscape on iPhone
+               </div>
+               <div class="CardTextDescription">
+                  Create Stunning Synth Sound on Mobile Devices
+                  Create Stunning Synth Sound on Mobile Devices
+                  Create Stunning Synth Sound on Mobile Devices
+                  Create Stunning Synth Sound on Mobile Devices
+               </div>
+            </div>
+            <div class="CardImgContainer col-xl-8 col-lg-12">
+               <img class="CardImgIphoneLandscape" src="./static/image/Works_in_Landscape_on_iphone_1.png">
+               <img class="CardImgIphoneLandscape" src="./static/image/Works_in_Landscape_on_iphone_2.png">
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="Embed">
+      <div class="EmbedIntro">
+         Here are some demo videos on Youtube.
+      </div>
+      <div class="Videos row">
+         <iframe class="YoutubeVideo col-xl-6" src="https://www.youtube.com/embed/lJIrF4YjHfQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         <iframe class="YoutubeVideo col-xl-6" src="https://www.youtube.com/embed/RJzu3sdX6AM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+   </div>
+   <div class="Menu">
+   </div>
 </body>
+
 </html>
