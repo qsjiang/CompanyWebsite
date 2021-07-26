@@ -172,10 +172,52 @@
     color: white;
   }
 
+  .DescriptionAndLink {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
   .WorkDescription {
+    padding-top: 10px;
+    padding-bottom: 10px;
     font-size: 16px;
     color: #DDD;
     display: block
+  }
+
+  .ShaperLink {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .ShaperLearnMoreButton {
+    color: white;
+    font-size: 17px;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 6px 10px;
+    box-shadow: 0px 0px 2px #FFF;
+    background-color: transparent;
+    opacity: 0.8;
+    transition: 500ms;
+  }
+
+  .ShaperLearnMoreButton:hover {
+    text-decoration: none;
+    color: white;
+    box-shadow: 0px 0px 10px #FFF;
+    text-shadow: 0 0 6px #FFF;
+    opacity: 1;
+  }
+
+  .ShaperLearnMoreButton:active {
+    text-decoration: none;
+    color: white;
+    box-shadow: 0px 0px 10px #FFF;
+    opacity: 1;
   }
 
 
@@ -320,7 +362,12 @@
               </div>
               <div class="WorkText">
                 <span class="WorkTitle">Shaper - Synthesizer</span>
-                <span class="WorkDescription">A fully-featured subtractive synthesizer designed for the mobile platform.</span>
+                <div class="DescriptionAndLink">
+                  <div class="WorkDescription">Create stunning synth sound on mobile devices</div>
+                  <div class="ShaperLink">
+                    <a class="ShaperLearnMoreButton" href="https://autumnrock.dev/shaper/" target="_blank">Learn More</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -418,9 +465,9 @@ gtag('js', new Date());
 gtag('config', 'UA-152724195-1');
 </script>
 <script type="text/javascript">
-		function moveToContact (){
-			document.getElementById("contactSection").scrollIntoView();
-		}
-	</script>
+function moveToContact() {
+  document.getElementById("contactSection").scrollIntoView();
+}
+</script>
 
 </html>
