@@ -3,994 +3,994 @@
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
 
 <head>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-  <title>Shaper - Synthesizer</title>
-  <style type="text/css">
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    background-color: #101010;
-    padding: 0;
-    margin: 0;
-    font-family: "Titillium Web";
-    color: white;
-    line-height: 2;
-    text-rendering: optimizeLegibility;
-  }
-
-  .row {
-    margin-right: 0px;
-    margin-left: 0px;
-  }
-
-  .BillboardBackground {
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    background-image: linear-gradient(rgb(10, 25, 49), rgb(16, 16, 16));
-  }
-
-  .Navbar {
-    padding: 0px;
-    margin: 0px;
-    position: relative;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 3;
-  }
-
-  .NavbarContainer {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .ButtonSection {
-    display: flex;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-right: 2px;
-    margin: 0px;
-  }
-
-  #HomeButton {
-    color: white;
-    font-size: 17px;
-    line-height: 1.5;
-    text-align: center;
-    text-decoration: none;
-    border: 2px solid white;
-    border-radius: 8px;
-    padding: 8px 36px;
-    box-shadow: 0px 0px 2px #FFF;
-    background-color: transparent;
-    opacity: 0.7;
-    transition: 500ms;
-  }
-
-  #HomeButton:hover {
-    box-shadow: 0px 0px 15px #FFF;
-    text-shadow: 0 0 6px #FFF;
-    opacity: 1;
-  }
-
-  #HomeButton:active {
-    box-shadow: 0px 0px 15px #FFF;
-    opacity: 1;
-  }
-
-  .LinkSection {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 2px;
-  }
-
-  #AppleLink {
-    padding-right: 2px;
-    text-decoration: none;
-  }
-
-  #GoogleLink {
-    padding-left: 2px;
-    text-decoration: none;
-  }
-
-  .LinkSectionIcon {
-    display: inline-block;
-    border-radius: 8px;
-    opacity: 0.7;
-    transition: 500ms;
-  }
-
-  .LinkSectionIcon:hover {
-    box-shadow: 0px 0px 15px #FFF;
-    opacity: 1;
-  }
-
-  .LinkSectionIcon:active {
-    box-shadow: 0px 0px 15px #FFF;
-    opacity: 1;
-  }
-
-  .Billboard {
-    padding: 60px 0px 10px 0px;
-  }
-
-  .IconSection {
-    margin-bottom: 0px;
-  }
-
-  .BillboardIcon {
-    display: block;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 400px;
-    width: 50%;
-    background-color: transparent;
-    box-shadow: 0 0 80px 10px rgb(0, 0, 0);
-    border-radius: 30px;
-  }
-
-  .BillboardTitle {
-    text-align: center;
-    font-size: 70px;
-    font-weight: bold;
-    text-shadow: 0 0 6px #FFF;
-  }
-
-  .IllustrationSection {
-    margin-bottom: 0px;
-  }
-
-  .IllusImage {
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding: 0 80px 0 80px;
-  }
-
-  #iPhoneImg {
-    vertical-align: bottom;
-    position: relative;
-    z-index: 2;
-    max-height: 357px;
-  }
-
-  #iPadImg {
-    vertical-align: bottom;
-    position: relative;
-    z-index: 1;
-    max-height: 410px;
-  }
-
-  .BillboardSubTitle {
-    padding: 20px 10px 80px 10px;
-    text-align: center;
-  }
-
-  .BillboardSubTitleText {
-    font-size: 30px;
-  }
-
-  .BillboardSubTitleLine {
-    max-width: 1000px;
-    margin-top: 5px;
-    background-color: #233E8B;
-    box-shadow: 0 0 8px #233E8B;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    height: 2px;
-    border-radius: 100%;
-  }
-
-  .Introduction {
-    min-height: 100%;
-    overflow: hidden;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .IntroContainer {
-    max-width: 1300px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .IntroCard {
-    background-color: #000000;
-    justify-content: space-around;
-    margin: 40px 40px 40px 40px;
-    padding: 20px;
-  }
-
-  .CardText {
-    position: relative;
-  }
-
-  .CardTextTitle {
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    line-height: normal;
-  }
-
-  .CardTextDescription {
-    padding: 0 20px 0 20px;
-    font-weight: lighter;
-    font-size: 24px;
-    color: #DDDDDD;
-  }
-
-  .left-text {
-    padding: 0px 20px 0px 20px;
-  }
-
-  .left-text::before {
-    content: " ";
-    width: 2px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0px;
-    box-shadow: 0 0 12px #E99539;
-    background-color: #E99539;
-  }
-
-  .right-text {
-    padding: 0px 20px 0px 20px;
-  }
-
-  .right-text::after {
-    content: " ";
-    width: 2px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0px;
-    box-shadow: 0 0 12px #E99539;
-    background-color: #E99539;
-  }
-
-  .CardImgContainer {
-    padding: 0px 0px 0px 0px;
-  }
-
-  .CardImgContainerIphone {
-    flex-wrap: wrap;
-    display: inline-flex;
-    justify-content: space-around;
-  }
-
-  .CardImg {
-    display: block;
-    width: 100%;
-    z-index: -1;
-  }
-
-  .IphonePortrait {
-    display: inline-flex;
-    justify-content: space-around;
-  }
-
-  .CardImgIphone {
-    width: 48%;
-  }
-
-  .CardImgIphoneLandscape {
-    width: 100%;
-    padding-top: 10px;
-    z-index: -1;
-  }
-
-  .Embed {
-    margin: 100px 0 100px 0;
-  }
-
-  .EmbedIntro {
-    text-align: center;
-    font-size: 36px;
-    text-shadow: 0 0 4px #FFF;
-  }
-
-  .Videos {
-    padding-top: 40px;
-  }
-
-  .YoutubeVideo {
-    padding: 20px;
-    height: 450px;
-  }
-
-  .FeaturesMenuContainer {
-    background-color: #000000;
-    max-width: 1300px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .FeaturesMenuTitle {
-    padding-top: 36px;
-    text-align: center;
-    font-size: 40px;
-    text-shadow: 0 0 4px #FFF;
-  }
-
-  .FeaturesMenuTitleLine {
-    background-color: #233E8B;
-    box-shadow: 0 0 8px #233E8B;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    height: 2px;
-    border-radius: 100%;
-    font-weight: bold;
-  }
-
-  .FeaturesMenuDescription {
-    padding: 40px 120px 40px 120px;
-    text-align: left;
-    font-size: 22px;
-    color: #DDDDDD;
-    font-weight: lighter;
-  }
-
-  .DownloadMenuContainer {
-    max-width: 1300px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 40px;
-  }
-
-  .DownloadMenuTitle {
-    font-size: 36px;
-    padding-top: 100px;
-    text-align: center;
-    font-size: 40px;
-    text-shadow: 0 0 4px #FFF;
-  }
-
-  .DownloadMenuLinkSection {
-    padding-top: 30px;
-    text-align: center;
-  }
-
-  #AppleLinkBottom {
-    text-decoration: none;
-  }
-
-  #GoogleLinkBottom {
-    text-decoration: none;
-  }
-
-  .LinkSectionIconBottom {
-    margin-left: 20px;
-    margin-right: 20px;
-    display: inline-block;
-    border-radius: 8px;
-    opacity: 0.7;
-    transition: 500ms;
-    width: 256px;
-    height: 80px;
-  }
-
-  .LinkSectionIconBottom:hover {
-    box-shadow: 0px 0px 15px #FFF;
-    opacity: 1;
-  }
-
-  .LinkSectionIconBottom:active {
-    box-shadow: 0px 0px 15px #FFF;
-    opacity: 1;
-  }
-
-  .ManualAndCreditsContainer {
-    max-width: 1300px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 120px;
-  }
-
-  .ManualAndCreditsTitle {
-    font-size: 36px;
-    padding-top: 40px;
-    text-align: center;
-    font-size: 40px;
-    text-shadow: 0 0 4px #FFF;
-  }
-
-  .ManualAndCreditsLinkContainer {
-    padding-top: 40px;
-    margin-right: auto;
-    margin-left: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .ManualAndCreditsButton {
-    margin-left: 40px;
-    margin-right: 40px;
-    color: white;
-    font-size: 24px;
-    line-height: 1.5;
-    text-align: center;
-    text-decoration: none;
-    border: 2px solid white;
-    padding: 10px 60px;
-    box-shadow: 0px 0px 2px #FFF;
-    background-color: transparent;
-    opacity: 0.7;
-    transition: 500ms;
-  }
-
-  .ManualAndCreditsButton:hover {
-    color: white;
-    text-decoration: none;
-    box-shadow: 0px 0px 15px #FFF;
-    text-shadow: 0 0 6px #FFF;
-    opacity: 1;
-  }
-
-  .ManualAndCreditsButton:active {
-    color: white;
-    text-decoration: none;
-    box-shadow: 0px 0px 15px #FFF;
-    opacity: 1;
-  }
-
-  @media only screen and (min-width: 1400px) {
-    .NavbarContainer {
-      max-width: 1400px;
-    }
-
-    .Billboard {
-      max-width: 1400px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .Videos {
-      max-width: 1600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-
-  @media only screen and (max-width: 1200px) {
-    .BillboardIcon {
-      max-width: 220px;
-      margin-top: 0px;
-      margin-bottom: 0px;
-    }
-
-    .IllusImage {
-      padding: 60px 60px 0 60px;
-    }
-
-    .IntroCard {
-      padding-left: 60px;
-      padding-right: 60px;
-      margin-left: 80px;
-      margin-right: 80px;
-    }
-
-    .CardText {
-      padding-top: 20px;
-      padding-right: 0px;
-      padding-left: 0px;
-      padding-bottom: 20px;
-    }
-
-    .CardTextTitle {
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
-
-    .CardTextDescription {
-      padding-left: 0px;
-      padding-right: 0px;
-    }
-
-    .left-text::before {
-      width: 100%;
-      height: 2px;
-      top: 5px;
-      left: 0px;
-    }
-
-    .right-text::after {
-      width: 100%;
-      height: 2px;
-      top: 5px;
-      left: 0px;
-    }
-
-    .CardImg {
-      display: block;
-      width: 100%;
-      margin: 0 auto;
-    }
-
-    .YoutubeVideo {
-      display: block;
-      margin: 0 auto;
-      width: 800px;
-      height: 450px;
-    }
-  }
-
-  @media only screen and (max-width: 1000px) {
-    .IllusImage {
-      justify-content: flex-start;
-    }
-
-    #iPadImg {
-      position: absolute;
-      top: 0;
-      right: 60px;
-    }
-
-    .YoutubeVideo {
-      width: 700px;
-      height: 394px;
-    }
-
-    .FeaturesMenuContainer {
-      margin-right: 80px;
-      margin-left: 80px;
-    }
-
-    .FeaturesMenuTitle {
-      font-size: 36px;
-    }
-
-    .FeaturesMenuDescription {
-      padding-left: 80px;
-      padding-right: 80px;
-      font-size: 20px;
-    }
-
-    .DownloadMenuTitle {
-      font-size: 36px;
-    }
-
-    .ManualAndCreditsTitle {
-      font-size: 36px;
-    }
-  }
-
-  @media only screen and (max-width: 800px) {
-    .BillboardIcon {
-      max-width: 200px;
-    }
-
-    .BillboardTitle {
-      font-size: 60px;
-    }
-
-    #iPhoneImg {
-      width: 40%;
-    }
-
-    #iPadImg {
-      position: absolute;
-      top: 0;
-      right: 10px;
-      width: 80%;
-    }
-
-    .BillboardSubTitle {
-      padding-bottom: 40px;
-    }
-
-    .BillboardSubTitleText {
-      font-size: 24px;
-    }
-
-    .IntroCard {
-      padding-left: 40px;
-      padding-right: 40px;
-      margin-left: 60px;
-      margin-right: 60px;
-    }
-
-    .CardTextTitle {
-      font-size: 24px;
-      margin-top: 0px;
-      margin-bottom: 16px;
-    }
-
-    .CardTextDescription {
-      font-size: 18px;
-      padding-right: 10px;
-      padding-left: 10px;
-    }
-
-    .EmbedIntro {
-      font-size: 36px;
-    }
-
-    .YoutubeVideo {
-      width: 620px;
-      height: 349px;
-    }
-
-    .FeaturesMenuContainer {
-      margin-left: 60px;
-      margin-right: 60px;
-    }
-
-    .FeaturesMenuTitle {
-      padding-top: 20px;
-    }
-
-    .FeaturesMenuDescription {
-      padding-left: 60px;
-      padding-right: 60px;
-      font-size: 18px;
-    }
-
-    .LinkSectionIconBottom {
-      margin-bottom: 20px;
-    }
-
-    .ManualAndCreditsButton {
-      margin-bottom: 40px;
-    }
-
-    .DownloadMenuTitle {
-      padding-top: 20px;
-    }
-
-    .ManualAndCreditsTitle {
-      padding-top: 20px;
-    }
-  }
-
-  @media only screen and (max-width: 500px) {
-    .NavbarContainer {
-      padding-left: 12px;
-      padding-right: 12px;
-    }
-
-    #HomeButton {
-      font-size: 14px;
-      padding: 8px 16px;
-      opacity: 1;
-    }
-
-    .LinkSection {
-      height: 80px;
-    }
-
-    .LinkSectionIcon {
-      height: 40px;
-      opacity: 1;
-    }
-
-    .Billboard {
-      padding-top: 30px;
-    }
-
-    .BillboardIcon {
-      max-width: 140px;
-    }
-
-    .BillboardTitle {
-      font-size: 40px;
-    }
-
-    .IllustrationSection {
-      margin: 0;
-    }
-
-    .IllusImage {
-      padding: 30px 30px 0 30px;
-    }
-
-    .BillboardSubTitleText {
-      font-size: 16px;
-    }
-
-    .IntroCard {
-      padding-left: 20px;
-      padding-right: 20px;
-      margin-left: 20px;
-      margin-right: 20px;
-    }
-
-    .CardTextTitle {
-      font-size: 20px;
-      margin-top: 0px;
-      margin-bottom: 10px;
-    }
-
-    .CardTextDescription {
-      font-size: 16px;
-      padding-left: 0px;
-      padding-right: 0px;
-    }
-
-    .Embed {
-      margin: 40px 0 40px 0;
-    }
-
-    .EmbedIntro {
-      font-size: 24px;
-    }
-
-    .Videos {
-      padding-top: 30px;
-    }
-
-    .YoutubeVideo {
-      width: 320px;
-      height: 180px;
-    }
-
-    .FeaturesMenuContainer {
-      margin-left: 20px;
-      margin-right: 20px;
-    }
-
-    .FeaturesMenuTitle {
-      font-size: 24px;
-      padding-top: 18px;
-    }
-
-    .FeaturesMenuDescription {
-      padding-left: 20px;
-      padding-right: 20px;
-      font-size: 16px;
-    }
-
-    .DownloadMenuTitle {
-      font-size: 24px;
-      padding-top: 18px;
-    }
-
-    .LinkSectionIconBottom {
-      height: 40px;
-      width: 128px;
-      opacity: 1;
-    }
-
-    .ManualAndCreditsTitle {
-      font-size: 24px;
-      padding-top: 18px;
-    }
-
-    .ManualAndCreditsButton {
-      font-size: 18px;
-      padding: 8px 40px;
-      margin-left: 20px;
-      margin-right: 20px;
-      opacity: 1;
-    }
-  }
-  </style>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	<title>Shaper - Synthesizer</title>
+	<style type="text/css">
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		background-color: #101010;
+		padding: 0;
+		margin: 0;
+		font-family: "Titillium Web";
+		color: white;
+		line-height: 2;
+		text-rendering: optimizeLegibility;
+	}
+
+	.row {
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+
+	.BillboardBackground {
+		background-size: cover;
+		background-position: center;
+		position: relative;
+		background-image: linear-gradient(rgb(10, 25, 49), rgb(16, 16, 16));
+	}
+
+	.Navbar {
+		padding: 0px;
+		margin: 0px;
+		position: relative;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 3;
+	}
+
+	.NavbarContainer {
+		display: flex;
+		justify-content: space-between;
+		padding-left: 30px;
+		padding-right: 30px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.ButtonSection {
+		display: flex;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-right: 2px;
+		margin: 0px;
+	}
+
+	#HomeButton {
+		color: white;
+		font-size: 17px;
+		line-height: 1.5;
+		text-align: center;
+		text-decoration: none;
+		border: 2px solid white;
+		border-radius: 8px;
+		padding: 8px 36px;
+		box-shadow: 0px 0px 2px #FFF;
+		background-color: transparent;
+		opacity: 0.7;
+		transition: 500ms;
+	}
+
+	#HomeButton:hover {
+		box-shadow: 0px 0px 15px #FFF;
+		text-shadow: 0 0 6px #FFF;
+		opacity: 1;
+	}
+
+	#HomeButton:active {
+		box-shadow: 0px 0px 15px #FFF;
+		opacity: 1;
+	}
+
+	.LinkSection {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-left: 2px;
+	}
+
+	#AppleLink {
+		padding-right: 2px;
+		text-decoration: none;
+	}
+
+	#GoogleLink {
+		padding-left: 2px;
+		text-decoration: none;
+	}
+
+	.LinkSectionIcon {
+		display: inline-block;
+		border-radius: 8px;
+		opacity: 0.7;
+		transition: 500ms;
+	}
+
+	.LinkSectionIcon:hover {
+		box-shadow: 0px 0px 15px #FFF;
+		opacity: 1;
+	}
+
+	.LinkSectionIcon:active {
+		box-shadow: 0px 0px 15px #FFF;
+		opacity: 1;
+	}
+
+	.Billboard {
+		padding: 60px 0px 10px 0px;
+	}
+
+	.IconSection {
+		margin-bottom: 0px;
+	}
+
+	.BillboardIcon {
+		display: block;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 400px;
+		width: 50%;
+		background-color: transparent;
+		box-shadow: 0 0 80px 10px rgb(0, 0, 0);
+		border-radius: 30px;
+	}
+
+	.BillboardTitle {
+		text-align: center;
+		font-size: 70px;
+		font-weight: bold;
+		text-shadow: 0 0 6px #FFF;
+	}
+
+	.IllustrationSection {
+		margin-bottom: 0px;
+	}
+
+	.IllusImage {
+		position: relative;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		padding: 0 80px 0 80px;
+	}
+
+	#iPhoneImg {
+		vertical-align: bottom;
+		position: relative;
+		z-index: 2;
+		max-height: 357px;
+	}
+
+	#iPadImg {
+		vertical-align: bottom;
+		position: relative;
+		z-index: 1;
+		max-height: 410px;
+	}
+
+	.BillboardSubTitle {
+		padding: 20px 10px 80px 10px;
+		text-align: center;
+	}
+
+	.BillboardSubTitleText {
+		font-size: 30px;
+	}
+
+	.BillboardSubTitleLine {
+		max-width: 1000px;
+		margin-top: 5px;
+		background-color: #233E8B;
+		box-shadow: 0 0 8px #233E8B;
+		width: 70%;
+		margin-left: auto;
+		margin-right: auto;
+		height: 2px;
+		border-radius: 100%;
+	}
+
+	.Introduction {
+		min-height: 100%;
+		overflow: hidden;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.IntroContainer {
+		max-width: 1300px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.IntroCard {
+		background-color: #000000;
+		justify-content: space-around;
+		margin: 40px 40px 40px 40px;
+		padding: 20px;
+	}
+
+	.CardText {
+		position: relative;
+	}
+
+	.CardTextTitle {
+		text-align: center;
+		font-size: 30px;
+		font-weight: bold;
+		margin-top: 20px;
+		margin-bottom: 30px;
+		line-height: normal;
+	}
+
+	.CardTextDescription {
+		padding: 0 20px 0 20px;
+		font-weight: lighter;
+		font-size: 24px;
+		color: #DDDDDD;
+	}
+
+	.left-text {
+		padding: 0px 20px 0px 20px;
+	}
+
+	.left-text::before {
+		content: " ";
+		width: 2px;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0px;
+		box-shadow: 0 0 12px #E99539;
+		background-color: #E99539;
+	}
+
+	.right-text {
+		padding: 0px 20px 0px 20px;
+	}
+
+	.right-text::after {
+		content: " ";
+		width: 2px;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		right: 0px;
+		box-shadow: 0 0 12px #E99539;
+		background-color: #E99539;
+	}
+
+	.CardImgContainer {
+		padding: 0px 0px 0px 0px;
+	}
+
+	.CardImgContainerIphone {
+		flex-wrap: wrap;
+		display: inline-flex;
+		justify-content: space-around;
+	}
+
+	.CardImg {
+		display: block;
+		width: 100%;
+		z-index: -1;
+	}
+
+	.IphonePortrait {
+		display: inline-flex;
+		justify-content: space-around;
+	}
+
+	.CardImgIphone {
+		width: 48%;
+	}
+
+	.CardImgIphoneLandscape {
+		width: 100%;
+		padding-top: 10px;
+		z-index: -1;
+	}
+
+	.Embed {
+		margin: 100px 0 100px 0;
+	}
+
+	.EmbedIntro {
+		text-align: center;
+		font-size: 36px;
+		text-shadow: 0 0 4px #FFF;
+	}
+
+	.Videos {
+		padding-top: 40px;
+	}
+
+	.YoutubeVideo {
+		padding: 20px;
+		height: 450px;
+	}
+
+	.FeaturesMenuContainer {
+		background-color: #000000;
+		max-width: 1300px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.FeaturesMenuTitle {
+		padding-top: 36px;
+		text-align: center;
+		font-size: 40px;
+		text-shadow: 0 0 4px #FFF;
+	}
+
+	.FeaturesMenuTitleLine {
+		background-color: #233E8B;
+		box-shadow: 0 0 8px #233E8B;
+		width: 70%;
+		margin-left: auto;
+		margin-right: auto;
+		height: 2px;
+		border-radius: 100%;
+		font-weight: bold;
+	}
+
+	.FeaturesMenuDescription {
+		padding: 40px 120px 40px 120px;
+		text-align: left;
+		font-size: 22px;
+		color: #DDDDDD;
+		font-weight: lighter;
+	}
+
+	.DownloadMenuContainer {
+		max-width: 1300px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 40px;
+	}
+
+	.DownloadMenuTitle {
+		font-size: 36px;
+		padding-top: 100px;
+		text-align: center;
+		font-size: 40px;
+		text-shadow: 0 0 4px #FFF;
+	}
+
+	.DownloadMenuLinkSection {
+		padding-top: 30px;
+		text-align: center;
+	}
+
+	#AppleLinkBottom {
+		text-decoration: none;
+	}
+
+	#GoogleLinkBottom {
+		text-decoration: none;
+	}
+
+	.LinkSectionIconBottom {
+		margin-left: 20px;
+		margin-right: 20px;
+		display: inline-block;
+		border-radius: 8px;
+		opacity: 0.7;
+		transition: 500ms;
+		width: 256px;
+		height: 80px;
+	}
+
+	.LinkSectionIconBottom:hover {
+		box-shadow: 0px 0px 15px #FFF;
+		opacity: 1;
+	}
+
+	.LinkSectionIconBottom:active {
+		box-shadow: 0px 0px 15px #FFF;
+		opacity: 1;
+	}
+
+	.ManualAndCreditsContainer {
+		max-width: 1300px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 120px;
+	}
+
+	.ManualAndCreditsTitle {
+		font-size: 36px;
+		padding-top: 40px;
+		text-align: center;
+		font-size: 40px;
+		text-shadow: 0 0 4px #FFF;
+	}
+
+	.ManualAndCreditsLinkContainer {
+		padding-top: 40px;
+		margin-right: auto;
+		margin-left: auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.ManualAndCreditsButton {
+		margin-left: 40px;
+		margin-right: 40px;
+		color: white;
+		font-size: 24px;
+		line-height: 1.5;
+		text-align: center;
+		text-decoration: none;
+		border: 2px solid white;
+		padding: 10px 60px;
+		box-shadow: 0px 0px 2px #FFF;
+		background-color: transparent;
+		opacity: 0.7;
+		transition: 500ms;
+	}
+
+	.ManualAndCreditsButton:hover {
+		color: white;
+		text-decoration: none;
+		box-shadow: 0px 0px 15px #FFF;
+		text-shadow: 0 0 6px #FFF;
+		opacity: 1;
+	}
+
+	.ManualAndCreditsButton:active {
+		color: white;
+		text-decoration: none;
+		box-shadow: 0px 0px 15px #FFF;
+		opacity: 1;
+	}
+
+	@media only screen and (min-width: 1400px) {
+		.NavbarContainer {
+			max-width: 1400px;
+		}
+
+		.Billboard {
+			max-width: 1400px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.Videos {
+			max-width: 1600px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	@media only screen and (max-width: 1200px) {
+		.BillboardIcon {
+			max-width: 220px;
+			margin-top: 0px;
+			margin-bottom: 0px;
+		}
+
+		.IllusImage {
+			padding: 60px 60px 0 60px;
+		}
+
+		.IntroCard {
+			padding-left: 60px;
+			padding-right: 60px;
+			margin-left: 80px;
+			margin-right: 80px;
+		}
+
+		.CardText {
+			padding-top: 20px;
+			padding-right: 0px;
+			padding-left: 0px;
+			padding-bottom: 20px;
+		}
+
+		.CardTextTitle {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+
+		.CardTextDescription {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+
+		.left-text::before {
+			width: 100%;
+			height: 2px;
+			top: 5px;
+			left: 0px;
+		}
+
+		.right-text::after {
+			width: 100%;
+			height: 2px;
+			top: 5px;
+			left: 0px;
+		}
+
+		.CardImg {
+			display: block;
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		.YoutubeVideo {
+			display: block;
+			margin: 0 auto;
+			width: 800px;
+			height: 450px;
+		}
+	}
+
+	@media only screen and (max-width: 1000px) {
+		.IllusImage {
+			justify-content: flex-start;
+		}
+
+		#iPadImg {
+			position: absolute;
+			top: 0;
+			right: 60px;
+		}
+
+		.YoutubeVideo {
+			width: 700px;
+			height: 394px;
+		}
+
+		.FeaturesMenuContainer {
+			margin-right: 80px;
+			margin-left: 80px;
+		}
+
+		.FeaturesMenuTitle {
+			font-size: 36px;
+		}
+
+		.FeaturesMenuDescription {
+			padding-left: 80px;
+			padding-right: 80px;
+			font-size: 20px;
+		}
+
+		.DownloadMenuTitle {
+			font-size: 36px;
+		}
+
+		.ManualAndCreditsTitle {
+			font-size: 36px;
+		}
+	}
+
+	@media only screen and (max-width: 800px) {
+		.BillboardIcon {
+			max-width: 200px;
+		}
+
+		.BillboardTitle {
+			font-size: 60px;
+		}
+
+		#iPhoneImg {
+			width: 40%;
+		}
+
+		#iPadImg {
+			position: absolute;
+			top: 0;
+			right: 10px;
+			width: 80%;
+		}
+
+		.BillboardSubTitle {
+			padding-bottom: 40px;
+		}
+
+		.BillboardSubTitleText {
+			font-size: 24px;
+		}
+
+		.IntroCard {
+			padding-left: 40px;
+			padding-right: 40px;
+			margin-left: 60px;
+			margin-right: 60px;
+		}
+
+		.CardTextTitle {
+			font-size: 24px;
+			margin-top: 0px;
+			margin-bottom: 16px;
+		}
+
+		.CardTextDescription {
+			font-size: 18px;
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+
+		.EmbedIntro {
+			font-size: 36px;
+		}
+
+		.YoutubeVideo {
+			width: 620px;
+			height: 349px;
+		}
+
+		.FeaturesMenuContainer {
+			margin-left: 60px;
+			margin-right: 60px;
+		}
+
+		.FeaturesMenuTitle {
+			padding-top: 20px;
+		}
+
+		.FeaturesMenuDescription {
+			padding-left: 60px;
+			padding-right: 60px;
+			font-size: 18px;
+		}
+
+		.LinkSectionIconBottom {
+			margin-bottom: 20px;
+		}
+
+		.ManualAndCreditsButton {
+			margin-bottom: 40px;
+		}
+
+		.DownloadMenuTitle {
+			padding-top: 20px;
+		}
+
+		.ManualAndCreditsTitle {
+			padding-top: 20px;
+		}
+	}
+
+	@media only screen and (max-width: 500px) {
+		.NavbarContainer {
+			padding-left: 12px;
+			padding-right: 12px;
+		}
+
+		#HomeButton {
+			font-size: 14px;
+			padding: 8px 16px;
+			opacity: 1;
+		}
+
+		.LinkSection {
+			height: 80px;
+		}
+
+		.LinkSectionIcon {
+			height: 40px;
+			opacity: 1;
+		}
+
+		.Billboard {
+			padding-top: 30px;
+		}
+
+		.BillboardIcon {
+			max-width: 140px;
+		}
+
+		.BillboardTitle {
+			font-size: 40px;
+		}
+
+		.IllustrationSection {
+			margin: 0;
+		}
+
+		.IllusImage {
+			padding: 30px 30px 0 30px;
+		}
+
+		.BillboardSubTitleText {
+			font-size: 16px;
+		}
+
+		.IntroCard {
+			padding-left: 20px;
+			padding-right: 20px;
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+
+		.CardTextTitle {
+			font-size: 20px;
+			margin-top: 0px;
+			margin-bottom: 10px;
+		}
+
+		.CardTextDescription {
+			font-size: 16px;
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+
+		.Embed {
+			margin: 40px 0 40px 0;
+		}
+
+		.EmbedIntro {
+			font-size: 24px;
+		}
+
+		.Videos {
+			padding-top: 30px;
+		}
+
+		.YoutubeVideo {
+			width: 320px;
+			height: 180px;
+		}
+
+		.FeaturesMenuContainer {
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+
+		.FeaturesMenuTitle {
+			font-size: 24px;
+			padding-top: 18px;
+		}
+
+		.FeaturesMenuDescription {
+			padding-left: 20px;
+			padding-right: 20px;
+			font-size: 16px;
+		}
+
+		.DownloadMenuTitle {
+			font-size: 24px;
+			padding-top: 18px;
+		}
+
+		.LinkSectionIconBottom {
+			height: 40px;
+			width: 128px;
+			opacity: 1;
+		}
+
+		.ManualAndCreditsTitle {
+			font-size: 24px;
+			padding-top: 18px;
+		}
+
+		.ManualAndCreditsButton {
+			font-size: 18px;
+			padding: 8px 40px;
+			margin-left: 20px;
+			margin-right: 20px;
+			opacity: 1;
+		}
+	}
+	</style>
 </head>
 
 <body>
-  <div class="BillboardBackground">
-    <div class="Navbar">
-      <div class="NavbarContainer">
-        <div class="ButtonSection">
-          <a id="HomeButton" href="https://autumnrock.dev/" target="_blank">Home</a>
-        </div>
-        <div class="LinkSection">
-          <a id="AppleLink" href="https://apps.apple.com/app/shaper-synthesizer/id1536713443" target="_blank">
-            <img class="LinkSectionIcon" src="../static/image/app-store-badge.svg">
-          </a>
-          <a id="GoogleLink" href="https://play.google.com/store/apps/details?id=com.autumnrockdev.shaper" target="_blank">
-            <img class="LinkSectionIcon" src="../static/image/google-play-badge.svg">
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="row Billboard">
-      <div class="IconSection col-xl-4">
-        <img class="BillboardIcon" src="../static/image/shaper/shaper-logo.png"></img>
-        <div class="BillboardTitle">Shaper</div>
-      </div>
-      <div class="IllustrationSection col-xl-8">
-        <div class="IllusImage">
-          <img id="iPhoneImg" src="../static/image/shaper/iPhoneX.svg">
-          <img id="iPadImg" src="../static/image/shaper/iPadPro.svg">
-        </div>
-      </div>
-    </div>
-    <div class="BillboardSubTitle">
-      <div class="BillboardSubTitleText">
-        Create Stunning Synth Sound on Mobile Devices
-      </div>
-      <div class="BillboardSubTitleLine"></div>
-    </div>
-  </div>
-  <div class="Introduction">
-    <div class="IntroContainer">
-      <div class="IntroCard row">
-        <div class="CardText left-text col-xl-6 col-lg-12">
-          <div class="CardTextTitle">
-            Fully Customizable LFO Graphs
-          </div>
-          <div class="CardTextDescription">
-            <dl>
-              <dd> - Freely add / remove control points</dd>
-              <dd> - Adjustable curvature</dd>
-              <dd> - Snappable grid system</dd>
-              <dd> - Can also be used as step sequencers</dd>
-            </dl>
-          </div>
-        </div>
-        <div class="CardImgContainer col-xl-6 col-lg-12">
-          <img class="CardImg" src="../static/image/shaper/Create_stunning_synth_sound_on_mobile_devices.png">
-        </div>
-      </div>
-      <div class="IntroCard row">
-        <div class="CardText left-text col-xl-6 col-lg-12">
-          <div class="CardTextTitle">
-            Modulation Assignments
-          </div>
-          <div class="CardTextDescription">
-            <dl>
-              <dd> - Assign modulations with drag and drop</dd>
-              <dd> - Animated cursors on ENV and LFO graphs</dd>
-              <dd> - Intuitive visual indicators around knobs</dd>
-            </dl>
-          </div>
-        </div>
-        <div class="CardImgContainer col-xl-6 col-lg-12">
-          <img class="CardImg" src="../static/image/shaper/Drag_and_drop_modulation.png">
-        </div>
-      </div>
-      <div class="IntroCard row">
-        <div class="CardText left-text col-xl-6 col-lg-12">
-          <div class="CardTextTitle">
-            Advanced Modulation Matrix
-          </div>
-          <div class="CardTextDescription">
-            <dl>
-              <dd> - Adjustable scales for each mod assignment</dd>
-              <dd> - Support for higher order modulation (parameters within each LFO can also be modulated)</dd>
-              <dd> - A dedicated routings overview window</dd>
-            </dl>
-          </div>
-        </div>
-        <div class="CardImgContainer col-xl-6 col-lg-12">
-          <img class="CardImg" src="../static/image/shaper/Overview_of_active_routings.png">
-        </div>
-      </div>
-      <div class="IntroCard row">
-        <div class="CardImgContainer col-xl-6 col-lg-12 order-xl-1 order-12">
-          <img class="CardImg" src="../static/image/shaper/Built-in_effect_rack.png">
-        </div>
-        <div class="CardText right-text col-xl-6 col-lg-12 order-xl-12 order-1">
-          <div class="CardTextTitle">
-            Built-in Effect Rack
-          </div>
-          <div class="CardTextDescription">
-            <dl>
-              <dd> - 3-slot effect rack</dd>
-              <dd> - 8 built-in effects (Bitcrusher, Chorus, Delay, Groove Delay, Distortion, Filter, Phaser, Reverb)</dd>
-              <dd> - Mix and bypass for each slot</dd>
-              <dd> - All knobs within effect rack can be modulated</dd>
-            </dl>
-          </div>
-        </div>
-      </div>
-      <div class="IntroCard row">
-        <div class="CardImgContainer col-xl-6 col-lg-12 order-xl-1 order-12">
-          <img class="CardImg" src="../static/image/shaper/AUv3.png">
-        </div>
-        <div class="CardText right-text col-xl-6 col-lg-12 order-xl-12 order-1">
-          <div class="CardTextTitle">
-            AUv3 Support for iOS
-          </div>
-          <div class="CardTextDescription">
-            <dl>
-              <dd> - Works great with AUM, Cubasis, Garageband and any DAW with Audio Unit support</dd>
-              <dd> - All knobs can be automated by the host program</dd>
-            </dl>
-          </div>
-        </div>
-      </div>
-      <div class="IntroCard row">
-        <div class="CardImgContainerIphone col-xl-6 col-lg-12 order-xl-1 order-12">
-          <div class="IphonePortrait">
-            <img class="CardImgIphone" src="../static/image/shaper/Shaper_Also Works_on_iPhone_1.png">
-            <img class="CardImgIphone" src="../static/image/shaper/Shaper_Also Works_on_iPhone_2.png">
-          </div>
-          <div class="IphoneLandscape">
-            <img class="CardImgIphoneLandscape" src="../static/image/shaper/Works_in_Landscape_on_iphone_1.png">
-          </div>
-        </div>
-        <div class="CardText right-text col-xl-6 col-lg-12 order-xl-12 order-1">
-          <div class="CardTextTitle">
-            Also Works Great on Smaller Devices
-          </div>
-          <div class="CardTextDescription">
-            <dl>
-              <dd> - Scalable UI that looks greate on all screen sizes</dd>
-              <dd> - Support both portrait and landscape modes on phones</dd>
-            </dl>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="Embed">
-    <div class="EmbedIntro">
-      Demos and Reviews
-      <div class="BillboardSubTitleLine"></div>
-    </div>
-    <div class="Videos row">
-      <iframe class="YoutubeVideo col-xl-6" src="https://www.youtube.com/embed/sBDd_G-FfrY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <iframe class="YoutubeVideo col-xl-6" src="https://www.youtube.com/embed/WQ4ztwehRxs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <div class="Videos row">
-      <iframe class="YoutubeVideo col-xl-6" src="https://www.youtube.com/embed/1krMUqkJ3cQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <iframe class="YoutubeVideo col-xl-6" src="https://www.youtube.com/embed/9-lFyV9jgA8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-  </div>
-  <div class="FeaturesMenuContainer">
-    <div class="FeaturesMenuTitle">
-      Complete Features List
-    </div>
-    <div class="FeaturesMenuTitleLine"></div>
-    <div class="FeaturesMenuDescription">
-      <dl>
-        <dd> - 2 alias-free waveform oscillators and an additional noise oscillator</dd>
-        <dd> - 2 ENVs and 2 LFOs</dd>
-        <dd> - Intuitive "drag and drop" modulation assignment</dd>
-        <dd> - Fully configurable LFO graphs</dd>
-        <dd> - Classic analog filter</dd>
-        <dd> - 3-slot effect rack</dd>
-        <dd> - 8 built-in effects (Bitcrusher, Chorus, Delay, Groove Delay, Distortion, Filter, Phaser, Reverb)</dd>
-        <dd> - MIDI and MIDI learn support</dd>
-        <dd> - AUv3 support, every knob can be automated by the host program (iOS only)</dd>
-        <dd> - Works great with AUM, Cubasis, Garageband and any DAW with Audio Unit support (iOS only)</dd>
-      </dl>
-    </div>
-  </div>
-  <div class="DownloadMenuContainer">
-    <div class="DownloadMenuTitle">
-      Download
-      <div class="BillboardSubTitleLine"></div>
-    </div>
-    <div class="DownloadMenuLinkSection">
-      <a id="AppleLinkBottom" href="https://apps.apple.com/app/shaper-synthesizer/id1536713443" target="_blank">
-        <img class="LinkSectionIconBottom" src="../static/image/app-store-badge.svg">
-      </a>
-      <a id="GoogleLinkBottom" href="https://play.google.com/store/apps/details?id=com.autumnrockdev.shaper" target="_blank">
-        <img class="LinkSectionIconBottom" src="../static/image/google-play-badge.svg">
-      </a>
-    </div>
-  </div>
-  <div class="ManualAndCreditsContainer">
-    <div class="ManualAndCreditsTitle">
-      Manual and Credits
-      <div class="BillboardSubTitleLine"></div>
-    </div>
-    <div class="ManualAndCreditsLinkContainer">
-      <a class="ManualAndCreditsButton" href="https://autumnrock.dev/shaper/manual/shaper_1.1_manual.pdf" target="_blank">Manual</a>
-      <a class="ManualAndCreditsButton" href="https://autumnrock.dev/shaper/credits" target="_blank">Credits</a>
-    </div>
-  </div>
+	<div class="BillboardBackground">
+		<div class="Navbar">
+			<div class="NavbarContainer">
+				<div class="ButtonSection">
+					<a id="HomeButton" href="https://autumnrock.dev/" target="_blank">Home</a>
+				</div>
+				<div class="LinkSection">
+					<a id="AppleLink" href="https://apps.apple.com/app/shaper-synthesizer/id1536713443" target="_blank">
+						<img class="LinkSectionIcon" src="../static/image/app-store-badge.svg">
+					</a>
+					<a id="GoogleLink" href="https://play.google.com/store/apps/details?id=com.autumnrockdev.shaper" target="_blank">
+						<img class="LinkSectionIcon" src="../static/image/google-play-badge.svg">
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="row Billboard">
+			<div class="IconSection col-xl-4">
+				<img class="BillboardIcon" src="../static/image/shaper/shaper-logo.png"></img>
+				<div class="BillboardTitle">Shaper</div>
+			</div>
+			<div class="IllustrationSection col-xl-8">
+				<div class="IllusImage">
+					<img id="iPhoneImg" src="../static/image/shaper/iPhoneX.svg">
+					<img id="iPadImg" src="../static/image/shaper/iPadPro.svg">
+				</div>
+			</div>
+		</div>
+		<div class="BillboardSubTitle">
+			<div class="BillboardSubTitleText">
+				Create Stunning Synth Sound on Mobile Devices
+			</div>
+			<div class="BillboardSubTitleLine"></div>
+		</div>
+	</div>
+	<div class="Introduction">
+		<div class="IntroContainer">
+			<div class="IntroCard row">
+				<div class="CardText left-text col-xl-6 col-lg-12">
+					<div class="CardTextTitle">
+						Fully Customizable LFO Graphs
+					</div>
+					<div class="CardTextDescription">
+						<dl>
+							<dd> - Freely add / remove control points</dd>
+							<dd> - Adjustable curvature</dd>
+							<dd> - Snappable grid system</dd>
+							<dd> - Can also be used as step sequencers</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="CardImgContainer col-xl-6 col-lg-12">
+					<img class="CardImg" src="../static/image/shaper/Create_stunning_synth_sound_on_mobile_devices.png">
+				</div>
+			</div>
+			<div class="IntroCard row">
+				<div class="CardText left-text col-xl-6 col-lg-12">
+					<div class="CardTextTitle">
+						Modulation Assignments
+					</div>
+					<div class="CardTextDescription">
+						<dl>
+							<dd> - Assign modulations with drag and drop</dd>
+							<dd> - Animated cursors on ENV and LFO graphs</dd>
+							<dd> - Intuitive visual indicators around knobs</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="CardImgContainer col-xl-6 col-lg-12">
+					<img class="CardImg" src="../static/image/shaper/Drag_and_drop_modulation.png">
+				</div>
+			</div>
+			<div class="IntroCard row">
+				<div class="CardText left-text col-xl-6 col-lg-12">
+					<div class="CardTextTitle">
+						Advanced Modulation Matrix
+					</div>
+					<div class="CardTextDescription">
+						<dl>
+							<dd> - Adjustable scales for each mod assignment</dd>
+							<dd> - Support for higher order modulation (parameters within each LFO can also be modulated)</dd>
+							<dd> - A dedicated routings overview window</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="CardImgContainer col-xl-6 col-lg-12">
+					<img class="CardImg" src="../static/image/shaper/Overview_of_active_routings.png">
+				</div>
+			</div>
+			<div class="IntroCard row">
+				<div class="CardImgContainer col-xl-6 col-lg-12 order-xl-1 order-12">
+					<img class="CardImg" src="../static/image/shaper/Built-in_effect_rack.png">
+				</div>
+				<div class="CardText right-text col-xl-6 col-lg-12 order-xl-12 order-1">
+					<div class="CardTextTitle">
+						Built-in Effect Rack
+					</div>
+					<div class="CardTextDescription">
+						<dl>
+							<dd> - 3-slot effect rack</dd>
+							<dd> - 8 built-in effects (Bitcrusher, Chorus, Delay, Groove Delay, Distortion, Filter, Phaser, Reverb)</dd>
+							<dd> - Mix and bypass for each slot</dd>
+							<dd> - All knobs within effect rack can be modulated</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="IntroCard row">
+				<div class="CardImgContainer col-xl-6 col-lg-12 order-xl-1 order-12">
+					<img class="CardImg" src="../static/image/shaper/AUv3.png">
+				</div>
+				<div class="CardText right-text col-xl-6 col-lg-12 order-xl-12 order-1">
+					<div class="CardTextTitle">
+						AUv3 Support for iOS
+					</div>
+					<div class="CardTextDescription">
+						<dl>
+							<dd> - Works great with AUM, Cubasis, Garageband and any DAW with Audio Unit support</dd>
+							<dd> - All knobs can be automated by the host program</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="IntroCard row">
+				<div class="CardImgContainerIphone col-xl-6 col-lg-12 order-xl-1 order-12">
+					<div class="IphonePortrait">
+						<img class="CardImgIphone" src="../static/image/shaper/Shaper_Also Works_on_iPhone_1.png">
+						<img class="CardImgIphone" src="../static/image/shaper/Shaper_Also Works_on_iPhone_2.png">
+					</div>
+					<div class="IphoneLandscape">
+						<img class="CardImgIphoneLandscape" src="../static/image/shaper/Works_in_Landscape_on_iphone_1.png">
+					</div>
+				</div>
+				<div class="CardText right-text col-xl-6 col-lg-12 order-xl-12 order-1">
+					<div class="CardTextTitle">
+						Also Works Great on Smaller Devices
+					</div>
+					<div class="CardTextDescription">
+						<dl>
+							<dd> - Scalable UI that looks greate on all screen sizes</dd>
+							<dd> - Support both portrait and landscape modes on phones</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="Embed">
+		<div class="EmbedIntro">
+			Demos and Reviews
+			<div class="BillboardSubTitleLine"></div>
+		</div>
+		<div class="Videos row">
+			<iframe class="YoutubeVideo col-xl-6" src="https://www.youtube.com/embed/sBDd_G-FfrY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe class="YoutubeVideo col-xl-6" src="https://www.youtube.com/embed/WQ4ztwehRxs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		<div class="Videos row">
+			<iframe class="YoutubeVideo col-xl-6" src="https://www.youtube.com/embed/1krMUqkJ3cQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe class="YoutubeVideo col-xl-6" src="https://www.youtube.com/embed/9-lFyV9jgA8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+	<div class="FeaturesMenuContainer">
+		<div class="FeaturesMenuTitle">
+			Complete Features List
+		</div>
+		<div class="FeaturesMenuTitleLine"></div>
+		<div class="FeaturesMenuDescription">
+			<dl>
+				<dd> - 2 alias-free waveform oscillators and an additional noise oscillator</dd>
+				<dd> - 2 ENVs and 2 LFOs</dd>
+				<dd> - Intuitive "drag and drop" modulation assignment</dd>
+				<dd> - Fully configurable LFO graphs</dd>
+				<dd> - Classic analog filter</dd>
+				<dd> - 3-slot effect rack</dd>
+				<dd> - 8 built-in effects (Bitcrusher, Chorus, Delay, Groove Delay, Distortion, Filter, Phaser, Reverb)</dd>
+				<dd> - MIDI and MIDI learn support</dd>
+				<dd> - AUv3 support, every knob can be automated by the host program (iOS only)</dd>
+				<dd> - Works great with AUM, Cubasis, Garageband and any DAW with Audio Unit support (iOS only)</dd>
+			</dl>
+		</div>
+	</div>
+	<div class="DownloadMenuContainer">
+		<div class="DownloadMenuTitle">
+			Download
+			<div class="BillboardSubTitleLine"></div>
+		</div>
+		<div class="DownloadMenuLinkSection">
+			<a id="AppleLinkBottom" href="https://apps.apple.com/app/shaper-synthesizer/id1536713443" target="_blank">
+				<img class="LinkSectionIconBottom" src="../static/image/app-store-badge.svg">
+			</a>
+			<a id="GoogleLinkBottom" href="https://play.google.com/store/apps/details?id=com.autumnrockdev.shaper" target="_blank">
+				<img class="LinkSectionIconBottom" src="../static/image/google-play-badge.svg">
+			</a>
+		</div>
+	</div>
+	<div class="ManualAndCreditsContainer">
+		<div class="ManualAndCreditsTitle">
+			Manual and Credits
+			<div class="BillboardSubTitleLine"></div>
+		</div>
+		<div class="ManualAndCreditsLinkContainer">
+			<a class="ManualAndCreditsButton" href="https://autumnrock.dev/shaper/manual/shaper_1.1_manual.pdf" target="_blank">Manual</a>
+			<a class="ManualAndCreditsButton" href="https://autumnrock.dev/shaper/credits" target="_blank">Credits</a>
+		</div>
+	</div>
 </body>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152724195-1"></script>
@@ -1002,4 +1002,5 @@ gtag('js', new Date());
 
 gtag('config', 'UA-152724195-1');
 </script>
+
 </html>
