@@ -135,13 +135,12 @@
 
   .LinkSection {
     display: inline-block;
-    background: rgba(0, 0, 0, 0.65);
+    background: transparent;
     cursor: pointer;
     user-select: none;
     text-decoration: none;
-    color: white;
     position: relative;
-    height: 60px;
+    height: 40px;
   }
 
   .LinkSection:hover {
@@ -150,12 +149,22 @@
   }
 
   .LinkSectionIcon {
+    border-radius: 6px;
+    transition: 500ms;
+    opacity: 0.7;
+    margin: 8px;
     display: inline-block;
     height: 100%;
   }
 
-  .appleLink {
-    padding: 9px;
+  .LinkSectionIcon:hover {
+    box-shadow: 0px 0px 15px #FFF;
+    opacity: 1;
+  }
+
+  .LinkSectionIcon:active {
+    box-shadow: 0px 0px 15px #FFF;
+    opacity: 1;
   }
 
   .WorkText {
@@ -293,6 +302,10 @@
       height: 20px;
 
     }
+
+    .LinkSectionIcon{
+      opacity: 1;
+    }
   }
 
   @media only screen and (max-width: 400px) {
@@ -353,10 +366,10 @@
               <div class="WorkCover">
                 <div class="WorkCoverImage" style="background-image: url(./static/cover/shaper.jpg);">
                   <a class="LinkSection appleLink" href="https://apps.apple.com/app/shaper-synthesizer/id1536713443" target="_blank">
-                    <img class="LinkSectionIcon" src="./static/image/apple-app-store.svg"></img>
+                    <img class="LinkSectionIcon" src="./static/image/app-store-badge.svg"></img>
                   </a>
                   <a class="LinkSection" href="https://play.google.com/store/apps/details?id=com.autumnrockdev.shaper" target="_blank">
-                    <img class="LinkSectionIcon" src="./static/image/google-play-badge.png"></img>
+                    <img class="LinkSectionIcon" src="./static/image/google-play-badge.svg"></img>
                   </a>
                 </div>
               </div>
@@ -376,10 +389,10 @@
               <div class="WorkCover">
                 <div class="WorkCoverImage" style="background-image: url(./static/cover/nail.jpg);">
                   <a class="LinkSection appleLink" href="https://apps.apple.com/app/id1486640549" target="_blank">
-                    <img class="LinkSectionIcon" src="./static/image/apple-app-store.svg"></img>
+                    <img class="LinkSectionIcon" src="./static/image/app-store-badge.svg"></img>
                   </a>
                   <a class="LinkSection" href="https://play.google.com/store/apps/details?id=com.autumnrockdev.nailthepitch&hl=en" target="_blank">
-                    <img class="LinkSectionIcon" src="./static/image/google-play-badge.png"></img>
+                    <img class="LinkSectionIcon" src="./static/image/google-play-badge.svg"></img>
                   </a>
                 </div>
               </div>
@@ -394,10 +407,10 @@
               <div class="WorkCover">
                 <div class="WorkCoverImage" style="background-image: url(./static/cover/polyrhythm.jpg);">
                   <a class="LinkSection appleLink" href="https://apps.apple.com/app/polyrhythm-poly-metronome/id1522128691" target="_blank">
-                    <img class="LinkSectionIcon" src="./static/image/apple-app-store.svg"></img>
+                    <img class="LinkSectionIcon" src="./static/image/app-store-badge.svg"></img>
                   </a>
                   <a class="LinkSection" href="https://play.google.com/store/apps/details?id=com.autumnrockdev.polyrhythm" target="_blank">
-                    <img class="LinkSectionIcon" src="./static/image/google-play-badge.png"></img>
+                    <img class="LinkSectionIcon" src="./static/image/google-play-badge.svg"></img>
                   </a>
                 </div>
               </div>
@@ -412,7 +425,7 @@
               <div class="WorkCover">
                 <div class="WorkCoverImage" style="background-image: url(./static/cover/wave.jpg);">
                   <a class="LinkSection" href="https://play.google.com/store/apps/details?id=com.autumnrockdev.waveform&hl=en" target="_blank">
-                    <img class="LinkSectionIcon" src="./static/image/google-play-badge.png"></img>
+                    <img class="LinkSectionIcon" src="./static/image/google-play-badge.svg"></img>
                   </a>
                 </div>
               </div>
