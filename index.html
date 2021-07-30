@@ -228,30 +228,31 @@
 	}
 
 	.ContactsSection {
-		padding: 0px 10px 200px 10px;
-		width: 90%;
-		margin: 0 auto;
+		padding: 10px 10px 100px 10px;
 	}
 
-	.ContactMethodWrapper {
-		padding: 20px 10px;
-	}
-
-	.ContactMethod {
-		text-align: center;
-		font-size: 24px;
+	.ContactList {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 
 	.SocialLink {
-		display: inline-block;
-		color: #FFF !important;
-		text-decoration: underline;
+		margin: 30px;
 	}
 
-	.SocialLink:hover {
-		text-decoration: underline;
-		cursor: pointer;
-		color: #CCC !important;
+	.SocialLinkIcon {
+		width: 90px;
+		height: auto;
+		transition: 500ms;
+	}
+
+	.SocialLinkIcon:hover {
+		-ms-transform: scale(1.3);
+		/* IE 9 */
+		-webkit-transform: scale(1.3);
+		/* Safari 3-8 */
+		transform: scale(1.3);
 	}
 
 	@media only screen and (min-width: 1200px) and (max-width: 1700px) {
@@ -286,7 +287,7 @@
 			padding: 0px 10px;
 		}
 
-		.ContactButton{
+		.ContactButton {
 			opacity: 1;
 		}
 
@@ -301,6 +302,14 @@
 		.LinkSectionIcon {
 			opacity: 1;
 			margin: 4px;
+		}
+
+		.SocialLink {
+			margin: 10px;
+		}
+
+		.SocialLinkIcon {
+			width: 60px;
 		}
 	}
 
@@ -434,25 +443,16 @@
 		<div class="SectionInnerWrapper">
 			<div class="SectionHeader">Contact</div>
 			<div class="ContactsSection">
-				<div class="ContactsList row">
-					<div class="ContactMethodWrapper col-xl-12">
-						<div class="ContactMethod">
-							Facebook: <a class="SocialLink" href="https://www.facebook.com/AutumnRockDev" target="_blank">@AutumnRockDev</a>
-						</div>
-					</div>
-					<div class="ContactMethodWrapper col-xl-12">
-						<div class="ContactMethod">
-							Twitter: <a class="SocialLink" href="https://twitter.com/AutumnRockDev" target="_blank">@AutumnRockDev</a>
-						</div>
-					</div>
-					<div class="ContactMethodWrapper col-xl-12">
-						<div class="ContactMethod">
-							Email:
-							<a class="SocialLink" href="mailto: autumnrockdev@gmail.com">
-								autumnrockdev@gmail.com
-							</a>
-						</div>
-					</div>
+				<div class="ContactList">
+					<a class="SocialLink" href="https://twitter.com/AutumnRockDev" target="_blank">
+						<img class="SocialLinkIcon" src="./static/image/Twitter.svg"></img>
+					</a>
+					<a class="SocialLink" href="https://www.facebook.com/AutumnRockDev" target="_blank">
+						<img class="SocialLinkIcon" src="./static/image/Facebook.svg"></img>
+					</a>
+					<a class="SocialLink" href="mailto: autumnrockdev@gmail.com">
+						<img class="SocialLinkIcon" src="./static/image/E-mail.svg"></img>
+					</a>
 				</div>
 			</div>
 		</div>
