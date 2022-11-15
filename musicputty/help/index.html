@@ -2,10 +2,181 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
+	<title>MusicPutty Manuel</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		.SectionContainer {
+			padding: 10px 0px;
+		}
+		.Section {
+			padding: 20px 20px;
+		}
+		.SectionTtitle {
+			padding: 8px 0px;
+			margin: 0px auto 20px auto;
+			max-width: 800px;
+			text-align: center;
+			color: #000;
+			font-family: sans-serif;
+			border-bottom: 2px solid #333;
+		}
+		.SectionTextDescription {
+			max-width: 800px;
+			margin: 0 auto;
+			font-size: 18px;
+			font-family: sans-serif;
+			color: #333;
+		}
+		.ImageWrapper { 
+			text-align: center;
+			font-family: sans-serif;
+		}
+		.ImageWrapper img {
+			width: 100%;
+			max-width: 800px;
+		}
+		.ImageWrapperSmall img {
+			width: 100%;
+			max-width: 500px;
+		}
+		.SectionBulletPointsContainer {
+			padding: 10px 20px;
+			max-width: 600px;
+			margin: 0 auto;
+		}
+		.SectionBulletPointsContainer .SectionBulletPoint {
+			padding: 10px 0px;
+			font-size: 18px;
+			margin: 10px 0;
+			font-family: sans-serif;
+		}
+		.SectionBulletPointsContainer .BulletPointNumber {
+			display: inline-block;
+			text-align: center;
+			width: 30px;
+			height: 34px;
+			background-color: #FB6063;
+			color: white;
+			font-size: 22px;
+			border-radius: 5px;
+		}
+		.SupportSection {
+			text-align: center;
+		}
+	</style>
 </head>
 <body>
-	<h1>coming soon</h1>
+	<div class=SectionContainer>
+		
+		<div class="Section">
+			<h1 class="SectionTtitle">Quick Start Guide</h1>
+			<div class="SectionTextDescription">
+				MusicPutty is an advanced note-based pitch editor designed for iOS. The program's algorithm can analyze the pitch information of your vocal takes and give you the ability to edit them note by note. This may sound complicated, but fear not, the program is designed to be as easy as possible, and there are only two main sections in MusicPutty that you need to be aware of. Those are the "Project Window" and the "Pitch Editing Window". 
+			</div>
+		</div>
+
+
+		<div class="Section">
+			<h1 class="SectionTtitle">Project Window</h1>
+			<div class="SectionTextDescription">
+				 Project window is where you can add tracks, record vocal clips and move those clips around across the timeline.
+			</div>
+			<div class="ImageWrapper">
+				<img src="../../static/image/musicputty/mputty_v1_manuel_1.jpg">
+			</div>
+			<div class="SectionBulletPointsContainer">
+				<div class="SectionBulletPoint">
+					<div class="BulletPointNumber">1</div>
+					<span class="BulletPointBody">Menu: Contains buttons for loading, saving and exporting projects. </span>
+				</div>
+				<div class="SectionBulletPoint">
+					<div class="BulletPointNumber">2</div>
+					<span class="BulletPointBody">Cursor Reset, Play and Record.</span>
+				</div>
+				<div class="SectionBulletPoint">
+					<div class="BulletPointNumber">3</div>
+					<span class="BulletPointBody">Snap Toggle: Anything you drag will snap to grid once enabled.</span>
+				</div>
+				<div class="SectionBulletPoint">
+					<div class="BulletPointNumber">4</div>
+					<span class="BulletPointBody">Settings: Contains controls for metronome, tempo and time signature.</span>
+				</div>
+				<div class="SectionBulletPoint">
+					<div class="BulletPointNumber">5</div>
+					<span class="BulletPointBody">Track Icon: Click once to select a track, and twice to open its volume settings.</span>
+				</div>
+				<div class="SectionBulletPoint">
+					<div class="BulletPointNumber">6</div>
+					<span class="BulletPointBody">Vocal Clip: Any vocal takes you record will show up in the project window with a miniature view of all the notes inside. You can double-click on it to open the Pitch Editing Window."</span>
+				</div>
+				<div class="SectionBulletPoint">
+					<div class="BulletPointNumber">7</div>
+					<span class="BulletPointBody">Add Track: Click on it to add an empty track or import a backing track.</span>
+				</div>
+				<div class="SectionBulletPoint">
+					<div class="BulletPointNumber">8</div>
+					<span class="BulletPointBody">Backing Track: Any backing tracks you have imported will show up as plain audio clips.</span>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="Section">
+			<h1 class="SectionTtitle">Pitch Editing Window</h1>
+			<div class="SectionTextDescription">
+				Pitch editing window is where you can view and edit all the notes that have been detected inside your vocal clips. To access this page, double-click on any vocal clips you have recorded in the project window.
+			</div>
+			<div class="ImageWrapper ImageWrapperSmall">
+				<img src="../../static/image/musicputty/mputty_v1_manuel_2.jpg">
+			</div>
+			<div class="SectionBulletPointsContainer">
+				<div class="SectionBulletPoint">
+					<div class="BulletPointNumber">1</div>
+					<span class="BulletPointBody">Detected Note: the box shows the rough range of a note, and the line within the box shows the exact pitch at a point in time.</span>
+				</div>
+				<div class="SectionBulletPoint">
+					<div class="BulletPointNumber">2</div>
+					<span class="BulletPointBody">Main Tool: With this tool selected, you can drag a note up or down to change its pitch.</span>
+				</div>		
+				<div class="SectionBulletPoint">
+					<div class="BulletPointNumber">3</div>
+					<span class="BulletPointBody">Note Separation Tool: You can use this tool to separate one note into multiple notes or merge multiple notes into one. (see more information in the screenshot below)</span>
+				</div>			
+			</div>
+			<div class="ImageWrapper">
+				<img src="../../static/image/musicputty/mputty_v1_manuel_3.jpg">
+			</div>
+			<div class="SectionBulletPointsContainer">
+				<div class="SectionBulletPoint">
+					<div class="BulletPointNumber">1</div>
+					<span class="BulletPointBody">Position Handle: Use this handle to set the position where you want to separate the note. Once in place, you can either click on the handle or drag the handle upward to slice the note in half.</span>
+				</div>
+				<div class="SectionBulletPoint">
+					<div class="BulletPointNumber">2</div>
+					<span class="BulletPointBody">Merge Button (Left): Click here to merge the selected note with the note on its left.</span>
+				</div>		
+				<div class="SectionBulletPoint">
+					<div class="BulletPointNumber">3</div>
+					<span class="BulletPointBody">Merge Button (Right): Click here to merge the selected note with the note on its right.</span>
+				</div>				
+			</div>
+		</div>
+	</div>
+
+	<div class="Section SupportSection">
+		Support Email: <a href = "mailto: autumnrockdev@gmail.com">autumnrockdev@gmail.com</a>
+	</div>
 </body>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-152724195-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-152724195-1');
+	</script>
+
 </html>
