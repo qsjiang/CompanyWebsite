@@ -2,10 +2,181 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
+	<title>MusicPutty Manuel</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		.SectionContainer {
+			padding: 10px 0px;
+		}
+		.Section {
+			padding: 20px 20px;
+		}
+		.SectionTtitle {
+			padding: 8px 0px;
+			margin: 0px auto 20px auto;
+			max-width: 800px;
+			text-align: center;
+			color: #000;
+			font-family: sans-serif;
+			border-bottom: 2px solid #333;
+		}
+		.SectionTextDescription {
+			max-width: 800px;
+			margin: 0 auto;
+			font-size: 18px;
+			font-family: sans-serif;
+			color: #333;
+		}
+		.ImageWrapper { 
+			text-align: center;
+			font-family: sans-serif;
+		}
+		.ImageWrapper img {
+			width: 100%;
+			max-width: 800px;
+		}
+		.ImageWrapperSmall img {
+			width: 100%;
+			max-width: 500px;
+		}
+		.SectionBulletPointsContainer {
+			padding: 10px 20px;
+			max-width: 600px;
+			margin: 0 auto;
+		}
+		.SectionBulletPointsContainer .SectionBulletPoint {
+			padding: 10px 0px;
+			font-size: 18px;
+			margin: 10px 0;
+			font-family: sans-serif;
+		}
+		.SectionBulletPointsContainer .BulletPointNumber {
+			display: inline-block;
+			text-align: center;
+			width: 30px;
+			height: 34px;
+			background-color: #FB6063;
+			color: white;
+			font-size: 22px;
+			border-radius: 5px;
+		}
+		.SupportSection {
+			text-align: center;
+			padding-bottom: 50px;
+		}
+	</style>
 </head>
 <body>
-	<h1>coming soon</h1>
+	<div class=SectionContainer>
+		
+		<div class="Section">
+			<h1 class="SectionTtitle">上手指南</h1>
+			<div class="SectionTextDescription">
+				音樂黏土是一款強大的音高編輯器。當你用音樂黏土錄歌的時候程序的算法會分析你人聲的音高並且允許你對每一個音符的音高進行修改。雖然算法這詞聽起來可能有點複雜不過音樂黏土的界面非常簡單，只要了解了下面兩個程序頁面就可以輕鬆使用。
+			</div>
+		</div>
+		<div class="Section">
+			<h1 class="SectionTtitle">工程頁面</h1>
+			<div class="SectionTextDescription">
+				在工程頁面下你可以添加音軌，錄製人聲並擺放已經錄好的片段。
+			</div>
+			<div class="ImageWrapper">
+				<img src="../../static/image/musicputty/mputty_v1_manuel_1.jpg">
+			</div>
+			<div class="SectionBulletPointsContainer">
+				<div class="SectionBulletPoint">
+					<div class="BulletPointNumber">1</div>
+					<span class="BulletPointBody">菜單: 這裡有保存，讀取和導出按鈕。 </span>
+				</div>
+				<div class="SectionBulletPoint">
+					<div class="BulletPointNumber">2</div>
+					<span class="BulletPointBody">指針重置，播放，錄音。</span>
+				</div>
+				<div class="SectionBulletPoint">
+					<div class="BulletPointNumber">3</div>
+					<span class="BulletPointBody">對齊網格: 點開後所拖動的東西會自動對齊網格。</span>
+				</div>
+				<div class="SectionBulletPoint">
+					<div class="BulletPointNumber">4</div>
+					<span class="BulletPointBody">設置: 這裡有節拍器，速度和拍子記號的設置。</span>
+				</div>
+				<div class="SectionBulletPoint">
+					<div class="BulletPointNumber">5</div>
+					<span class="BulletPointBody">音軌圖標: 點一次會選中此音軌，點兩次可以打開音軌的音量設置。</span>
+				</div>
+				<div class="SectionBulletPoint">
+					<div class="BulletPointNumber">6</div>
+					<span class="BulletPointBody">人聲音頻: 人聲音頻上的微型圖展示了音頻裡所有的音符，雙擊人聲音頻可以進入音高編輯頁面。
+					</span>
+				</div>
+				<div class="SectionBulletPoint">
+					<div class="BulletPointNumber">7</div>
+					<span class="BulletPointBody">添加音軌: 點這裡可以添加空音軌和伴奏音頻。</span>
+				</div>
+				<div class="SectionBulletPoint">
+					<div class="BulletPointNumber">8</div>
+					<span class="BulletPointBody">伴奏音頻: 伴奏音頻會以聲波圖的形式顯示在界面上。</span>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="Section">
+			<h1 class="SectionTtitle">音高編輯頁面</h1>
+			<div class="SectionTextDescription">
+				在音高編輯頁面裡你可以對每一個音符的音高進行修改。（通過雙擊人聲音頻來打開該頁面）
+			</div>
+			<div class="ImageWrapper ImageWrapperSmall">
+				<img src="../../static/image/musicputty/mputty_v1_manuel_2.jpg">
+			</div>
+			<div class="SectionBulletPointsContainer">
+				<div class="SectionBulletPoint">
+					<div class="BulletPointNumber">1</div>
+					<span class="BulletPointBody">算法檢測到的音符: 方形的輪廓代表音符的大致音高。輪廓裡的線條代表了在每一時刻的精準音高。</span>
+				</div>
+				<div class="SectionBulletPoint">
+					<div class="BulletPointNumber">2</div>
+					<span class="BulletPointBody">主工具: 用來調整音符音高。</span>
+				</div>		
+				<div class="SectionBulletPoint">
+					<div class="BulletPointNumber">3</div>
+					<span class="BulletPointBody">音符分離工具: 使用這個工具來切分或合併音符。 （具體見下圖）</span>
+				</div>			
+			</div>
+			<div class="ImageWrapper">
+				<img src="../../static/image/musicputty/mputty_v1_manuel_3.jpg">
+			</div>
+			<div class="SectionBulletPointsContainer">
+				<div class="SectionBulletPoint">
+					<div class="BulletPointNumber">1</div>
+					<span class="BulletPointBody">位置標記:移動它來設置你想在哪里切開當前音符。移動到位後點擊位置標記（或者上拉）即可把當前音符一分為二。</span>
+				</div>
+				<div class="SectionBulletPoint">
+					<div class="BulletPointNumber">2</div>
+					<span class="BulletPointBody">合併按鈕（左）: 點這裡可以讓當前音符和左邊的音符合併。</span>
+				</div>		
+				<div class="SectionBulletPoint">
+					<div class="BulletPointNumber">3</div>
+					<span class="BulletPointBody">合併按鈕（右）: 點這裡可以讓當前音符和右邊的音符合併。</span>
+				</div>				
+			</div>
+		</div>
+	</div>
+
+	<div class="Section SupportSection">
+		客服郵箱: <a href = "mailto: autumnrockdev@gmail.com">autumnrockdev@gmail.com</a>
+	</div>
 </body>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-152724195-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-152724195-1');
+	</script>
+
 </html>
