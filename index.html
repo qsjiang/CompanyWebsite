@@ -136,6 +136,10 @@
 			height: 400px;
 		}
 
+		#MusicputtyImg {
+			background-image: url(./static/cover/musicputty.jpg);
+		}
+
 		.LinkSection {
 			display: inline-block;
 			background: transparent;
@@ -263,9 +267,19 @@
 			}
 		}
 
+		@media screen and (min-width:900px) and (max-width:1200px) {
+			#MusicputtyImg {
+				background-image: url(./static/cover/musicputty-small.jpg);
+			}
+		}
+
 		@media only screen and (min-width: 600px) and (max-width: 900px) {
 			.WorkCoverImage {
 				height: 220px;
+			}
+
+			#MusicputtyImg {
+				background-image: url(./static/cover/musicputty-small.jpg);
 			}
 		}
 
@@ -294,6 +308,10 @@
 
 			.WorkCoverImage {
 				height: 200px;
+			}
+
+			#MusicputtyImg {
+				background-image: url(./static/cover/musicputty-small.jpg);
 			}
 
 			.BillBackgroundBottom {
@@ -363,6 +381,23 @@
 			<div class="SectionInnerWrapper">
 				<div class="SectionHeader">Our Apps</div>
 				<div class="WorkCardContainer row">
+					<div class="WorkCardWrapper col-xl-12 col-lg-12">
+						<div class="WorkCard">
+							<div class="WorkCover">
+								<div id="MusicputtyImg" class="WorkCoverImage">
+									<a class="LinkSection" href="https://apps.apple.com/app/id6444390100"
+										target="_blank">
+										<img class="LinkSectionIcon" src="./static/image/app-store-badge.svg"></img>
+									</a>
+								</div>
+							</div>
+							<div class="WorkText">
+								<div class="WorkTitle">MusicPutty - Pitch Editor</div>
+								<div class="WorkDescription">Finally a note-based vocal pitch editor for iOS!
+								</div>
+							</div>
+						</div>
+					</div>
 					<div class="WorkCardWrapper col-xl-6 col-lg-12">
 						<div class="WorkCard">
 							<div class="WorkCover">
