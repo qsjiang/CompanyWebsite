@@ -7,721 +7,721 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 	<title>Shaper - Synthesizer</title>
 	<style type="text/css">
-	html {
-		scroll-behavior: smooth;
-	}
+		html {
+			scroll-behavior: smooth;
+		}
 
-	body {
-		background-color: #101010;
-		padding: 0;
-		margin: 0;
-		font-family: "Titillium Web";
-		color: white;
-		line-height: 2;
-		text-rendering: optimizeLegibility;
-	}
+		body {
+			background-color: #101010;
+			padding: 0;
+			margin: 0;
+			font-family: "Titillium Web";
+			color: white;
+			line-height: 2;
+			text-rendering: optimizeLegibility;
+		}
 
-	.row {
-		margin-right: 0px;
-		margin-left: 0px;
-	}
+		.row {
+			margin-right: 0px;
+			margin-left: 0px;
+		}
 
-	.BillboardBackground {
-		background-size: cover;
-		background-position: center;
-		position: relative;
-		background-image: linear-gradient(rgb(10, 25, 49), rgb(16, 16, 16));
-	}
+		.BillboardBackground {
+			background-size: cover;
+			background-position: center;
+			position: relative;
+			background-image: linear-gradient(rgb(10, 25, 49), rgb(16, 16, 16));
+		}
 
-	.Navbar {
-		padding: 0px;
-		margin: 0px;
-		position: relative;
-		top: 0;
-		right: 0;
-		left: 0;
-		z-index: 3;
-	}
+		.Navbar {
+			padding: 0px;
+			margin: 0px;
+			position: relative;
+			top: 0;
+			right: 0;
+			left: 0;
+			z-index: 3;
+		}
 
-	.NavbarContainer {
-		display: flex;
-		justify-content: space-between;
-		padding-left: 30px;
-		padding-right: 30px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.ButtonSection {
-		display: flex;
-		padding-top: 20px;
-		padding-bottom: 20px;
-		padding-right: 2px;
-		margin: 0px;
-	}
-
-	#HomeButton {
-		color: white;
-		font-size: 17px;
-		line-height: 1.5;
-		text-align: center;
-		text-decoration: none;
-		border: 2px solid white;
-		border-radius: 8px;
-		padding: 8px 36px;
-		box-shadow: 0px 0px 2px #FFF;
-		background-color: transparent;
-		opacity: 0.7;
-		transition: 500ms;
-	}
-
-	#HomeButton:hover {
-		box-shadow: 0px 0px 15px #FFF;
-		text-shadow: 0 0 6px #FFF;
-		opacity: 1;
-	}
-
-	#HomeButton:active {
-		box-shadow: 0px 0px 15px #FFF;
-		opacity: 1;
-	}
-
-	.LinkSection {
-		padding-top: 20px;
-		padding-bottom: 20px;
-		padding-left: 2px;
-	}
-
-	#AppleLink {
-		padding-right: 2px;
-		text-decoration: none;
-	}
-
-	#GoogleLink {
-		padding-left: 2px;
-		text-decoration: none;
-	}
-
-	.LinkSectionIcon {
-		display: inline-block;
-		border-radius: 8px;
-		opacity: 0.7;
-		transition: 500ms;
-	}
-
-	.LinkSectionIcon:hover {
-		box-shadow: 0px 0px 15px #FFF;
-		opacity: 1;
-	}
-
-	.LinkSectionIcon:active {
-		box-shadow: 0px 0px 15px #FFF;
-		opacity: 1;
-	}
-
-	.Billboard {
-		padding: 60px 0px 10px 0px;
-	}
-
-	.IconSection {
-		margin-bottom: 0px;
-	}
-
-	.BillboardIcon {
-		display: block;
-		margin-top: 20px;
-		margin-bottom: 20px;
-		margin-left: auto;
-		margin-right: auto;
-		max-width: 300px;
-		width: 50%;
-		background-color: transparent;
-		box-shadow: 0 0 80px 10px rgb(0, 0, 0);
-		border-radius: 30px;
-	}
-
-	.BillboardTitle {
-		text-align: center;
-		font-size: 70px;
-		font-weight: bold;
-		text-shadow: 0 0 6px #FFF;
-	}
-
-	.BillboardSubTitle {
-		padding: 20px 10px 80px 10px;
-		text-align: center;
-	}
-
-	.BillboardSubTitleText {
-		font-size: 30px;
-	}
-
-	.BillboardSubTitleLine {
-		max-width: 1000px;
-		margin-top: 5px;
-		background-color: #233E8B;
-		box-shadow: 0 0 8px #233E8B;
-		width: 70%;
-		margin-left: auto;
-		margin-right: auto;
-		height: 2px;
-		border-radius: 100%;
-	}
-
-	.Introduction {
-		min-height: 100%;
-		overflow: hidden;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.IntroContainer {
-		max-width: 1300px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.IntroCard {
-		background-color: #000000;
-		justify-content: space-around;
-		margin: 40px 40px 40px 40px;
-		padding: 20px;
-	}
-
-	.CardText {
-		position: relative;
-	}
-
-	.CardTextTitle {
-		text-align: center;
-		font-size: 30px;
-		font-weight: bold;
-		margin-top: 20px;
-		margin-bottom: 30px;
-		line-height: normal;
-	}
-
-	.CardTextDescription {
-		padding: 0 20px 0 20px;
-		font-weight: lighter;
-		font-size: 24px;
-		color: #DDDDDD;
-	}
-
-	.left-text {
-		padding: 0px 20px 0px 20px;
-	}
-
-	.left-text::before {
-		content: " ";
-		width: 2px;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0px;
-		box-shadow: 0 0 12px #E99539;
-		background-color: #E99539;
-	}
-
-	.right-text {
-		padding: 0px 20px 0px 20px;
-	}
-
-	.right-text::after {
-		content: " ";
-		width: 2px;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		right: 0px;
-		box-shadow: 0 0 12px #E99539;
-		background-color: #E99539;
-	}
-
-	.CardImgContainer {
-		padding: 0px 0px 0px 0px;
-	}
-
-	.CardImgContainerIphone {
-		flex-wrap: wrap;
-		display: inline-flex;
-		justify-content: space-around;
-	}
-
-	.CardImg {
-		display: block;
-		width: 100%;
-		height: auto;
-		z-index: -1;
-	}
-
-	.IphonePortrait {
-		display: flex;
-		justify-content: space-around;
-	}
-
-	.CardImgIphone {
-		width: 48%;
-		align-self: flex-start;
-	}
-
-	.CardImgIphoneLandscape {
-		width: 100%;
-		padding-top: 10px;
-		z-index: -1;
-		height: auto;
-	}
-
-	.Embed {
-		margin: 100px 0 100px 0;
-	}
-
-	.EmbedIntro {
-		text-align: center;
-		font-size: 36px;
-		text-shadow: 0 0 4px #FFF;
-	}
-
-	.Videos {
-		padding-top: 40px;
-	}
-
-	.YoutubeVideo {
-		padding: 20px;
-		height: 450px;
-	}
-
-	.FeaturesMenuContainer {
-		background-color: #000000;
-		max-width: 1300px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.FeaturesMenuTitle {
-		padding-top: 36px;
-		text-align: center;
-		font-size: 40px;
-		text-shadow: 0 0 4px #FFF;
-	}
-
-	.FeaturesMenuTitleLine {
-		background-color: #233E8B;
-		box-shadow: 0 0 8px #233E8B;
-		width: 70%;
-		margin-left: auto;
-		margin-right: auto;
-		height: 2px;
-		border-radius: 100%;
-		font-weight: bold;
-	}
-
-	.FeaturesMenuDescription {
-		padding: 40px 120px 40px 120px;
-		text-align: left;
-		font-size: 22px;
-		color: #DDDDDD;
-		font-weight: lighter;
-	}
-
-	.DownloadMenuContainer {
-		max-width: 1300px;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 40px;
-	}
-
-	.DownloadMenuTitle {
-		font-size: 36px;
-		padding-top: 100px;
-		text-align: center;
-		font-size: 40px;
-		text-shadow: 0 0 4px #FFF;
-	}
-
-	.DownloadMenuLinkSection {
-		padding-top: 30px;
-		text-align: center;
-	}
-
-	#AppleLinkBottom {
-		text-decoration: none;
-	}
-
-	#GoogleLinkBottom {
-		text-decoration: none;
-	}
-
-	.LinkSectionIconBottom {
-		margin-left: 20px;
-		margin-right: 20px;
-		display: inline-block;
-		border-radius: 8px;
-		opacity: 0.7;
-		transition: 500ms;
-		width: 256px;
-		height: 80px;
-	}
-
-	.LinkSectionIconBottom:hover {
-		box-shadow: 0px 0px 15px #FFF;
-		opacity: 1;
-	}
-
-	.LinkSectionIconBottom:active {
-		box-shadow: 0px 0px 15px #FFF;
-		opacity: 1;
-	}
-
-	.ManualAndCreditsContainer {
-		max-width: 1300px;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 120px;
-	}
-
-	.ManualAndCreditsTitle {
-		font-size: 36px;
-		padding-top: 40px;
-		text-align: center;
-		font-size: 40px;
-		text-shadow: 0 0 4px #FFF;
-	}
-
-	.ManualAndCreditsLinkContainer {
-		padding-top: 40px;
-		margin-right: auto;
-		margin-left: auto;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		text-align: center;
-	}
-
-	.ManualAndCreditsButton {
-		margin-left: 40px;
-		margin-right: 40px;
-		color: white;
-		font-size: 24px;
-		line-height: 1.5;
-		text-align: center;
-		text-decoration: none;
-		border: 2px solid white;
-		padding: 10px 60px;
-		box-shadow: 0px 0px 2px #FFF;
-		background-color: transparent;
-		opacity: 0.7;
-		transition: 500ms;
-	}
-
-	.ManualAndCreditsButton:hover {
-		color: white;
-		text-decoration: none;
-		box-shadow: 0px 0px 15px #FFF;
-		text-shadow: 0 0 6px #FFF;
-		opacity: 1;
-	}
-
-	.ManualAndCreditsButton:active {
-		color: white;
-		text-decoration: none;
-		box-shadow: 0px 0px 15px #FFF;
-		opacity: 1;
-	}
-
-	@media only screen and (min-width: 1400px) {
 		.NavbarContainer {
-			max-width: 1400px;
+			display: flex;
+			justify-content: space-between;
+			padding-left: 30px;
+			padding-right: 30px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.ButtonSection {
+			display: flex;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			padding-right: 2px;
+			margin: 0px;
+		}
+
+		#HomeButton {
+			color: white;
+			font-size: 17px;
+			line-height: 1.5;
+			text-align: center;
+			text-decoration: none;
+			border: 2px solid white;
+			border-radius: 8px;
+			padding: 8px 36px;
+			box-shadow: 0px 0px 2px #FFF;
+			background-color: transparent;
+			opacity: 0.7;
+			transition: 500ms;
+		}
+
+		#HomeButton:hover {
+			box-shadow: 0px 0px 15px #FFF;
+			text-shadow: 0 0 6px #FFF;
+			opacity: 1;
+		}
+
+		#HomeButton:active {
+			box-shadow: 0px 0px 15px #FFF;
+			opacity: 1;
+		}
+
+		.LinkSection {
+			padding-top: 20px;
+			padding-bottom: 20px;
+			padding-left: 2px;
+		}
+
+		#AppleLink {
+			padding-right: 2px;
+			text-decoration: none;
+		}
+
+		#GoogleLink {
+			padding-left: 2px;
+			text-decoration: none;
+		}
+
+		.LinkSectionIcon {
+			display: inline-block;
+			border-radius: 8px;
+			opacity: 0.7;
+			transition: 500ms;
+		}
+
+		.LinkSectionIcon:hover {
+			box-shadow: 0px 0px 15px #FFF;
+			opacity: 1;
+		}
+
+		.LinkSectionIcon:active {
+			box-shadow: 0px 0px 15px #FFF;
+			opacity: 1;
 		}
 
 		.Billboard {
-			max-width: 1400px;
-			margin-left: auto;
-			margin-right: auto;
+			padding: 60px 0px 10px 0px;
 		}
 
-		.Videos {
-			max-width: 1600px;
-			margin-left: auto;
-			margin-right: auto;
-		}
-	}
-
-	@media only screen and (max-width: 1200px) {
-		.BillboardIcon {
-			max-width: 260px;
-			margin-top: 0px;
+		.IconSection {
 			margin-bottom: 0px;
 		}
 
+		.BillboardIcon {
+			display: block;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 300px;
+			width: 50%;
+			background-color: transparent;
+			box-shadow: 0 0 80px 10px rgb(0, 0, 0);
+			border-radius: 30px;
+		}
+
+		.BillboardTitle {
+			text-align: center;
+			font-size: 70px;
+			font-weight: bold;
+			text-shadow: 0 0 6px #FFF;
+		}
+
+		.BillboardSubTitle {
+			padding: 20px 10px 80px 10px;
+			text-align: center;
+		}
+
+		.BillboardSubTitleText {
+			font-size: 30px;
+		}
+
+		.BillboardSubTitleLine {
+			max-width: 1000px;
+			margin-top: 5px;
+			background-color: #233E8B;
+			box-shadow: 0 0 8px #233E8B;
+			width: 70%;
+			margin-left: auto;
+			margin-right: auto;
+			height: 2px;
+			border-radius: 100%;
+		}
+
+		.Introduction {
+			min-height: 100%;
+			overflow: hidden;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.IntroContainer {
+			max-width: 1300px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
 		.IntroCard {
-			padding-left: 60px;
-			padding-right: 60px;
-			margin-left: 80px;
-			margin-right: 80px;
+			background-color: #000000;
+			justify-content: space-around;
+			margin: 40px 40px 40px 40px;
+			padding: 20px;
 		}
 
 		.CardText {
-			padding-top: 20px;
-			padding-right: 0px;
-			padding-left: 0px;
-			padding-bottom: 20px;
+			position: relative;
 		}
 
 		.CardTextTitle {
-			margin-top: 10px;
-			margin-bottom: 10px;
+			text-align: center;
+			font-size: 30px;
+			font-weight: bold;
+			margin-top: 20px;
+			margin-bottom: 30px;
+			line-height: normal;
 		}
 
 		.CardTextDescription {
-			padding-left: 0px;
-			padding-right: 0px;
+			padding: 0 20px 0 20px;
+			font-weight: lighter;
+			font-size: 24px;
+			color: #DDDDDD;
+		}
+
+		.left-text {
+			padding: 0px 20px 0px 20px;
 		}
 
 		.left-text::before {
-			width: 100%;
-			height: 2px;
-			top: 5px;
+			content: " ";
+			width: 2px;
+			height: 100%;
+			position: absolute;
+			top: 0;
 			left: 0px;
+			box-shadow: 0 0 12px #E99539;
+			background-color: #E99539;
+		}
+
+		.right-text {
+			padding: 0px 20px 0px 20px;
 		}
 
 		.right-text::after {
-			width: 100%;
-			height: 2px;
-			top: 5px;
-			left: 0px;
+			content: " ";
+			width: 2px;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			right: 0px;
+			box-shadow: 0 0 12px #E99539;
+			background-color: #E99539;
+		}
+
+		.CardImgContainer {
+			padding: 0px 0px 0px 0px;
+		}
+
+		.CardImgContainerIphone {
+			flex-wrap: wrap;
+			display: inline-flex;
+			justify-content: space-around;
 		}
 
 		.CardImg {
 			display: block;
 			width: 100%;
-			margin: 0 auto;
+			height: auto;
+			z-index: -1;
 		}
 
-		.YoutubeVideo {
-			display: block;
-			margin: 0 auto;
-			width: 800px;
-			height: 450px;
-		}
-	}
-
-	@media only screen and (max-width: 1000px) {
-		.YoutubeVideo {
-			width: 700px;
-			height: 394px;
+		.IphonePortrait {
+			display: flex;
+			justify-content: space-around;
 		}
 
-		.FeaturesMenuContainer {
-			margin-right: 80px;
-			margin-left: 80px;
+		.CardImgIphone {
+			width: 48%;
+			align-self: flex-start;
 		}
 
-		.FeaturesMenuTitle {
-			font-size: 36px;
+		.CardImgIphoneLandscape {
+			width: 100%;
+			padding-top: 10px;
+			z-index: -1;
+			height: auto;
 		}
 
-		.FeaturesMenuDescription {
-			padding-left: 80px;
-			padding-right: 80px;
-			font-size: 20px;
-		}
-
-		.DownloadMenuTitle {
-			font-size: 36px;
-		}
-
-		.ManualAndCreditsTitle {
-			font-size: 36px;
-		}
-	}
-
-	@media only screen and (max-width: 800px) {
-		.BillboardTitle {
-			font-size: 60px;
-		}
-
-		.BillboardSubTitle {
-			padding-bottom: 40px;
-		}
-
-		.BillboardSubTitleText {
-			font-size: 24px;
-		}
-
-		.IntroCard {
-			padding-left: 40px;
-			padding-right: 40px;
-			margin-left: 60px;
-			margin-right: 60px;
-		}
-
-		.CardTextTitle {
-			font-size: 24px;
-			margin-top: 0px;
-			margin-bottom: 16px;
-		}
-
-		.CardTextDescription {
-			font-size: 18px;
-			padding-right: 10px;
-			padding-left: 10px;
+		.Embed {
+			margin: 100px 0 100px 0;
 		}
 
 		.EmbedIntro {
+			text-align: center;
 			font-size: 36px;
+			text-shadow: 0 0 4px #FFF;
+		}
+
+		.Videos {
+			padding-top: 40px;
 		}
 
 		.YoutubeVideo {
-			width: 620px;
-			height: 349px;
+			padding: 20px;
+			height: 450px;
 		}
 
 		.FeaturesMenuContainer {
-			margin-left: 60px;
-			margin-right: 60px;
+			background-color: #000000;
+			max-width: 1300px;
+			margin-left: auto;
+			margin-right: auto;
 		}
 
 		.FeaturesMenuTitle {
-			padding-top: 20px;
+			padding-top: 36px;
+			text-align: center;
+			font-size: 40px;
+			text-shadow: 0 0 4px #FFF;
+		}
+
+		.FeaturesMenuTitleLine {
+			background-color: #233E8B;
+			box-shadow: 0 0 8px #233E8B;
+			width: 70%;
+			margin-left: auto;
+			margin-right: auto;
+			height: 2px;
+			border-radius: 100%;
+			font-weight: bold;
 		}
 
 		.FeaturesMenuDescription {
-			padding-left: 60px;
-			padding-right: 60px;
-			font-size: 18px;
+			padding: 40px 120px 40px 120px;
+			text-align: left;
+			font-size: 22px;
+			color: #DDDDDD;
+			font-weight: lighter;
 		}
 
-		.LinkSectionIconBottom {
-			margin-bottom: 20px;
-		}
-
-		.ManualAndCreditsButton {
+		.DownloadMenuContainer {
+			max-width: 1300px;
+			margin-left: auto;
+			margin-right: auto;
 			margin-bottom: 40px;
 		}
 
 		.DownloadMenuTitle {
-			padding-top: 20px;
-		}
-
-		.ManualAndCreditsTitle {
-			padding-top: 20px;
-		}
-	}
-
-	@media only screen and (max-width: 500px) {
-		.NavbarContainer {
-			padding-left: 12px;
-			padding-right: 12px;
-		}
-
-		#HomeButton {
-			font-size: 14px;
-			padding: 8px 16px;
-			opacity: 1;
-		}
-
-		.LinkSection {
-			height: 80px;
-		}
-
-		.LinkSectionIcon {
-			height: 40px;
-			opacity: 1;
-		}
-
-		.Billboard {
-			padding-top: 30px;
-		}
-
-		.BillboardIcon {
-			max-width: 160px;
-		}
-
-		.BillboardTitle {
+			font-size: 36px;
+			padding-top: 100px;
+			text-align: center;
 			font-size: 40px;
+			text-shadow: 0 0 4px #FFF;
 		}
 
-		.BillboardSubTitleText {
-			font-size: 16px;
-		}
-
-		.IntroCard {
-			padding-left: 20px;
-			padding-right: 20px;
-			margin-left: 20px;
-			margin-right: 20px;
-		}
-
-		.CardTextTitle {
-			font-size: 20px;
-			margin-top: 0px;
-			margin-bottom: 10px;
-		}
-
-		.CardTextDescription {
-			font-size: 16px;
-			padding-left: 0px;
-			padding-right: 0px;
-		}
-
-		.Embed {
-			margin: 40px 0 40px 0;
-		}
-
-		.EmbedIntro {
-			font-size: 24px;
-		}
-
-		.Videos {
+		.DownloadMenuLinkSection {
 			padding-top: 30px;
+			text-align: center;
 		}
 
-		.YoutubeVideo {
-			width: 320px;
-			height: 180px;
+		#AppleLinkBottom {
+			text-decoration: none;
 		}
 
-		.FeaturesMenuContainer {
-			margin-left: 20px;
-			margin-right: 20px;
-		}
-
-		.FeaturesMenuTitle {
-			font-size: 24px;
-			padding-top: 18px;
-		}
-
-		.FeaturesMenuDescription {
-			padding-left: 20px;
-			padding-right: 20px;
-			font-size: 16px;
-		}
-
-		.DownloadMenuTitle {
-			font-size: 24px;
-			padding-top: 18px;
+		#GoogleLinkBottom {
+			text-decoration: none;
 		}
 
 		.LinkSectionIconBottom {
-			height: 40px;
-			width: 128px;
+			margin-left: 20px;
+			margin-right: 20px;
+			display: inline-block;
+			border-radius: 8px;
+			opacity: 0.7;
+			transition: 500ms;
+			width: 256px;
+			height: 80px;
+		}
+
+		.LinkSectionIconBottom:hover {
+			box-shadow: 0px 0px 15px #FFF;
 			opacity: 1;
+		}
+
+		.LinkSectionIconBottom:active {
+			box-shadow: 0px 0px 15px #FFF;
+			opacity: 1;
+		}
+
+		.ManualAndCreditsContainer {
+			max-width: 1300px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 120px;
 		}
 
 		.ManualAndCreditsTitle {
-			font-size: 24px;
-			padding-top: 18px;
+			font-size: 36px;
+			padding-top: 40px;
+			text-align: center;
+			font-size: 40px;
+			text-shadow: 0 0 4px #FFF;
+		}
+
+		.ManualAndCreditsLinkContainer {
+			padding-top: 40px;
+			margin-right: auto;
+			margin-left: auto;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			text-align: center;
 		}
 
 		.ManualAndCreditsButton {
-			font-size: 18px;
-			padding: 8px 40px;
-			margin-left: 20px;
-			margin-right: 20px;
+			margin-left: 40px;
+			margin-right: 40px;
+			color: white;
+			font-size: 24px;
+			line-height: 1.5;
+			text-align: center;
+			text-decoration: none;
+			border: 2px solid white;
+			padding: 10px 60px;
+			box-shadow: 0px 0px 2px #FFF;
+			background-color: transparent;
+			opacity: 0.7;
+			transition: 500ms;
+		}
+
+		.ManualAndCreditsButton:hover {
+			color: white;
+			text-decoration: none;
+			box-shadow: 0px 0px 15px #FFF;
+			text-shadow: 0 0 6px #FFF;
 			opacity: 1;
 		}
-	}
+
+		.ManualAndCreditsButton:active {
+			color: white;
+			text-decoration: none;
+			box-shadow: 0px 0px 15px #FFF;
+			opacity: 1;
+		}
+
+		@media only screen and (min-width: 1400px) {
+			.NavbarContainer {
+				max-width: 1400px;
+			}
+
+			.Billboard {
+				max-width: 1400px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.Videos {
+				max-width: 1600px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
+		@media only screen and (max-width: 1200px) {
+			.BillboardIcon {
+				max-width: 260px;
+				margin-top: 0px;
+				margin-bottom: 0px;
+			}
+
+			.IntroCard {
+				padding-left: 60px;
+				padding-right: 60px;
+				margin-left: 80px;
+				margin-right: 80px;
+			}
+
+			.CardText {
+				padding-top: 20px;
+				padding-right: 0px;
+				padding-left: 0px;
+				padding-bottom: 20px;
+			}
+
+			.CardTextTitle {
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+
+			.CardTextDescription {
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+			.left-text::before {
+				width: 100%;
+				height: 2px;
+				top: 5px;
+				left: 0px;
+			}
+
+			.right-text::after {
+				width: 100%;
+				height: 2px;
+				top: 5px;
+				left: 0px;
+			}
+
+			.CardImg {
+				display: block;
+				width: 100%;
+				margin: 0 auto;
+			}
+
+			.YoutubeVideo {
+				display: block;
+				margin: 0 auto;
+				width: 800px;
+				height: 450px;
+			}
+		}
+
+		@media only screen and (max-width: 1000px) {
+			.YoutubeVideo {
+				width: 700px;
+				height: 394px;
+			}
+
+			.FeaturesMenuContainer {
+				margin-right: 80px;
+				margin-left: 80px;
+			}
+
+			.FeaturesMenuTitle {
+				font-size: 36px;
+			}
+
+			.FeaturesMenuDescription {
+				padding-left: 80px;
+				padding-right: 80px;
+				font-size: 20px;
+			}
+
+			.DownloadMenuTitle {
+				font-size: 36px;
+			}
+
+			.ManualAndCreditsTitle {
+				font-size: 36px;
+			}
+		}
+
+		@media only screen and (max-width: 800px) {
+			.BillboardTitle {
+				font-size: 60px;
+			}
+
+			.BillboardSubTitle {
+				padding-bottom: 40px;
+			}
+
+			.BillboardSubTitleText {
+				font-size: 24px;
+			}
+
+			.IntroCard {
+				padding-left: 40px;
+				padding-right: 40px;
+				margin-left: 60px;
+				margin-right: 60px;
+			}
+
+			.CardTextTitle {
+				font-size: 24px;
+				margin-top: 0px;
+				margin-bottom: 16px;
+			}
+
+			.CardTextDescription {
+				font-size: 18px;
+				padding-right: 10px;
+				padding-left: 10px;
+			}
+
+			.EmbedIntro {
+				font-size: 36px;
+			}
+
+			.YoutubeVideo {
+				width: 620px;
+				height: 349px;
+			}
+
+			.FeaturesMenuContainer {
+				margin-left: 60px;
+				margin-right: 60px;
+			}
+
+			.FeaturesMenuTitle {
+				padding-top: 20px;
+			}
+
+			.FeaturesMenuDescription {
+				padding-left: 60px;
+				padding-right: 60px;
+				font-size: 18px;
+			}
+
+			.LinkSectionIconBottom {
+				margin-bottom: 20px;
+			}
+
+			.ManualAndCreditsButton {
+				margin-bottom: 40px;
+			}
+
+			.DownloadMenuTitle {
+				padding-top: 20px;
+			}
+
+			.ManualAndCreditsTitle {
+				padding-top: 20px;
+			}
+		}
+
+		@media only screen and (max-width: 500px) {
+			.NavbarContainer {
+				padding-left: 12px;
+				padding-right: 12px;
+			}
+
+			#HomeButton {
+				font-size: 14px;
+				padding: 8px 16px;
+				opacity: 1;
+			}
+
+			.LinkSection {
+				height: 80px;
+			}
+
+			.LinkSectionIcon {
+				height: 40px;
+				opacity: 1;
+			}
+
+			.Billboard {
+				padding-top: 30px;
+			}
+
+			.BillboardIcon {
+				max-width: 160px;
+			}
+
+			.BillboardTitle {
+				font-size: 40px;
+			}
+
+			.BillboardSubTitleText {
+				font-size: 16px;
+			}
+
+			.IntroCard {
+				padding-left: 20px;
+				padding-right: 20px;
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+
+			.CardTextTitle {
+				font-size: 20px;
+				margin-top: 0px;
+				margin-bottom: 10px;
+			}
+
+			.CardTextDescription {
+				font-size: 16px;
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+			.Embed {
+				margin: 40px 0 40px 0;
+			}
+
+			.EmbedIntro {
+				font-size: 24px;
+			}
+
+			.Videos {
+				padding-top: 30px;
+			}
+
+			.YoutubeVideo {
+				width: 320px;
+				height: 180px;
+			}
+
+			.FeaturesMenuContainer {
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+
+			.FeaturesMenuTitle {
+				font-size: 24px;
+				padding-top: 18px;
+			}
+
+			.FeaturesMenuDescription {
+				padding-left: 20px;
+				padding-right: 20px;
+				font-size: 16px;
+			}
+
+			.DownloadMenuTitle {
+				font-size: 24px;
+				padding-top: 18px;
+			}
+
+			.LinkSectionIconBottom {
+				height: 40px;
+				width: 128px;
+				opacity: 1;
+			}
+
+			.ManualAndCreditsTitle {
+				font-size: 24px;
+				padding-top: 18px;
+			}
+
+			.ManualAndCreditsButton {
+				font-size: 18px;
+				padding: 8px 40px;
+				margin-left: 20px;
+				margin-right: 20px;
+				opacity: 1;
+			}
+		}
 	</style>
 </head>
 
@@ -929,12 +929,12 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152724195-1"></script>
 <script>
-window.dataLayer = window.dataLayer || [];
+	window.dataLayer = window.dataLayer || [];
 
-function gtag() { dataLayer.push(arguments); }
-gtag('js', new Date());
+	function gtag() { dataLayer.push(arguments); }
+	gtag('js', new Date());
 
-gtag('config', 'UA-152724195-1');
+	gtag('config', 'UA-152724195-1');
 </script>
 
 </html>
