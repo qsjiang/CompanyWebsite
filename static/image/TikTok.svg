@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="127.001" height="127.001" viewBox="0 0 127.001 127.001">
+  <defs>
+    <filter id="Oval" x="0" y="0" width="127.001" height="127.001" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="TikTok" transform="translate(-207 -491)">
+    <g transform="matrix(1, 0, 0, 1, 207, 491)" filter="url(#Oval)">
+      <ellipse id="Oval-2" data-name="Oval" cx="54.501" cy="54.5" rx="54.501" ry="54.5" transform="translate(9 6)" fill="#323232"/>
+    </g>
+    <path id="tiktok-icon" d="M33.028,0C33.885,7.375,38,11.772,45.158,12.239v8.295c-4.147.405-7.78-.951-12.005-3.508V32.539c0,19.708-21.485,25.866-30.123,11.74C-2.52,35.19.878,19.24,18.684,18.6v8.747a25.762,25.762,0,0,0-4.132,1.013C10.592,29.7,8.347,32.212,8.97,36.64c1.2,8.482,16.761,10.992,15.467-5.582V.016h8.591Z" transform="translate(247.409 526)" fill="#fff" fill-rule="evenodd"/>
+  </g>
+</svg>
