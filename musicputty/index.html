@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<title>MusicPutty - Vocal Tune</title>
+	<style type="text/css">
+		html {
+			scroll-behavior: smooth;
+		}
+
+		body {
+			background-color: #F9F9F9;
+			padding: 0;
+			margin: 0;
+			text-rendering: optimizeLegibility;
+		}
+
+		.row {
+			margin-right: 0;
+			margin-left: 0;
+		}
+
+		.container {
+			max-width: 1400px;
+		}
+
+		.Navebar {}
+
+		.ButtonSection {
+			padding-bottom: 10px;
+			opacity: 0.8;
+			transition: 500ms;
+		}
+
+		.ButtonSection:hover {
+			opacity: 1;
+		}
+
+		#HomeButton {
+			color: black;
+			font-size: 22px;
+			text-align: center;
+			text-decoration: none;
+			margin-left: 10px;
+		}
+
+		#HomeImg {
+			border-radius: 8px;
+			width: 30px;
+			height: auto;
+			margin: 0 10px 8px 0;
+		}
+
+		.Billboard {
+			justify-content: space-around;
+			flex-wrap: wrap;
+			display: flex;
+			padding: 10px;
+			margin-top: 30px;
+			background-color: #FFFFFF;
+		}
+
+		.BillboardIntro {
+			position: relative;
+			padding: 10px 10px 10px 50px;
+			line-height: 1.2;
+		}
+
+		.BillboardIntroTitle {
+			font-size: 60px;
+			margin: 50px 0 50px 0;
+			font-weight: 500;
+		}
+
+		.BillboardIntroSubTitle {
+			font-size: 30px;
+			font-weight: lighter;
+		}
+
+		.BillboardLinkSection {
+			margin: 80px 0 80px 0;
+			justify-content: flex-start;
+			display: flex;
+		}
+
+		#AppleLink {
+			text-decoration: none;
+		}
+
+		.LinkSectionIcon {
+			height: auto;
+			width: 160px;
+			cursor: pointer;
+			opacity: 0.8;
+			transition: 500ms;
+		}
+
+		.LinkSectionIcon:hover {
+			opacity: 1;
+		}
+
+		.BillboardImgWrapper {
+			position: relative;
+			padding: 0px 0px 0px 0px;
+			justify-content: center;
+			display: flex;
+		}
+
+		.BillboardBackgroundImg {
+			width: 100%;
+			height: auto;
+		}
+
+		.Introductions {
+			min-height: 100%;
+			overflow: hidden;
+			margin-top: 30px;
+		}
+
+		.IntroCard {
+			justify-content: space-around;
+			margin: 0px 0px 00px 0px;
+			padding: 20px 0 20px 0px;
+		}
+
+		.IntroCardText {
+			color: #3A3A3C;
+			background-color: #FFFFFF;
+		}
+
+		.CardTextTitle {
+			text-align: center;
+			font-size: 30px;
+			font-weight: bold;
+			margin: 30px 0px 0px 0px;
+			line-height: normal;
+		}
+
+		.CardTextDescription {
+			padding: 20px 40px 20px 40px;
+			font-weight: lighter;
+			font-size: 22px;
+			line-height: 200%;
+		}
+
+		.IntroCardImgContainer {
+			padding: 0 0 0 12px;
+		}
+
+		.IntroCardImg {
+			width: 100%;
+			height: auto;
+			z-index: -1;
+			background-color: #FFFFFF;
+		}
+
+		.ProVersionIntroductions {
+			text-align: center;
+			margin-top: 0px;
+			padding: 40px 0px 40px 0px;
+		}
+
+		.ProVersionIntroTitle {
+			font-size: 36px;
+			font-weight: bold;
+			padding: 0 0 20px 0;
+		}
+
+		.ProIntroCardsContainer {
+			justify-content: space-around;
+			flex-wrap: wrap;
+			align-items: stretch;
+		}
+
+		.ProIntroCard {
+			padding: 0 5px 0 5px;
+		}
+
+		.ProIntroCardWrap {
+			margin: 10px 0 10px 0;
+			padding: 20px 10px 20px 10px;
+			background-color: #3A3A3C;
+			color: #FFFFFF;
+		}
+
+		.ProCardTextTitle {
+			padding: 0px 0 10px 0;
+			font-size: 28px;
+		}
+
+		.ProCardTextDescription {
+			padding: 0 0 20px 0;
+			margin: auto;
+			width: 90%;
+			font-weight: lighter;
+			font-size: 20px;
+		}
+
+		.ProIntroCardImg {
+			width: 90%;
+			height: auto;
+			flex: 0 0 auto;
+		}
+
+		.Roadmap {
+			text-align: center;
+			margin-top: 30px;
+			background-color: #FFFFFF;
+			padding: 80px 0px 80px 0px;
+		}
+
+		.RoadmapTitle {
+			font-size: 40px;
+			font-weight: bold;
+		}
+
+		.RoadmapText {
+			font-size: 34px;
+			font-weight: lighter;
+			margin: 30px 100px 20px 100px;
+		}
+
+		.RoadmapButtonSection {
+			text-align: center;
+			margin: 60px 0 0 0;
+		}
+
+		#RoadmapLink {
+			border-radius: 6px;
+			text-decoration: none;
+			border: 1px solid #3A3A3C;
+			padding: 10px 40px;
+			font-weight: 400;
+			font-size: 22px;
+			color: #3A3A3C;
+			cursor: pointer;
+			transition: 500ms;
+		}
+
+		#RoadmapLink:hover {
+			background-color: #3A3A3C;
+			color: #FFFFFF;
+		}
+
+		.Embed {
+			margin-top: 60px;
+		}
+
+		.EmbedTitle {
+			font-size: 40px;
+			text-align: center;
+		}
+
+		.Videos {}
+
+		.YoutubeVideo {
+			height: 450px;
+			padding: 20px;
+		}
+
+		#ContactSection {
+			margin-top: 60px;
+		}
+
+		.ContactSectionTitle {
+			font-size: 40px;
+			text-align: center;
+		}
+
+		.ContactList {
+			margin-top: 10px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		.SocialLink {
+			margin: 30px;
+		}
+
+		.SocialLinkIcon {
+			width: 90px;
+			height: auto;
+			transition: 500ms;
+		}
+
+		.SocialLinkIcon:hover {
+			-ms-transform: scale(1.3);
+			/* IE 9 */
+			-webkit-transform: scale(1.3);
+			/* Safari 3-8 */
+			transform: scale(1.3);
+		}
+
+		.FooterContainer {
+			background-color: #E4E4E4;
+			margin-top: 50px;
+			padding: 40px 0 60px 0;
+		}
+
+		.FooterListContainer {
+			justify-content: center;
+			padding: 20px 0 20px 0;
+			display: flex;
+		}
+
+		.FooterList {
+			list-style: none;
+			margin: 0 20px 0 20px;
+		}
+
+		.FooterText {
+			color: #595C5F;
+			font-size: 20px;
+			font-weight: lighter;
+			padding: 10px 10px 10px 10px;
+			text-align: center;
+			text-decoration: none;
+			cursor: pointer;
+		}
+
+		@media only screen and (min-width:1200px){
+			.CardTextTitle{
+				font-size: 34px;
+				margin: 50px 0 0 0;
+			}
+
+			.CardTextDescription{
+				font-size: 26px;
+			}
+		}
+
+		@media only screen and (max-width:1000px) {
+			.BillboardIntro{
+				padding: 10px 10px 10px 10px;
+				text-align: center;
+			}
+			.BillboardIntroTitle{
+				font-size: 50px;
+				margin: 30px 0 30px 0;
+			}
+
+			.BillboardIntroSubTitle{
+				font-size: 30px;
+			}
+
+			.BillboardLinkSection{
+				margin: 60px 0 20px 0;
+				justify-content: center;
+			}
+
+			.BillboardImgWrapper{
+				display: none;
+			}
+
+			.CardTextTitle{
+				font-size: 26px;
+				margin: 20px 0 10px 0;
+			}
+
+			.CardTextDescription{
+				font-size: 20px;
+				padding: 10px 40px 10px 40px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container py-4">
+		<div class="Navebar border-bottom">
+			<div class="ButtonSection">
+				<a id="HomeButton" href="https://autumnrock.dev/" target="_blank">
+					<img id="HomeImg" src="../static/image/company-logo.jpg">AutumnRock</a>
+			</div>
+		</div>
+
+		<div class="Billboard row">
+			<div class="BillboardIntro col-md-12 col-lg-5 col-xl-5">
+				<div class="BillboardIntroTitle">MusicPutty</div>
+				<div class="BillboardIntroSubTitle">Advanced note-based vocal pitch editor on iOS</div>
+				<div class="BillboardLinkSection">
+					<a id="AppleLink" href="https://apps.apple.com/app/id6444390100" target="_blank">
+						<img class="LinkSectionIcon" src="../static/image/app-store-badge.svg">
+					</a>
+				</div>
+			</div>
+			<div class="BillboardImgWrapper col-md-12 col-lg-7 col-xl-7">
+				<img class="BillboardBackgroundImg" src="../static/image/musicputty/billboard_background.svg">
+			</div>
+		</div>
+
+		<div class="Introductions">
+			<div class="IntroCard row">
+				<div class="IntroCardText col-md-12 col-lg-6 col-xl-6">
+					<div class="CardTextTitle">
+						Note-based vocal pitch editing
+					</div>
+					<div class="CardTextDescription">
+						<dl>
+							<dd> - Visualize vocal melodies and subtle pitch variations within each note</dd>
+							<dd> - Advanced shifting algorithm that preserves the original vocal formants and gives you the most natural-sounding results</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="IntroCardImgContainer col-md-12 col-lg-6 col-xl-6">
+					<img class="IntroCardImg" src="../static/image/musicputty/Note-based_vocal_pitch_editing.png">
+				</div>
+			</div>
+			<div class="IntroCard row">
+				<div class="IntroCardText col-md-12 col-lg-6 col-xl-6">
+					<div class="CardTextTitle">
+						Record and layout your vocals
+					</div>
+					<div class="CardTextDescription">
+						<dl>
+							<dd> - MusicPutty is also a multitrack recorder which makes it easy to create and layout your vocal harmonies</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="IntroCardImgContainer col-md-12 col-lg-6 col-xl-6">
+					<img class="IntroCardImg" src="../static/image/musicputty/Record_and_layout_your_vocals.png">
+				</div>
+			</div>
+			<div class="IntroCard row">
+				<div class="IntroCardText col-md-12 col-lg-6 col-xl-6">
+					<div class="CardTextTitle">
+						Correct pitch problems
+					</div>
+					<div class="CardTextDescription">
+						<dl>
+							<dd> - Ability to edit vocal takes note by note</dd>
+							<dd> - Intelligent legato preservation</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="IntroCardImgContainer col-md-12 col-lg-6 col-xl-6">
+					<img class="IntroCardImg" src="../static/image/musicputty/Correct_pitch_problems.png">
+				</div>
+			</div>
+		</div>
+
+		<div class="ProVersionIntroductions">
+			<div class="ProVersionIntroTitle">Get Pro Version to Unlock Advanced Editing Tools</div>
+			<div class="ProIntroCardsContainer row">
+				<div class="ProIntroCard col-sm-12 col-lg-4">
+					<div class="ProIntroCardWrap ">
+						<div class="ProCardTextTitle">Formant Shifting</div>
+						<div class="ProCardTextDescription">
+							Transform vocal formant to create special effects
+						</div>
+						<img class="ProIntroCardImg" src="../static/image/musicputty/Formant_Shifting.png">
+					</div>
+				</div>
+				<div class="ProIntroCard col-sm-12 col-lg-4">
+					<div class="ProIntroCardWrap">
+						<div class="ProCardTextTitle">Legato Tool</div>
+						<div class="ProCardTextDescription">
+							Control the duration of legato between two notes
+						</div>
+						<img class="ProIntroCardImg" src="../static/image/musicputty/Legato_Tool.png">
+					</div>
+				</div>
+				<div class="ProIntroCard col-sm-12 col-lg-4">
+					<div class="ProIntroCardWrap">
+						<div class="ProCardTextTitle">Vibrato Scaling</div>
+						<div class="ProCardTextDescription">
+							Reshape vibrato by reducing or amplifying its pitch variation
+						</div>
+						<img class="ProIntroCardImg" src="../static/image/musicputty/Vibrato_Scaling.png">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="Roadmap">
+			<div class="RoadmapTitle">Development Roadmap</div>
+			<div class="RoadmapText">
+				See what we are currently building and vote on new features
+			</div>
+			<div class="RoadmapButtonSection">
+				<a id="RoadmapLink" href="https://autumnrock.canny.io/" target="_blank">Roadmap</a>
+			</div>
+		</div>
+
+		<div class="Embed">
+			<div class="EmbedTitle border-bottom">Demos and Reviews</div>
+			<div class="Videos row">
+				<iframe class="YoutubeVideo col-xl-6" src="https://www.youtube.com/embed/MfbDFeUW1sw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				<iframe class="YoutubeVideo col-xl-6" src="https://www.youtube.com/embed/d-qXwr1eKRw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			</div>
+		</div>
+
+		<div id="ContactSection">
+			<div class="ContactSectionTitle border-bottom">Connect with Us </div>
+			<div class="ContactList">
+				<a class="SocialLink" href="https://www.youtube.com/@autumnrock" target="_blank">
+					<img class="SocialLinkIcon" src="../static/image/Youtube.svg">
+				</a>
+				<a class="SocialLink" href="https://www.tiktok.com/@autumnrockdev" target="_blank">
+					<img class="SocialLinkIcon" src="../static/image/TikTok.svg">
+				</a>
+				<a class="SocialLink" href="https://twitter.com/AutumnRockDev" target="_blank">
+					<img class="SocialLinkIcon" src="../static/image/Twitter.svg"></img>
+				</a>
+				<a class="SocialLink" href="https://www.facebook.com/AutumnRockDev" target="_blank">
+					<img class="SocialLinkIcon" src="../static/image/Facebook.svg"></img>
+				</a>
+				<a class="SocialLink" href="https://www.instagram.com/autumnrockdev/" target="_blank">
+					<img class="SocialLinkIcon" src="../static/image/Instagram.svg">
+				</a>
+				<a class="SocialLink" href="mailto: autumnrockdev@gmail.com">
+					<img class="SocialLinkIcon" src="../static/image/E-mail.svg"></img>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<footer class="FooterContainer">
+		<ul class="FooterListContainer">
+			<li class="FooterList">
+				<a class="FooterText" href="https://autumnrock.dev/" target="_blank">Home</a>
+			</li>
+			<li class="FooterList">
+				<a class="FooterText" href="https://autumnrock.canny.io/" target="_blank">Roadmap</a>
+			</li>
+			<li class="FooterList">
+				<a class="FooterText" href="https://autumnrock.dev/musicputty/help/" target="_blank">Help</a>
+			</li>
+		</ul>
+	</footer>
+</body>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-152724195-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+
+	function gtag() { dataLayer.push(arguments); }
+	gtag('js', new Date());
+
+	gtag('config', 'UA-152724195-1');
+</script>
+
+</html>
