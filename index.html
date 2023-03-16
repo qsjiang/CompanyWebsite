@@ -197,12 +197,12 @@
 			color: #DDD;
 		}
 
-		.ShaperLink {
+		#MusicPuttyLink {
 			padding-top: 10px;
 			padding-bottom: 10px;
 		}
 
-		.ShaperLearnMoreButton {
+		#MusicPuttyLearnMoreButton {
 			border-radius: 6px;
 			color: white;
 			font-size: 17px;
@@ -217,7 +217,7 @@
 			transition: 500ms;
 		}
 
-		.ShaperLearnMoreButton:hover {
+		#MusicPuttyLearnMoreButton:hover {
 			text-decoration: none;
 			color: white;
 			box-shadow: 0px 0px 10px #FFF;
@@ -225,10 +225,31 @@
 			opacity: 1;
 		}
 
-		.ShaperLearnMoreButton:active {
+		#ShaperLink {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+
+		#ShaperLearnMoreButton {
+			border-radius: 6px;
+			color: white;
+			font-size: 17px;
+			line-height: 1.5;
+			text-align: center;
+			text-decoration: none;
+			border: 2px solid white;
+			padding: 6px 10px;
+			box-shadow: 0px 0px 2px #FFF;
+			background-color: transparent;
+			opacity: 0.8;
+			transition: 500ms;
+		}
+
+		#ShaperLearnMoreButton:hover {
 			text-decoration: none;
 			color: white;
 			box-shadow: 0px 0px 10px #FFF;
+			text-shadow: 0 0 6px #FFF;
 			opacity: 1;
 		}
 
@@ -390,7 +411,12 @@
 							</div>
 							<div class="WorkText">
 								<div class="WorkTitle">MusicPutty - Pitch Editor</div>
-								<div class="WorkDescription">Finally a note-based vocal pitch editor for iOS!</div>
+								<div class="DescriptionAndLink">
+									<div class="WorkDescription">Finally a note-based vocal pitch editor for iOS!</div>
+									<div id="MusicPuttyLink">
+										<a id="MusicPuttyLearnMoreButton" href="https://autumnrock.dev/musicputty/" target="_blank">Learn More</a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -410,8 +436,8 @@
 								<div class="WorkTitle">Shaper - Synthesizer</div>
 								<div class="DescriptionAndLink">
 									<div class="WorkDescription">Create stunning synth sound on mobile devices</div>
-									<div class="ShaperLink">
-										<a class="ShaperLearnMoreButton" href="https://autumnrock.dev/shaper/" target="_blank">Learn More</a>
+									<div id="ShaperLink">
+										<a id="ShaperLearnMoreButton" href="https://autumnrock.dev/shaper/" target="_blank">Learn More</a>
 									</div>
 								</div>
 							</div>
