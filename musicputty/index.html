@@ -214,7 +214,7 @@
 
 		.RoadmapTitle {
 			font-size: 40px;
-			font-weight: bold;
+			font-weight: 500;
 		}
 
 		.RoadmapText {
@@ -322,48 +322,75 @@
 			cursor: pointer;
 		}
 
-		@media only screen and (min-width:1200px){
-			.CardTextTitle{
+		@media only screen and (min-width:1200px) {
+			.CardTextTitle {
 				font-size: 34px;
 				margin: 50px 0 0 0;
 			}
 
-			.CardTextDescription{
+			.CardTextDescription {
 				font-size: 26px;
 			}
 		}
 
 		@media only screen and (max-width:1000px) {
-			.BillboardIntro{
+			.BillboardIntro {
 				padding: 10px 10px 10px 10px;
 				text-align: center;
 			}
-			.BillboardIntroTitle{
+
+			.BillboardIntroTitle {
 				font-size: 50px;
 				margin: 30px 0 30px 0;
 			}
 
-			.BillboardIntroSubTitle{
+			.BillboardIntroSubTitle {
 				font-size: 30px;
 			}
 
-			.BillboardLinkSection{
+			.BillboardLinkSection {
 				margin: 60px 0 20px 0;
 				justify-content: center;
 			}
 
-			.BillboardImgWrapper{
+			.BillboardImgWrapper {
 				display: none;
 			}
 
-			.CardTextTitle{
+			.CardTextTitle {
 				font-size: 26px;
 				margin: 20px 0 10px 0;
 			}
 
-			.CardTextDescription{
+			.CardTextDescription {
 				font-size: 20px;
 				padding: 10px 40px 10px 40px;
+			}
+
+			.Roadmap {
+				padding: 60px 0 60px 0;
+			}
+
+			.RoadmapText {
+				font-size: 30px;
+				margin: 30px 60px 20px 60px;
+			}
+
+			@media only screen and (max-width:990px) {
+				.IntroCardImgContainer{
+					padding: 0 50px 20px 50px;
+					background-color: #FFFFFF;
+				}
+			}
+
+			@media only screen and (max-width:500px) {
+				.ButtonSection{
+					opacity: 1;
+				}
+
+				.LinkSectionIcon{
+					opacity: 1;
+				}
 			}
 		}
 	</style>
