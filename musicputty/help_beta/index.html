@@ -6,96 +6,14 @@
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
 	<title>MusicPutty - Quick Start Guide</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<style type="text/css">
-		.SectionContainer {
-			padding: 10px 0px;
-		}
-
-		.Section {
-			padding: 20px 20px;
-		}
-
-		.SectionTtitle {
-			padding: 8px 0px;
-			margin: 0px auto 20px auto;
-			max-width: 800px;
-			text-align: center;
-			color: #000;
-			font-family: sans-serif;
-			border-bottom: 2px solid #333;
-		}
-
-		.SectionTextDescription {
-			max-width: 800px;
-			margin: 0 auto;
-			font-size: 18px;
-			font-family: sans-serif;
-			color: #333;
-		}
-
-		.ImageWrapper {
-			text-align: center;
-			font-family: sans-serif;
-		}
-
-		.ImageWrapper img {
-			width: 100%;
-			max-width: 800px;
-		}
-
-		.ImageWrapperSmall img {
-			width: 100%;
-			max-width: 500px;
-		}
-
-		.SectionBulletPointsContainer {
-			padding: 10px 20px;
-			max-width: 600px;
-			margin: 0 auto;
-		}
-
-		.SectionBulletPointsContainer .SectionBulletPoint {
-			padding: 10px 0px;
-			font-size: 18px;
-			margin: 10px 0;
-			font-family: sans-serif;
-		}
-
-		.SectionBulletPointsContainer .BulletPointNumber {
-			display: inline-block;
-			text-align: center;
-			width: 30px;
-			height: 34px;
-			background-color: #FB6063;
-			color: white;
-			font-size: 22px;
-			border-radius: 5px;
-		}
-
-
-		.SectionBulletPointsContainer .BulletPointNumberSmall {
-			display: inline-block;
-			text-align: center;
-			width: 30px;
-			height: 24px;
-			background-color: #FB6063;
-			color: white;
-			font-size: 16px;
-			border-radius: 5px;
-		}
-
-		.SupportSection {
-			text-align: center;
-			padding-bottom: 50px;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="../../static/css/musicputty_help.css" />
 </head>
 
 <body>
 	<div class=SectionContainer>
 
 		<div class="Section">
-			<h1 class="SectionTtitle">Quick Start Guide</h1>
+			<h1 class="SectionTtitle">MusicPutty Manual</h1>
 			<div class="SectionTextDescription">
 				MusicPutty is an advanced note-based pitch editor designed for iOS. The program's algorithm can analyze the pitch information of your vocal takes and give you the ability to edit them note by note. This may sound complicated, but fear not, there are only two main sections in MusicPutty that you need to be aware of. Those are the "Project Window" and the "Pitch Editing Window".
 			</div>
@@ -197,7 +115,6 @@
 					</div>
 				</div>
 
-
 				<!-- Vibrato Tool sub section -->
 				<div class="SectionBulletPoint">
 					<div class="BulletPointNumber">5</div>
@@ -206,8 +123,6 @@
 				<div class="ImageWrapper">
 					<img src="../../static/image/musicputty/help/musicputty_help_5.png">
 				</div>
-
-
 
 				<!-- Legato Tool sub section -->
 				<div class="SectionBulletPoint">
@@ -246,17 +161,110 @@
 
 		<div id="pluginMode" class="Section">
 			<h1 class="SectionTtitle">Plugin Mode</h1>
-			<div class="SectionTextDescription">
-				To be filled To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  
+			<div class="SectionTextDescription"> 
+				With the introduction of version 2.0, MusicPutty can now be loaded as an AUv3 plugin within your preferred DAWs. This eliminates the need to transfer audio tracks back and forth between your DAW and MusicPutty while working on a song. Now, you can access MusicPutty's pitch editing tools directly within your DAW's UI.
+			</div>
+
+			<div class="SubSection">
+				<h3 class="SubSectionTitle">Load MusicPutty in DAWs</h3>
+				<div class="SubSectionTextDescription">
+					Once you have recorded vocals inside your DAW, you can load MusicPutty by adding it as an insert effect to the vocal track. The following screenshot shows how to do this in Garageband. For instructions on loading insert effects, please consult your DAW's manual.
+				</div>
+
+				<div class="ImageWrapper">
+					<img src="../../static/image/musicputty/help/loading_musicputty_in_garageband.jpg">
+				</div>
+				
+				<div class="SubSectionTextDescription">
+					When adding MusicPutty to an effect chain, it is recommended that you place MusicPutty as close to the beginning of the effect chain as possible. The only effects that should come before MusicPutty are those meant for cleaning the signal, such as a noise gate or other noise reduction plugins. This ensures MusicPutty can capture a clean signal without any audio effects applied, and it leaves the option open for you to add different effects later down the road.
+				</div>
+
+			</div>
+
+
+			<div class="SubSection">
+				<h3 class="SubSectionTitle">Select Where to Store Plugin's Data</h3>
+				<div class="SubSectionTextDescription">
+					When setting up a new instance of MusicPutty, the plugin prompts you to select a storage location for its data. You have two choices: either embed the data within the host's project file or save it in an external ".mputty" file. The recommended option is to embed the data in the host's project, which simplifies file management when transferring the project to another device. If you select the other option, you will need to copy both the host's project file along with all the ".mputty" files when transferring your work to a different device. Note that this embedding option is supported by most major DAWs, except for Cubasis. If you are using Cubasis, please choose the other option "store in a separate local file".
+				</div>
+
+				<div class="ImageWrapper">
+					<img src="../../static/image/musicputty/help/select_where_to_store_plugin_data.jpg">
+				</div>
+				
+			</div>
+
+
+			<div class="SubSection">
+				<h3 class="SubSectionTitle">Capture Audio from DAWs</h3>
+				<div class="SubSectionTextDescription">
+					Before MusicPutty can process your vocals, it needs to capture them from the DAW. Begin by clicking the 'CAPTURE' button to activate MusicPutty's audio capture mode. Then, place the host's playhead at the start of the vocal clip you want to capture and press the host's play button. MusicPutty will start capturing the audio as it flows through the track's effect chain. Press the 'STOP' button once you have captured everything.
+				</div>
+
+				<div class="ImageWrapper">
+					<img src="../../static/image/musicputty/help/audio_capture_1.jpg">
+					<div class="ImageLabel">
+						Click on the "CAPTURE" button to put the plugin into audio capture mode.
+					</div>
+
+				</div>
+
+ 
+				<div class="ImageWrapper">
+					<img src="../../static/image/musicputty/help/audio_capture_3.jpg">
+					<div class="ImageLabel">
+						Move the host's playhead to the start of the vocal clip you would like to capture and hit play. Click "STOP" once you are done.
+					</div>
+				</div>
+
+
+				<div class="ImageWrapper">
+					<img src="../../static/image/musicputty/help/audio_capture_4.jpg">
+					<div class="ImageLabel">
+						After the audio has been captured, MusicPutty will start to analyze its pitch content. Once that is done, you can start editing your vocals. 
+					</div>
+				</div>
 			</div>
 		</div>
 
+
 		<div id="dawCompatibilityTips" class="Section">
 			<h1 class="SectionTtitle">DAW Compatibility Tips</h1>
-			<div class="SectionTextDescription">
-				To be filled To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  To be filled  
+			<div class="SectionTextDescription"> 
+				Audio plugins on iOS communicate with their hosts through a protocol known as Audio Unit v3 (AUv3). However, in practice, AUv3 is a loosely defined standard, and each host interacts with its plugins in slightly different ways. When using MusicPutty in plugin mode, it is important to understand the distinct behaviors that your DAW may display when interacting with MusicPutty.
 			</div>
+
+
+			<div class="SubSection">
+				<h3 class="SubSectionTitle">Garageband & Logic Pro</h3>
+				<div class="SubSectionTextDescription">
+					Both Garageband and Logic Pro impose restrictions on when an effect plugin is allowed to output audio. If the DAW does not see any audio clip on one of its tracks, the DAW will stop querying audio from all the plugins inserted on that track. That means when moving or importing clips in MusicPutty, you must make sure the same clips are also moved or imported on the host's timeline. Otherwise, the DAW may think there is nothing to render and stop querying audio from MusicPutty.
+				</div>
+			</div>
+
+			<div class="SubSection">
+				<h3 class="SubSectionTitle">Cubasis</h3>
+				<div class="SubSectionTextDescription">
+					On Cubasis, you must select the option 'In a separate local file' when the plugin asks where you would like to store its data. Cubasis can't handle plugins with save file larger than a few megabytes. This limitation is a result of how Cubasis implements its undo system. Every time you open and close a plugin's UI in Cubasis, the DAW saves a copy of the plugin's state onto its undo stack. While this approach worked in the early days when most plugins were basic effects with a few parameters, it doesn't work well for today's complex plugins like MusicPutty. We have communicated this issue to the Cubasis team and will continue to work with them, hopefully have this problem addressed in the future.
+				</div>
+			</div>
+
+			<div class="SubSection">
+				<h3 class="SubSectionTitle">Auria & Auria Pro</h3>
+				<div class="SubSectionTextDescription">
+				 	There is currently a bug in Auria where the DAW does not supply its audio effects with transport information during mixdown and channel freeze. To work around this problem, first, export your MusicPutty project as audio files using the plugin's built-in export feature and place them onto Auria's track. Then, bypass all MusicPutty instances before starting mixdown in Auria. We have communicated this issue to the Auria team and will continue to work with them, hopefully have this problem addressed in the future.
+				</div>
+			</div>
+
+			<div class="SubSection">
+				<h3 class="SubSectionTitle">N-Track Studio</h3>
+				<div class="SubSectionTextDescription">
+				 	N-Track Studio sometimes supplies inaccurate transport information to its plugins. When capturing audio in N-Track Studio, please make sure you set 'Audio Capture Mode' to 'Compatibility Mode'. Otherwise, MusicPutty would interpret those inaccurate transport signals as a jump in the host's playhead and stop an ongoing audio capture prematurely.
+				</div>
+			</div>
+
 		</div>
+
 
 	</div>
 	<div class="Section SupportSection">
