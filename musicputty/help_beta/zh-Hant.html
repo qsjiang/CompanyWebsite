@@ -164,15 +164,15 @@
 		</div>
 
 		<div id="pluginMode" class="Section">
-			<h1 class="SectionTtitle">Plugin Mode</h1>
+			<h1 class="SectionTtitle">插件模式</h1>
 			<div class="SectionTextDescription"> 
-				With the introduction of version 2.0, MusicPutty can now be loaded as an AUv3 plugin within your preferred DAWs. This eliminates the need to transfer audio tracks back and forth between your DAW and MusicPutty while working on a song. Now, you can access MusicPutty's pitch editing tools directly within your DAW's UI.
+				隨著2.0版本的發布，音樂黏土現在可以作為AUv3插件加載到用戶的音頻工作站（DAW）中。這意味著在製作歌曲時，用戶將無需在DAW和音樂黏土之間反復導入和導出音頻。現在用戶可以直接在DAW的界面中使用音樂黏土的音高編輯工具。
 			</div>
 
 			<div class="SubSection">
-				<h3 class="SubSectionTitle">Load MusicPutty in DAWs</h3>
+				<h3 class="SubSectionTitle">在音頻工作站（DAW）中載入音樂黏土</h3>
 				<div class="SubSectionTextDescription">
-					Once you have recorded vocals inside your DAW, you can load MusicPutty by adding it as an insert effect to the vocal track. The following screenshot shows how to do this in Garageband. For instructions on loading insert effects, please consult your DAW's manual.
+					當在DAW內錄制好人聲後，用戶可以將音樂黏土（MusicPutty）以插件效果器的形式添加到人聲音軌上。以下截圖展示了在GarageBand中如何操作。有關載入插件的說明，請參考DAW的使用者手冊。
 				</div>
 
 				<div class="ImageWrapper">
@@ -180,15 +180,15 @@
 				</div>
 				
 				<div class="SubSectionTextDescription">
-					When adding MusicPutty to an effect chain, it is recommended that you place MusicPutty as close to the beginning of the effect chain as possible. The only effects that should come before MusicPutty are those meant for cleaning the signal, such as a noise gate or other noise reduction plugins. This ensures MusicPutty can capture a clean signal without any audio effects applied, and it leaves the option open for you to add different effects later down the road.
+					當把音樂黏土添加進一條效果器鏈時，請將音樂黏土擺放在靠近效果器鏈開頭的位置。在其前面應該只有用於清理信號的效果器，例如噪聲門或其他降噪插件。這樣可以確保音樂黏土能夠捕捉到原始的幹聲信號，為以後添加其他效果器留下更多可操作的空間。
 				</div>
 
 			</div>
 
 			<div class="SubSection">
-				<h3 class="SubSectionTitle">Select Where to Store Plugin's Data</h3>
+				<h3 class="SubSectionTitle">選擇如何保存插件數據</h3>
 				<div class="SubSectionTextDescription">
-					When setting up a new instance of MusicPutty, the plugin prompts you to select a storage location for its data. You have two choices: either embed the data within the host's project file or save it in an external ".mputty" file. The recommended option is to embed the data in the host's project, which simplifies file management when transferring the project to another device. If you select the other option, you will need to copy both the host's project file along with all the ".mputty" files when transferring your work to a different device. Note that this embedding option is supported by most major DAWs, except for Cubasis. If you are using Cubasis, please choose the other option "store in a separate local file".
+					每當用戶打開一個新的音樂黏土實例時，插件會提示用戶選擇數據的存儲位置。這裡有兩個選擇：將數據儲存在宿主的工程文件中或將其儲存在另一個本地“.mputty”檔案中。音樂黏土推薦使用第一個選項，將數據儲存在宿主的工程文件中。這樣當用戶把作品拷貝到另一個設備上時，用戶只需要移動宿主的工程文件。如果選擇第二個選項，那用戶在拷貝宿主工程文件的同時也需要記得拷貝所有作品中用到的“.mputty”檔案。請注意，除Cubasis外，大部分主流DAW都支持第一個選項。如果你在使用Cubasis，請選擇第二個選項。
 				</div>
 
 				<div class="ImageWrapper">
@@ -198,15 +198,15 @@
 			</div>
 
 			<div id= "captureAudioFromDAWs" class="SubSection">
-				<h3 class="SubSectionTitle">Capture Audio from DAWs</h3>
+				<h3 class="SubSectionTitle">從音頻工作站（DAW）中捕捉音訊</h3>
 				<div class="SubSectionTextDescription">
-					Before MusicPutty can process your vocals, it needs to capture them from the DAW. Begin by clicking the 'CAPTURE' button to activate MusicPutty's audio capture mode. Then, place the host's playhead at the start of the vocal clip you want to capture and press the host's play button. MusicPutty will start capturing the audio as it flows through the track's effect chain. Press the 'STOP' button once you have captured everything.
+					在音樂黏土能夠處理用戶的人聲之前，它需要先從宿主中捕捉到人聲的音訊。首先，點擊“捕捉音訊”按鈕讓音樂黏土進入音訊捕捉模式。接著，將宿主的播放指針放置到人聲音訊的開頭，然後按下宿主的播放按鈕。隨著人聲音訊“流過”音樂黏土所在的效果器鏈，音樂黏土會將這些音訊數據保存在其文件中。當捕捉到所有內容後，請點擊“停止”按鈕。
 				</div>
 
 				<div class="ImageWrapper">
 					<img src="../../static/image/musicputty/help/audio_capture_1_hant.jpg">
 					<div class="ImageLabel">
-						Click on the "CAPTURE" button to put the plugin into audio capture mode.
+						點擊“捕捉音訊”按鈕讓音樂黏土進入音訊捕捉模式。
 					</div>
 
 				</div>
@@ -214,7 +214,7 @@
 				<div class="ImageWrapper">
 					<img src="../../static/image/musicputty/help/audio_capture_3_hant.jpg">
 					<div class="ImageLabel">
-						Move the host's playhead to the start of the vocal clip you would like to capture and hit play. Click "STOP" once you are done.
+						將宿主的播放指針放置到人聲音訊的開頭，然後按下宿主的播放按鈕。當捕捉到所有內容後，請點擊“停止”按鈕。
 					</div>
 				</div>
 
@@ -222,44 +222,44 @@
 				<div class="ImageWrapper">
 					<img src="../../static/image/musicputty/help/audio_capture_4_hant.jpg">
 					<div class="ImageLabel">
-						After the audio has been captured, MusicPutty will start to analyze its pitch content. Once that is done, you can start editing your vocals. 
+						音樂黏土會自動分析被捕捉音訊的音高，分析完成後就可開始調音了。
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<div id="dawCompatibilityTips" class="Section">
-			<h1 class="SectionTtitle">DAW Compatibility Tips</h1>
+			<h1 class="SectionTtitle">在不同音頻工作站（DAW）中需要注意的事項</h1>
 			<div class="SectionTextDescription"> 
-				Audio plugins on iOS communicate with their hosts through a protocol known as Audio Unit v3 (AUv3). In practice, AUv3 is a loosely defined standard, and each host interacts with its plugins in slightly different ways. Here are a few things you need to be aware of when running MusicPutty under different hosts
+				當一個iOS上的音頻插件需要和它的宿主進行交流時，程序之間會使用一個叫做Audio Unit v3（AUv3）的協議進行溝通。雖然大部分宿主都表明自己支持AUv3協議，但在實踐中，每個宿主對AUv3協議的解讀都略有不同。因此針對不同宿主，這裡有一些需要提前了解的注意事項。
 			</div>
 
 
 			<div class="SubSection">
 				<h3 class="SubSectionTitle">Garageband & Logic Pro</h3>
 				<div class="SubSectionTextDescription">
-					Both Garageband and Logic Pro impose restrictions on when an effect plugin is allowed to output audio. If the DAW does not see any audio clip on one of its tracks, the DAW will stop querying audio from all the plugins inserted on that track. That means when moving or importing clips in MusicPutty, you must make sure the same clips are also moved or imported on the host's timeline. Otherwise, the DAW may think there is nothing to render and stop querying audio from MusicPutty.
+					Garageband和Logic Pro對何時一個效果器能夠輸出音訊設有嚴格的限制。如果宿主在它的一個音軌上沒有看到任何音訊，宿主會自動停止該音軌上的所有效果器。這就意味著當你在音樂黏土中移動或導入音訊時，你必須確保該音訊同時也存在於宿主的時間軸上，並被放在相同位置。否則，宿主可能會誤以為當前播放指針所處的位置沒有任何東西需要播放，並停止從音樂黏土中調取音訊。
 				</div>
 			</div>
 
 			<div class="SubSection">
 				<h3 class="SubSectionTitle">Cubasis</h3>
 				<div class="SubSectionTextDescription">
-					On Cubasis, you must select the option 'In a separate local file' when the plugin asks where you would like to store its data. Cubasis can't handle plugins with save file larger than a few megabytes. This limitation is a result of how Cubasis implements its undo system. Every time you open and close a plugin's UI in Cubasis, the DAW saves a copy of the plugin's state onto its undo stack. While this approach worked in the early days when most plugins were basic effects with a few parameters, it doesn't work well for today's complex plugins like MusicPutty. We have communicated this issue to the Cubasis team and will continue to work with them, hopefully have this problem addressed in the future.
+					在Cubasis中，當音樂黏土提示用戶選擇數據存儲位置時，請務必選擇“儲存在另一個本機檔案中”。目前由於Cubasis的設計中存在的一些限制，其系統只支持10MB以下的插件存檔。我們已經向Cubasis團隊傳達了這個問題，並將繼續與他們溝通，希望未來可以找到一個更好的解決方案。
 				</div>
 			</div>
 
 			<div class="SubSection">
 				<h3 class="SubSectionTitle">Auria & Auria Pro</h3>
 				<div class="SubSectionTextDescription">
-				 	There is currently a bug in Auria where the DAW does not supply its audio effects with transport information during mixdown and channel freeze. To work around this problem, first, export your MusicPutty project as audio files using the plugin's built-in export feature and place the exported audio files onto your vocal tracks inside Auria. Then, bypass all MusicPutty instances before starting mixdown in Auria. We have communicated this issue to the Auria team and will continue to work with them, hopefully have this problem addressed in the future.
+				 	目前Auria的導出功能中存在一個Bug。導出時，Auria不會按照AUv3協議的要求給其插件提供宿主的指針信息，導致任何需要指針信息的效果器都無法在Auria上正常導出。想要繞過這個問題，請首先使用音樂黏土的內置導出功能將其項目導出為音訊文件，並將導出的音訊文件放置到Auria的音軌上。然後，在導出Auria工程前，靜音所有音樂黏土的插件實例。我們已經向Auria團隊傳達了這個問題，並將繼續與他們溝通，希望未來可以修復這個問題。
 				</div>
 			</div>
 
 			<div class="SubSection">
 				<h3 class="SubSectionTitle">N-Track Studio</h3>
 				<div class="SubSectionTextDescription">
-				 	N-Track Studio sometimes supplies inaccurate transport information to its plugins. When capturing audio in N-Track Studio, please make sure you set 'Audio Capture Mode' to 'Compatibility Mode'. Otherwise, MusicPutty would interpret those inaccurate transport signals as a jump in the host's playhead and stop an ongoing audio capture prematurely.
+				 	N-Track Studio有時會向插件提供不准確的指針信息。在N-Track Studio裡捕捉音訊時，請將音樂黏土的音訊捕捉模式設置為“兼容模式”。否則，音樂黏土可能會將那些不准確的信息解讀為宿主播放指針的跳躍，並導致其過早停止音訊捕捉。
 				</div>
 			</div>
 		</div>
