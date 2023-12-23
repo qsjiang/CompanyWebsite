@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	<title>MusicPutty - Vocal Tune</title>
 	<style type="text/css">
 		html {
@@ -12,7 +12,7 @@
 		}
 
 		body {
-			background-color: #F9F9F9;
+			background-color: #F2F3F4;
 			padding: 0;
 			margin: 0;
 			text-rendering: optimizeLegibility;
@@ -27,61 +27,92 @@
 			max-width: 1400px;
 		}
 
-		.Navebar {}
+		.Navebar {
+			padding: 0;
+			margin: 0;
+		}
 
-		.ButtonSection {
+		.NavbarContainer {
+			display: flex;
 			padding-bottom: 10px;
-			opacity: 0.8;
-			transition: 500ms;
+			justify-content: center;
 		}
 
-		.ButtonSection:hover {
-			opacity: 1;
-		}
-
-		#HomeButton {
+		.HomeButton {
 			color: black;
 			font-size: 22px;
 			text-align: center;
 			text-decoration: none;
-			margin-left: 10px;
+			margin-right: auto;
+			align-items: center;
+			display: flex;
+			opacity: 0.8;
+			transition: 500ms;
 		}
 
-		#HomeImg {
+		.HomeButton:hover {
+			opacity: 1;
+		}
+
+		.HomeButtonImg {
 			border-radius: 8px;
 			width: 30px;
 			height: auto;
-			margin: 0 10px 8px 0;
+			margin-right: 10px;
+			margin-left: 10px;
+		}
+
+		.NavbarMenuContainer {
+			display: flex;
+			flex-wrap: wrap;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.MenuItem {
+			margin: 0 18px 0 18px;
+		}
+
+		.MenuItemLink {
+			display: block;
+			text-decoration: none;
+			color: #000000;
+			font-size: 20px;
+			opacity: 0.6;
+			transition: 500ms;
+		}
+
+		.MenuItemLink:hover {
+			opacity: 1;
 		}
 
 		.Billboard {
-			justify-content: space-around;
-			flex-wrap: wrap;
-			display: flex;
-			padding: 10px;
 			margin-top: 30px;
 			background-color: #FFFFFF;
 		}
 
 		.BillboardIntro {
-			position: relative;
-			padding: 10px 10px 10px 50px;
+			padding: 0px 0px 0px 80px;
 			line-height: 1.2;
 		}
 
 		.BillboardIntroTitle {
-			font-size: 60px;
-			margin: 50px 0 50px 0;
+			font-size: 80px;
+			margin: 80px 0 0px 0;
 			font-weight: 500;
 		}
 
 		.BillboardIntroSubTitle {
-			font-size: 30px;
+			font-size: 40px;
 			font-weight: lighter;
+			margin: 50px 0 50px 0;
 		}
 
 		.BillboardLinkSection {
-			margin: 80px 0 80px 0;
+			margin: 0px 0 50px 0;
 			justify-content: flex-start;
 			display: flex;
 		}
@@ -103,111 +134,123 @@
 		}
 
 		.BillboardImgWrapper {
-			position: relative;
-			padding: 0px 0px 0px 0px;
-			justify-content: center;
-			display: flex;
+			padding: 20px 0px 0px 0px;
 		}
 
 		.BillboardBackgroundImg {
-			width: 100%;
+			width: 90%;
 			height: auto;
+			margin: auto;
+			display: block;
 		}
 
 		.Introductions {
 			min-height: 100%;
-			overflow: hidden;
 			margin-top: 30px;
 		}
 
+		.IntroCardsContainer {
+			align-items: stretch;
+		}
+
+		.IntroCardWrapper {
+			padding: 0px;
+			margin-bottom: 20px;
+		}
+
 		.IntroCard {
-			justify-content: space-around;
-			margin: 0px 0px 00px 0px;
-			padding: 20px 0 20px 0px;
-		}
-
-		.IntroCardText {
-			color: #3A3A3C;
+			height: 100%;
+			padding: 30px 30px 30px 30px;
 			background-color: #FFFFFF;
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+			flex-wrap: wrap;
 		}
 
-		.CardTextTitle {
+		.IntroCardTextWrapper {
 			text-align: center;
-			font-size: 30px;
+			margin: 0 0 20px 0;
+		}
+
+		.IntroCardTitle {
+			font-size: 35px;
 			font-weight: bold;
-			margin: 30px 0px 0px 0px;
-			line-height: normal;
+			margin: 0 0 10px 0;
 		}
 
-		.CardTextDescription {
-			padding: 20px 40px 20px 40px;
-			font-weight: lighter;
+		.IntroCardDescription {
 			font-size: 22px;
-			line-height: 200%;
+			font-weight: lighter;
 		}
 
-		.IntroCardImgContainer {
-			padding: 0 0 0 12px;
+		.IntroCardImgWrapper {
+			padding: 0;
+			margin: 0;
 		}
 
 		.IntroCardImg {
 			width: 100%;
 			height: auto;
-			z-index: -1;
-			background-color: #FFFFFF;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
 		}
 
 		.ProVersionIntroductions {
 			text-align: center;
-			margin-top: 0px;
-			padding: 40px 0px 40px 0px;
+			margin-top: 30px;
 		}
 
 		.ProVersionIntroTitle {
-			font-size: 36px;
-			font-weight: bold;
-			padding: 0 0 20px 0;
+			font-size: 34px;
+			font-weight: 500;
 		}
 
 		.ProIntroCardsContainer {
-			justify-content: space-around;
-			flex-wrap: wrap;
 			align-items: stretch;
 		}
 
-		.ProIntroCard {
-			padding: 0 5px 0 5px;
+		.ProIntroCardWrapper {
+			padding: 0;
+			margin: 20px 0 0 0;
 		}
 
-		.ProIntroCardWrap {
-			margin: 10px 0 10px 0;
+		.ProIntroCard {
+			height: 100%;
 			padding: 20px 10px 20px 10px;
-			background-color: #3A3A3C;
+			background-color: #2c2c2e;
 			color: #FFFFFF;
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+		}
+
+		.ProIntroCardTextWrapper {
+			margin: 10px 20px 20px 20px;
 		}
 
 		.ProCardTextTitle {
-			padding: 0px 0 10px 0;
-			font-size: 28px;
+			font-size: 30px;
+			margin: 0 0 10px 0;
 		}
 
 		.ProCardTextDescription {
-			padding: 0 0 20px 0;
-			margin: auto;
-			width: 90%;
-			font-weight: lighter;
 			font-size: 20px;
+			font-weight: lighter;
 		}
 
 		.ProIntroCardImg {
-			width: 90%;
+			width: 100%;
 			height: auto;
-			flex: 0 0 auto;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
 		}
 
 		.Roadmap {
 			text-align: center;
-			margin-top: 30px;
+			margin-top: 60px;
 			background-color: #FFFFFF;
 			padding: 80px 0px 80px 0px;
 		}
@@ -220,12 +263,11 @@
 		.RoadmapText {
 			font-size: 34px;
 			font-weight: lighter;
-			margin: 30px 100px 20px 100px;
+			margin: 30px 100px 80px 100px;
 		}
 
 		.RoadmapButtonSection {
 			text-align: center;
-			margin: 60px 0 0 0;
 		}
 
 		#RoadmapLink {
@@ -245,28 +287,33 @@
 			color: #FFFFFF;
 		}
 
-		.Embed {
+		.EmbedVideos {
 			margin-top: 60px;
 		}
 
 		.EmbedTitle {
 			font-size: 40px;
+			font-weight: 500;
 			text-align: center;
 		}
 
-		.Videos {}
+		.VideosContainer {
+			padding: 0;
+			margin: 0;
+		}
 
 		.YoutubeVideo {
 			height: 450px;
-			padding: 20px;
+			padding: 10px;
 		}
 
-		#ContactSection {
+		.ContactSection {
 			margin-top: 60px;
 		}
 
 		.ContactSectionTitle {
 			font-size: 40px;
+			font-weight: 500;
 			text-align: center;
 		}
 
@@ -296,7 +343,7 @@
 		}
 
 		.FooterContainer {
-			background-color: #E4E4E4;
+			background-color: #2c2c2e;
 			margin-top: 50px;
 			padding: 40px 0 60px 0;
 		}
@@ -313,84 +360,231 @@
 		}
 
 		.FooterText {
-			color: #595C5F;
+			color: #FFFFFF;
 			font-size: 20px;
 			font-weight: lighter;
 			padding: 10px 10px 10px 10px;
 			text-align: center;
 			text-decoration: none;
 			cursor: pointer;
+			opacity: 0.6;
+			transition: 500ms;
 		}
 
-		@media only screen and (min-width:1200px) {
-			.CardTextTitle {
-				font-size: 34px;
-				margin: 50px 0 0 0;
-			}
-
-			.CardTextDescription {
-				font-size: 26px;
-			}
+		.FooterText:hover {
+			opacity: 1;
 		}
 
-		@media only screen and (max-width:1000px) {
+		@media only screen and (max-width:1200px) {
 			.BillboardIntro {
-				padding: 10px 10px 10px 10px;
-				text-align: center;
+				padding: 0px 0px 0px 50px;
 			}
 
 			.BillboardIntroTitle {
-				font-size: 50px;
-				margin: 30px 0 30px 0;
+				font-size: 60px;
+				margin: 60px 0px 0px 0px;
 			}
 
 			.BillboardIntroSubTitle {
 				font-size: 30px;
+				margin: 40px 0 40px 0;
+			}
+
+			.IntroCard {
+				padding: 30px 20px 30px 20px;
+			}
+
+			.IntroCardTitle {
+				font-size: 28px;
+			}
+
+			.IntroCardDescription {
+				font-size: 20px;
+			}
+
+			.ProIntroCard {
+				padding: 10px 10px 10px 10px;
+			}
+
+			.ProCardTextTitle {
+				font-size: 26px;
+			}
+
+			.ProCardTextDescription {
+				font-size: 18px;
+			}
+
+			.YoutubeVideo {
+				padding: 6px;
+				height: 400px;
+			}
+		}
+
+		@media only screen and (max-width:992px) {
+			.BillboardIntro {
+				padding: 0px;
+				text-align: center;
+			}
+
+			.BillboardIntroTitle {
+				margin: 50px 0 0px 0;
 			}
 
 			.BillboardLinkSection {
-				margin: 60px 0 20px 0;
 				justify-content: center;
 			}
 
 			.BillboardImgWrapper {
-				display: none;
+				padding: 0;
 			}
 
-			.CardTextTitle {
+			.IntroCard {
+				padding: 10px 10px 10px 10px;
+			}
+
+			.IntroCardTextWrapper {
+				margin: 30px 60px 20px 60px;
+			}
+
+			.IntroCardTitle {
+				font-size: 32px;
+			}
+
+			.IntroCardDescription {
+				font-size: 22px;
+			}
+
+			.IntroCardImg {
+				width: 80%;
+			}
+
+			.ProVersionIntroTitle {
+				font-size: 32px;
+			}
+
+			.ProIntroCardTextWrapper {
+				margin: 30px 60px 20px 60px;
+			}
+
+			.ProCardTextTitle {
+				font-size: 32px;
+			}
+
+			.ProCardTextDescription {
+				font-size: 22px;
+			}
+
+			.ProIntroCardImg {
+				width: 80%;
+			}
+
+			.ProIntroCard {
+				flex-direction: column;
+			}
+
+			.RoadmapText {
+				font-size: 30px;
+				margin: 30px 60px 60px 60px;
+			}
+
+			.YoutubeVideo {
+				padding-right: 0px;
+				padding-left: 0px;
+			}
+		}
+
+		@media only screen and (max-width:576px) {
+			.NavbarContainer {
+				flex-direction: column;
+			}
+
+			.HomeButton {
+				margin-left: auto;
+				opacity: 1;
+			}
+
+			.NavbarMenuContainer {
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 24px;
+			}
+
+			.MenuItemLink {
+				opacity: 1;
+			}
+
+			.ButtonSection {
+				opacity: 1;
+			}
+
+			.BillboardIntro {
+				padding: 0 20px 0 20px;
+			}
+
+			.BillboardIntroTitle {
+				font-size: 56px;
+			}
+
+			.BillboardIntroSubTitle {
 				font-size: 26px;
-				margin: 20px 0 10px 0;
+				margin: 30px 0 30px 0;
 			}
 
-			.CardTextDescription {
-				font-size: 20px;
-				padding: 10px 40px 10px 40px;
+			.LinkSectionIcon {
+				opacity: 1;
+			}
+
+			.IntroCardTextWrapper {
+				margin: 10px 10px 20px 10px;
+			}
+
+			.IntroCardTitle {
+				font-size: 26px;
+			}
+
+			.IntroCardDescription {
+				font-size: 18px;
+			}
+
+			.IntroCardImg {
+				width: 100%;
+			}
+
+			.ProVersionIntroTitle {
+				font-size: 30px;
+			}
+
+			.ProIntroCardTextWrapper {
+				margin: 10px 10px 20px 10px;
+			}
+
+			.ProCardTextTitle {
+				font-size: 26px;
+			}
+
+			.ProCardTextDescription {
+				font-size: 18px;
+			}
+
+			.ProIntroCardImg {
+				width: 100%;
 			}
 
 			.Roadmap {
 				padding: 60px 0 60px 0;
 			}
 
+			.RoadmapTitle {
+				font-size: 32px;
+			}
+
 			.RoadmapText {
-				font-size: 30px;
-				margin: 30px 60px 20px 60px;
+				font-size: 26px;
+				margin: 30px 30px 60px 30px;
 			}
 
-			@media only screen and (max-width:990px) {
-				.IntroCardImgContainer {
-					padding: 0 50px 20px 50px;
-					background-color: #FFFFFF;
-				}
-			}
-
-			@media only screen and (max-width:500px) {
-				.ButtonSection {
-					opacity: 1;
-				}
-
-				.LinkSectionIcon {
-					opacity: 1;
-				}
+			.YoutubeVideo {
+				height: 300px;
 			}
 		}
 	</style>
@@ -398,112 +592,143 @@
 
 <body>
 	<div class="container py-4">
+		<!--Navbar Section-->
 		<div class="Navebar border-bottom">
-			<div class="ButtonSection">
-				<a id="HomeButton" href="https://autumnrock.dev/">
-					<img id="HomeImg" src="../static/image/company-logo.jpg">AutumnRock</a>
+			<div class="NavbarContainer">
+				<a class="HomeButton" href="https://autumnrock.dev/">
+					<img class="HomeButtonImg" src="../static/image/company-logo.jpg">AutumnRock</a>
+				<ul class="NavbarMenuContainer">
+					<li class="MenuItem">
+						<a class="MenuItemLink" href="https://autumnrock.dev/musicputty/help/" target="_blank">Help</a>
+					</li>
+					<li class="MenuItem">
+						<a class="MenuItemLink" href="#Roadmap_Link">Roadmap</a>
+					</li>
+					<li class="MenuItem">
+						<a class="MenuItemLink" href="#ContactSection_Link">Contact</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 
+		<!--Billboard Section-->
 		<div class="Billboard row">
-			<div class="BillboardIntro col-md-12 col-lg-5 col-xl-5">
+			<div class="BillboardIntro col-md-12 col-lg-5">
 				<div class="BillboardIntroTitle">MusicPutty</div>
-				<div class="BillboardIntroSubTitle">Advanced note-based vocal pitch editor on iOS</div>
+				<div class="BillboardIntroSubTitle">The Ultimate Pitch Correction Tool for iOS</div>
 				<div class="BillboardLinkSection">
 					<a id="AppleLink" href="https://apps.apple.com/app/id6444390100" target="_blank">
 						<img class="LinkSectionIcon" src="../static/image/app-store-badge.svg">
 					</a>
 				</div>
 			</div>
-			<div class="BillboardImgWrapper col-md-12 col-lg-7 col-xl-7">
-				<img class="BillboardBackgroundImg" src="../static/image/musicputty/billboard_background.svg">
+			<div class="BillboardImgWrapper col-md-12 col-lg-7">
+				<img class="BillboardBackgroundImg" src="../static/image/musicputty/billboard_background.jpg">
 			</div>
 		</div>
 
+		<!--Introduction Section-->
 		<div class="Introductions">
-			<div class="IntroCard row">
-				<div class="IntroCardText col-md-12 col-lg-6 col-xl-6">
-					<div class="CardTextTitle">
-						Note-based vocal pitch editing
-					</div>
-					<div class="CardTextDescription">
-						<dl>
-							<dd> - Visualize vocal melodies and subtle pitch variations within each note</dd>
-							<dd> - Advanced shifting algorithm that preserves the original vocal formants and gives you the most natural-sounding results</dd>
-						</dl>
-					</div>
-				</div>
-				<div class="IntroCardImgContainer col-md-12 col-lg-6 col-xl-6">
-					<img class="IntroCardImg" src="../static/image/musicputty/Note-based_vocal_pitch_editing.jpg">
-				</div>
-			</div>
-			<div class="IntroCard row">
-				<div class="IntroCardText col-md-12 col-lg-6 col-xl-6">
-					<div class="CardTextTitle">
-						Record and layout your vocals
-					</div>
-					<div class="CardTextDescription">
-						<dl>
-							<dd> - MusicPutty is also a multitrack recorder which makes it easy to create and layout your vocal harmonies</dd>
-						</dl>
+			<div class="IntroCardsContainer row">
+				<div class="IntroCardWrapper col-md-12 col-lg-6">
+					<div class="IntroCard me-lg-2">
+						<div class="IntroCardTextWrapper">
+							<div class="IntroCardTitle">Note-based Vocal Pitch Editing</div>
+							<div class="IntroCardDescription">
+								Visualize the pitch content of your vocal melodies and be able to fine-tune them note-by-note.
+							</div>
+						</div>
+						<div class="IntroCardImgWrapper">
+							<img class="IntroCardImg" src="../static/image/musicputty/note-base-editing.png">
+						</div>
 					</div>
 				</div>
-				<div class="IntroCardImgContainer col-md-12 col-lg-6 col-xl-6">
-					<img class="IntroCardImg" src="../static/image/musicputty/Record_and_layout_your_vocals.jpg">
+				<div class="IntroCardWrapper col-md-12 col-lg-6">
+					<div class="IntroCard ms-lg-2">
+						<div class="IntroCardTextWrapper">
+							<div class="IntroCardTitle">Correct Pitch and Timing</div>
+							<div class="IntroCardDescription">
+								Correct pitch and timing issues with sophisticated algorithms that preserve the original vocal formats, delivering exceptionally natural-sounding results.
+							</div>
+						</div>
+						<div class="IntroCardImgWrapper">
+							<img class="IntroCardImg" src="../static/image/musicputty/correct-pitch-timing.png">
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="IntroCard row">
-				<div class="IntroCardText col-md-12 col-lg-6 col-xl-6">
-					<div class="CardTextTitle">
-						Correct pitch problems
-					</div>
-					<div class="CardTextDescription">
-						<dl>
-							<dd> - Ability to edit vocal takes note by note</dd>
-							<dd> - Intelligent legato preservation</dd>
-						</dl>
+			<div class="IntroCardsContainer row">
+				<div class="IntroCardWrapper col-md-12 col-lg-6">
+					<div class="IntroCard me-lg-2">
+						<div class="IntroCardTextWrapper">
+							<div class="IntroCardTitle">Load in Your Favorite DAWs</div>
+							<div class="IntroCardDescription">
+								Integrate MusicPutty into your favorite DAWs as an AUv3 plugin for a streamlined workflow.
+							</div>
+						</div>
+						<div class="IntroCardImgWrapper">
+							<img class="IntroCardImg" src="../static/image/musicputty/load_in_DAW.png">
+						</div>
 					</div>
 				</div>
-				<div class="IntroCardImgContainer col-md-12 col-lg-6 col-xl-6">
-					<img class="IntroCardImg" src="../static/image/musicputty/Correct_pitch_problems.jpg">
+				<div class="IntroCardWrapper col-md-12 col-lg-6">
+					<div class="IntroCard ms-lg-2">
+						<div class="IntroCardTextWrapper">
+							<div class="IntroCardTitle">Light and Dark Modes</div>
+							<div class="IntroCardDescription">
+								Support both light and dark themes.
+							</div>
+						</div>
+						<div class="IntroCardImgWrapper">
+							<img class="IntroCardImg" src="../static/image/musicputty/light-dark-theme.png">
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 
+		<!--Pro Feature Introduction Section-->
 		<div class="ProVersionIntroductions">
 			<div class="ProVersionIntroTitle">Get Pro Version to Unlock Advanced Editing Tools</div>
 			<div class="ProIntroCardsContainer row">
-				<div class="ProIntroCard col-sm-12 col-lg-4">
-					<div class="ProIntroCardWrap ">
-						<div class="ProCardTextTitle">Formant Shifting</div>
-						<div class="ProCardTextDescription">
-							Transform vocal formant to create special effects
+				<div class="ProIntroCardWrapper col-sm-12 col-lg-4">
+					<div class="ProIntroCard me-lg-2">
+						<div class="ProIntroCardTextWrapper">
+							<div class="ProCardTextTitle">Vibrato Scaling</div>
+							<div class="ProCardTextDescription">
+								Reshape vibrato by reducing or amplifying its pitch variation
+							</div>
 						</div>
-						<img class="ProIntroCardImg" src="../static/image/musicputty/Formant_Shifting.jpg">
+						<img class="ProIntroCardImg" src="../static/image/musicputty/vibrato-scaling.png">
 					</div>
 				</div>
-				<div class="ProIntroCard col-sm-12 col-lg-4">
-					<div class="ProIntroCardWrap">
-						<div class="ProCardTextTitle">Legato Tool</div>
-						<div class="ProCardTextDescription">
-							Control the duration of legato between two notes
+				<div class="ProIntroCardWrapper col-sm-12 col-lg-4">
+					<div class="ProIntroCard me-lg-1 ms-lg-1">
+						<div class="ProIntroCardTextWrapper">
+							<div class="ProCardTextTitle">Legato Tool</div>
+							<div class="ProCardTextDescription">
+								Control the duration of legato between two notes
+							</div>
 						</div>
-						<img class="ProIntroCardImg" src="../static/image/musicputty/Legato_Tool.jpg">
+						<img class="ProIntroCardImg" src="../static/image/musicputty/legato-tool.png">
 					</div>
 				</div>
-				<div class="ProIntroCard col-sm-12 col-lg-4">
-					<div class="ProIntroCardWrap">
-						<div class="ProCardTextTitle">Vibrato Scaling</div>
-						<div class="ProCardTextDescription">
-							Reshape vibrato by reducing or amplifying its pitch variation
+				<div class="ProIntroCardWrapper col-sm-12 col-lg-4">
+					<div class="ProIntroCard  ms-lg-2">
+						<div class="ProIntroCardTextWrapper">
+							<div class="ProCardTextTitle">Formant Shifting</div>
+							<div class="ProCardTextDescription">
+								Transform vocal formant to create special effects
+							</div>
 						</div>
-						<img class="ProIntroCardImg" src="../static/image/musicputty/Vibrato_Scaling.jpg">
+						<img class="ProIntroCardImg" src="../static/image/musicputty/formant-shifting.png">
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="Roadmap">
+		<!--Roadmap Section-->
+		<div class="Roadmap" id="Roadmap_Link">
 			<div class="RoadmapTitle">Development Roadmap</div>
 			<div class="RoadmapText">
 				See what we are currently building and vote on new features
@@ -513,19 +738,21 @@
 			</div>
 		</div>
 
-		<div class="Embed">
+		<!--Embed Videos Section-->
+		<div class="EmbedVideos">
 			<div class="EmbedTitle border-bottom">Demos and Reviews</div>
-			<div class="Videos row">
-				<iframe class="YoutubeVideo col-xl-6" src="https://www.youtube.com/embed/ArMZGE0OgQw?si=R_s4mdzKB5eAigff" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-				<iframe class="YoutubeVideo col-xl-6" src="https://www.youtube.com/embed/yvBh17VWcfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			<div class="VideosContainer row">
+				<iframe class="YoutubeVideo col-lg-6 col-xl-6" src="https://www.youtube.com/embed/ArMZGE0OgQw?si=R_s4mdzKB5eAigff" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				<iframe class="YoutubeVideo col-lg-6" src="https://www.youtube.com/embed/yvBh17VWcfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 			</div>
-			<div class="Videos row">
-				<iframe class="YoutubeVideo col-xl-6" src="https://www.youtube.com/embed/d-qXwr1eKRw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-				<iframe class="YoutubeVideo col-xl-6" src="https://www.youtube.com/embed/MfbDFeUW1sw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			<div class="VideosContainer row">
+				<iframe class="YoutubeVideo col-lg-6 col-xl-6" src="https://www.youtube.com/embed/d-qXwr1eKRw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				<iframe class="YoutubeVideo col-lg-6 col-xl-6" src="https://www.youtube.com/embed/MfbDFeUW1sw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 			</div>
 		</div>
 
-		<div id="ContactSection">
+		<!--Contact Information Section-->
+		<div class="ContactSection" id="ContactSection_Link">
 			<div class="ContactSectionTitle border-bottom">Connect with Us </div>
 			<div class="ContactList">
 				<a class="SocialLink" href="https://www.youtube.com/@autumnrock" target="_blank">
@@ -535,7 +762,7 @@
 					<img class="SocialLinkIcon" src="../static/image/TikTok.svg">
 				</a>
 				<a class="SocialLink" href="https://twitter.com/AutumnRockDev" target="_blank">
-					<img class="SocialLinkIcon" src="../static/image/Twitter.svg"></img>
+					<img class="SocialLinkIcon" src="../static/image/X.svg"></img>
 				</a>
 				<a class="SocialLink" href="https://www.facebook.com/AutumnRockDev" target="_blank">
 					<img class="SocialLinkIcon" src="../static/image/Facebook.svg"></img>
@@ -550,6 +777,7 @@
 		</div>
 	</div>
 
+	<!--Footer Section-->
 	<footer class="FooterContainer">
 		<ul class="FooterListContainer">
 			<li class="FooterList">
