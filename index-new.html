@@ -16,6 +16,7 @@
             padding: 0;
             margin: 0;
             font-family: "Segoe UI", sans-serif;
+            line-height: normal;
         }
 
         .container {
@@ -128,7 +129,7 @@
         .MusicPuttyDescription {
             font-size: 29px;
             font-weight: 400;
-            margin-bottom: 80px;
+            margin-bottom: 60px;
         }
 
         .MusicPuttyLinkSection {
@@ -136,7 +137,7 @@
             flex-wrap: wrap;
             flex-direction: row;
             align-items: center;
-            justify-content: space-evenly;
+            justify-content: center;
             height: 100%;
         }
 
@@ -150,7 +151,7 @@
             text-align: center;
             text-decoration: none;
             transition: 300ms;
-            margin-bottom: 20px;
+            margin: 0 10px 20px 10px;
         }
 
         #MusicPuttyLearnMoreButton:hover {
@@ -165,7 +166,7 @@
         #NailThePitchAppleButton,
         #PolyrhythmAppleButton {
             width: 200px;
-            margin-bottom: 20px;
+            margin: 0 10px 20px 10px;
         }
 
         .AppStoreIconImg {
@@ -214,13 +215,17 @@
         .NailThePitchTitle {
             font-size: 76px;
             font-weight: 600;
-            margin: 0px 0 20px 0;
+        }
+
+        .NailThePitchSubtitle {
+            font-size: 47px;
+            margin-bottom: 20px;
         }
 
         .NailThePitchDescription {
             font-size: 29px;
             font-weight: 400;
-            margin-bottom: 80px;
+            margin-bottom: 60px;
         }
 
         .NailThePitchLinkSection {
@@ -228,13 +233,13 @@
             flex-wrap: wrap;
             flex-direction: row;
             align-items: center;
-            justify-content: space-evenly;
+            justify-content: center;
             height: 100%;
         }
 
         #NailThePitchGoogleButton {
             width: 200px;
-            margin-bottom: 20px;
+            margin: 0 10px 20px 10px;
         }
 
         .GooglePlayIconImg {
@@ -257,7 +262,7 @@
         .ShaperSection {
             background-color: #023E8A;
             padding-top: 30px;
-            padding-bottom: 50px;
+            padding-bottom: 30px;
         }
 
         .ShaperImgWrapper {
@@ -288,25 +293,28 @@
         .ShaperDescription {
             font-size: 29px;
             font-weight: 100;
-            margin-bottom: 80px;
+            margin-bottom: 60px;
         }
 
         .ShaperLinkSection {
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
-            width: 200px;
-            margin: 0 auto;
+            justify-content: center;
+            width: 100%;
         }
 
         #ShaperLearnMoreButton {
             font-size: 22px;
+            width: 200px;
             color: #FFFFFF;
             padding: 14px 0;
             border: 2px solid #FFFFFF;
             border-radius: 8px;
             text-decoration: none;
             transition: 300ms;
+            margin-left: auto;
+            margin-right: auto;
             margin-bottom: 20px;
         }
 
@@ -320,7 +328,9 @@
 
         #ShaperAppleButton,
         #ShaperGoogleButton {
-            width: 100%;
+            width: 200px;
+            margin-left: auto;
+            margin-right: auto;
             margin-bottom: 20px;
         }
 
@@ -346,7 +356,7 @@
         .PolyrhythmDescription {
             font-size: 29px;
             font-weight: 100;
-            margin-bottom: 80px;
+            margin-bottom: 60px;
         }
 
         .PolyrhythmLinkSection {
@@ -354,13 +364,13 @@
             flex-wrap: wrap;
             flex-direction: row;
             align-items: center;
-            justify-content: space-evenly;
+            justify-content: center;
             height: 100%;
         }
 
         #PolyrhythmGoogleButton {
             width: 200px;
-            margin-bottom: 20px;
+            margin: 0 10px 20px 10px;
         }
 
         .PolyrhythmImgWrapper {
@@ -387,6 +397,7 @@
         .FooterTitle {
             color: #FFFFFF;
             font-size: 28px;
+            margin-bottom: 10px;
         }
 
         .FooterDescription {
@@ -441,7 +452,7 @@
 
             .MusicPuttyDescription {
                 font-size: 25px;
-                margin-bottom: 60px;
+                margin-bottom: 40px;
             }
 
             #MusicPuttyLearnMoreButton {
@@ -456,13 +467,22 @@
                 width: 160px;
             }
 
+            .NailThePitchSection {
+                padding-bottom: 30px;
+            }
+
             .NailThePitchTitle {
                 font-size: 66px;
             }
 
+            .NailThePitchSubtitle {
+                font-size: 40px;
+                line-height: normal;
+            }
+
             .NailThePitchDescription {
                 font-size: 25px;
-                margin-bottom: 60px;
+                margin-bottom: 40px;
             }
 
             #NailThePitchGoogleButton {
@@ -479,14 +499,16 @@
 
             .ShaperDescription {
                 font-size: 25px;
-                margin-bottom: 60px;
+                margin-bottom: 40px;
             }
 
-            .ShaperLinkSection {
+            #ShaperAppleButton,
+            #ShaperGoogleButton {
                 width: 160px;
             }
 
             #ShaperLearnMoreButton {
+                width: 160px;
                 font-size: 19px;
                 padding: 9px 0;
             }
@@ -501,7 +523,7 @@
 
             .PolyrhythmDescription {
                 font-size: 25px;
-                margin-bottom: 60px;
+                margin-bottom: 40px;
             }
 
             #PolyrhythmGoogleButton {
@@ -512,15 +534,7 @@
         @media only screen and (max-width:992px) {
             .MusicPuttyIntroWrapper {
                 padding-top: 30px;
-                padding-bottom: 50px;
-            }
-
-            .MusicPuttyLinkSection {
-                justify-content: center;
-            }
-
-            #MusicPuttyLearnMoreButton {
-                margin-right: 60px;
+                padding-bottom: 30px;
             }
 
             .NailThePitchSection {
@@ -533,15 +547,7 @@
 
             .NailThePitchIntroWrapper {
                 padding-top: 30px;
-                padding-bottom: 50px;
-            }
-
-            .NailThePitchLinkSection {
-                justify-content: center;
-            }
-
-            #NailThePitchAppleButton {
-                margin-right: 60px;
+                padding-bottom: 30px;
             }
 
             .NailThePitchImgWrapperSmall {
@@ -561,23 +567,18 @@
 
             .ShaperIntroWrapper {
                 padding-top: 30px;
-                padding-bottom: 50px;
+                padding-bottom: 30px;
             }
 
             .ShaperLinkSection {
                 flex-direction: row;
                 justify-content: center;
-                width: auto;
-            }
-
-            #ShaperLearnMoreButton {
-                width: 160px;
             }
 
             #ShaperAppleButton,
-            #ShaperGoogleButton {
-                width: 160px;
-                margin-left: 30px;
+            #ShaperGoogleButton,
+            #ShaperLearnMoreButton {
+                margin: 0 10px 20px 10px;
             }
 
             .PolyrhythmSection {
@@ -586,15 +587,7 @@
 
             .PolyrhythmIntroWrapper {
                 padding-top: 30px;
-                padding-bottom: 50px;
-            }
-
-            .PolyrhythmLinkSection {
-                justify-content: center;
-            }
-
-            #PolyrhythmGoogleButton {
-                margin-left: 60px;
+                padding-bottom: 30px;
             }
 
             .PolyrhythmImgWrapper {
@@ -634,41 +627,25 @@
         }
 
         @media only screen and (max-width:576px) {
-            .MusicPuttyTitle {
+
+            .MusicPuttyTitle,
+            .NailThePitchTitle,
+            .ShaperTitle,
+            .PolyrhythmTitle {
                 font-size: 60px;
             }
 
-            .MusicPuttyDescription {
-                font-size: 24px;
+            .NailThePitchSubtitle,
+            .ShaperSubtitle,
+            .PolyrhythmSubtitle {
+                font-size: 37px;
             }
 
-            #MusicPuttyLearnMoreButton,
-            #MusicPuttyAppleButton {
-                margin: 0 10px 20px 10px;
-            }
-
-            .NailThePitchTitle {
-                font-size: 60px;
-            }
-
-            .NailThePitchDescription {
-                font-size: 24px;
-            }
-
-            #NailThePitchAppleButton,
-            #NailThePitchGoogleButton {
-                margin: 0 10px 20px 10px;
-            }
-
-            #ShaperLearnMoreButton,
-            #ShaperAppleButton,
-            #ShaperGoogleButton {
-                margin: 0 10px 20px 10px;
-            }
-
-            #PolyrhythmAppleButton,
-            #PolyrhythmGoogleButton {
-                margin: 0 10px 20px 10px;
+            .MusicPuttyDescription,
+            .NailThePitchDescription,
+            .ShaperDescription,
+            .PolyrhythmDescription {
+                font-size: 23px;
             }
 
             .ContactSection {
@@ -713,10 +690,10 @@
                             The Ultimate Pitch Correction Tool for iOS
                         </div>
                         <div class="MusicPuttyLinkSection">
-                            <a id="MusicPuttyLearnMoreButton" href="https://autumnrock.dev/musicputty/">Learn More</a>
                             <a id="MusicPuttyAppleButton" href="https://apps.apple.com/app/id6444390100" target="_blank">
                                 <img class="AppStoreIconImg" src="./static/image/app-store-badge.svg">
                             </a>
+                            <a id="MusicPuttyLearnMoreButton" href="https://autumnrock.dev/musicputty/">Learn More</a>
                         </div>
                     </div>
                     <div class="MusicPuttyImgWrapper col-lg-7">
@@ -737,8 +714,11 @@
                         <div class="NailThePitchTitle">
                             Nail the Pitch
                         </div>
+                        <div class="NailThePitchSubtitle">
+                            Vocal pitch monitor for singers
+                        </div>
                         <div class="NailThePitchDescription">
-                            Vocal pitch monitor trusted by millions of vocalists
+                            Trusted by millions of vocalists and music educators
                         </div>
                         <div class="NailThePitchLinkSection">
                             <a id="NailThePitchAppleButton" href="https://apps.apple.com/app/id1486640549" target="_blank">
@@ -777,13 +757,13 @@
                             Create stunning synth sounds on iOS and Android
                         </div>
                         <div class="ShaperLinkSection">
-                            <a id="ShaperLearnMoreButton" href="https://autumnrock.dev/shaper/">Learn More</a>
                             <a id="ShaperAppleButton" href="https://apps.apple.com/app/id1536713443" target="_blank">
                                 <img class="AppStoreIconImg" src="./static/image/app-store-badge.svg">
                             </a>
                             <a id="ShaperGoogleButton" href="https://play.google.com/store/apps/details?id=com.autumnrockdev.shaper" target="_blank">
                                 <img class="GooglePlayIconImg" src="./static/image/google-play-badge.svg">
                             </a>
+                            <a id="ShaperLearnMoreButton" href="https://autumnrock.dev/shaper/">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -828,7 +808,7 @@
         <footer class="FooterContainer">
             <div class="FooterTitle">Autumn Rock Software Development</div>
             <div class="FooterDescription">
-                Developing intuitive music software for professional musicians and hobbyists.
+                We are developing intuitive music software for professional musicians and hobbyists.
             </div>
             <div class="ContactSection" id="ContactSection_Link">
                 <div class="ContactSectionTitle">Connect with Us</div>
