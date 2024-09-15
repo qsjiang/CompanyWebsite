@@ -38,8 +38,8 @@
         .NavbarContainer {
             max-width: 1400px;
             margin: 0 auto;
-            padding-top: 10px;
-            padding-bottom: 10px;
+            padding-top: 20px;
+            padding-bottom: 20px;
             display: flex;
             justify-content: space-between;
         }
@@ -427,7 +427,6 @@
         .ContactSectionTitle {
             color: #FFFFFF;
             font-size: 22px;
-            margin-bottom: 20px;
         }
 
         .ContactList {
@@ -651,6 +650,13 @@
         }
 
         @media only screen and (max-width:600px) {
+            .HomeButton{
+                opacity: 1;
+            }
+
+            .MenuItemLink{
+                opacity: 1;
+            }
 
             .MusicPuttyTitle,
             .NailThePitchTitle,
@@ -677,6 +683,10 @@
             .ContactSection {
                 flex-direction: column;
                 align-items: start;
+            }
+
+            .ContactSectionTitle{
+                margin-bottom: 20px;
             }
 
             .ContactList {
