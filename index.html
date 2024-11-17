@@ -46,18 +46,13 @@
 
         .HomeButton {
             color: #FFFFFF;
-            font-size: 20px;
+            font-size: 22px;
             text-align: center;
             text-decoration: none;
             margin-right: auto;
             align-items: center;
             display: flex;
-            opacity: 0.8;
             transition: 200ms;
-        }
-
-        .HomeButton:hover {
-            opacity: 1;
         }
 
         .HomeButtonImg {
@@ -86,14 +81,9 @@
             display: block;
             text-decoration: none;
             color: #FFFFFF;
-            font-size: 20px;
-            opacity: 0.8;
+            font-size: 22px;
             transition: 200ms;
             cursor: pointer;
-        }
-
-        .MenuItemLink:hover {
-            opacity: 1;
         }
 
         .Introductions {
@@ -650,12 +640,16 @@
         }
 
         @media only screen and (max-width:600px) {
-            .HomeButton{
-                opacity: 1;
+            .NavbarContainer {
+                padding: 16px 10px 16px 10px;
             }
 
-            .MenuItemLink{
-                opacity: 1;
+            .HomeButton {
+                font-size: 20px;
+            }
+
+            .MenuItemLink {
+                font-size: 20px;
             }
 
             .MusicPuttyTitle,
