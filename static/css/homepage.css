@@ -1,0 +1,688 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: #141414;
+	padding: 0;
+	margin: 0;
+	font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+	line-height: normal;
+}
+
+.container {
+	max-width: none;
+	padding: 0;
+	margin: 0;
+}
+
+.row {
+	padding: 0;
+	margin: 0;
+}
+
+.Navbar {
+	padding: 0;
+	margin: 0;
+}
+
+.NavbarContainer {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.HomeButton {
+	color: #FFFFFF;
+	font-size: 22px;
+	text-align: center;
+	text-decoration: none;
+	margin-right: auto;
+	align-items: center;
+	display: flex;
+	transition: 200ms;
+}
+
+.HomeButtonImg {
+	border-radius: 8px;
+	width: 30px;
+	height: auto;
+	margin-right: 10px;
+	margin-left: 18px;
+}
+
+.NavbarMenuContainer {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	align-items: center;
+	justify-content: center;
+}
+
+.MenuItem {
+	margin: 0 18px 0 18px;
+}
+
+.MenuItemLink {
+	display: block;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 22px;
+	transition: 200ms;
+	cursor: pointer;
+}
+
+.Introductions {
+	padding: 0;
+	margin: 0;
+}
+
+.MusicPuttySection {
+	background-color: #FFFFFF;
+}
+
+.MusicPuttyCardContainer,
+.NailThePitchCardContainer,
+.ShaperCardContainer,
+.PolyrhythmCardContainer {
+	max-width: 1600px;
+	margin: 0 auto;
+	align-items: center;
+}
+
+.MusicPuttyIntroWrapper {
+	text-align: center;
+}
+
+.MusicPuttyTitle {
+	font-size: 70px;
+	font-weight: 500;
+	margin-bottom: 25px;
+}
+
+.MusicPuttyDescription {
+	font-size: 30px;
+	font-weight: 200;
+	margin-bottom: 60px;
+}
+
+.MusicPuttyLinkSection {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+#MusicPuttyLearnMoreButton {
+	width: 200px;
+	height: 62px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 22px;
+	color: #000000;
+	border: 2px solid #000000;
+	border-radius: 8px;
+	text-align: center;
+	text-decoration: none;
+	transition: 300ms;
+	margin: 0 10px 20px 10px;
+}
+
+#MusicPuttyLearnMoreButton:hover {
+	-ms-transform: scale(1.02);
+	/* IE 9 */
+	-webkit-transform: scale(1.02);
+	/* Safari 3-8 */
+	transform: scale(1.02);
+}
+
+#MusicPuttyAppleButton,
+#NailThePitchAppleButton,
+#PolyrhythmAppleButton {
+	width: 200px;
+	margin: 0 10px 20px 10px;
+}
+
+.AppStoreIconImg {
+	width: 100%;
+	height: 62px;
+	transition: 300ms;
+}
+
+.AppStoreIconImg:hover {
+	-ms-transform: scale(1.02);
+	/* IE 9 */
+	-webkit-transform: scale(1.02);
+	/* Safari 3-8 */
+	transform: scale(1.02);
+}
+
+.MusicPuttyImgWrapper {
+	padding: 0;
+}
+
+.MusicPuttyCardImg {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.NailThePitchSection {
+	background-color: #EDAF1D;
+	padding-top: 30px;
+}
+
+.NailThePitchImgWrapper {
+	padding: 0;
+}
+
+.NailThePitchCardImg {
+	width: 100%;
+	display: block;
+	height: auto;
+	margin: 0 auto;
+}
+
+.NailThePitchIntroWrapper {
+	text-align: center;
+}
+
+.NailThePitchTitle {
+	font-size: 70px;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+
+.NailThePitchSubtitle {
+	font-size: 40px;
+	font-weight: 400;
+	margin-bottom: 25px;
+}
+
+.NailThePitchDescription {
+	font-size: 30px;
+	font-weight: 200;
+	margin-bottom: 60px;
+}
+
+.NailThePitchLinkSection {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+#NailThePitchGoogleButton {
+	width: 200px;
+	margin: 0 10px 20px 10px;
+}
+
+.GooglePlayIconImg {
+	width: 100%;
+	height: 62px;
+	transition: 300ms;
+}
+
+.GooglePlayIconImg:hover {
+	-ms-transform: scale(1.02);
+	/* IE 9 */
+	-webkit-transform: scale(1.02);
+	/* Safari 3-8 */
+	transform: scale(1.02);
+}
+
+.NailThePitchImgWrapperSmall {
+	display: none;
+}
+
+.ShaperSection {
+	background-color: #023E8A;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.ShaperImgWrapper {
+	padding: 0;
+}
+
+.ShaperCardImg {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.ShaperIntroWrapper {
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.ShaperTitle {
+	font-size: 70px;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+
+.ShaperSubtitle {
+	font-size: 40px;
+	font-weight: 400;
+	margin-bottom: 25px;
+}
+
+.ShaperDescription {
+	font-size: 30px;
+	font-weight: 200;
+	margin-bottom: 60px;
+}
+
+.ShaperLinkSection {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+}
+
+#ShaperLearnMoreButton {
+	font-size: 22px;
+	width: 200px;
+	height: 62px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #FFFFFF;
+	padding: 14px 0;
+	border: 2px solid #FFFFFF;
+	border-radius: 8px;
+	text-decoration: none;
+	transition: 300ms;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+}
+
+#ShaperLearnMoreButton:hover {
+	-ms-transform: scale(1.02);
+	/* IE 9 */
+	-webkit-transform: scale(1.02);
+	/* Safari 3-8 */
+	transform: scale(1.02);
+}
+
+#ShaperAppleButton,
+#ShaperGoogleButton {
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+}
+
+.PolyrhythmSection {
+	background-color: #242233;
+}
+
+.PolyrhythmIntroWrapper {
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.PolyrhythmTitle {
+	font-size: 70px;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+
+.PolyrhythmSubtitle {
+	font-size: 40px;
+	font-weight: 400;
+	margin-bottom: 25px;
+}
+
+.PolyrhythmDescription {
+	font-size: 30px;
+	font-weight: 200;
+	margin-bottom: 60px;
+}
+
+.PolyrhythmLinkSection {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+#PolyrhythmGoogleButton {
+	width: 200px;
+	margin: 0 10px 20px 10px;
+}
+
+.PolyrhythmImgWrapper {
+	padding: 0;
+}
+
+.PolyrhythmCardImg {
+	width: 100%;
+	display: block;
+	height: auto;
+	margin: 0 auto;
+}
+
+.PolyrhythmImgWrapperSmall {
+	display: none;
+}
+
+.FooterContainer {
+	max-width: 1600px;
+	margin: 0 auto;
+	padding: 50px 20px 100px 20px;
+}
+
+.FooterTitle {
+	color: #FFFFFF;
+	font-size: 28px;
+	margin-bottom: 10px;
+}
+
+.FooterDescription {
+	color: #7A7A7A;
+	font-size: 18px;
+}
+
+.ContactSection {
+	margin-top: 30px;
+	display: flex;
+	align-items: center;
+}
+
+.ContactSectionTitle {
+	color: #FFFFFF;
+	font-size: 22px;
+}
+
+.ContactList {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 30px;
+}
+
+.SocialLink {
+	margin: 0 10px 0 10px;
+}
+
+.SocialLinkIcon {
+	width: 70px;
+	height: auto;
+	transition: 300ms;
+}
+
+.SocialLinkIcon:hover {
+	-ms-transform: scale(1.3);
+	/* IE 9 */
+	-webkit-transform: scale(1.3);
+	/* Safari 3-8 */
+	transform: scale(1.3);
+}
+
+@media only screen and (max-width:1400px) {
+	.NavbarContainer {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.MusicPuttyTitle {
+		font-size: 60px;
+	}
+
+	.MusicPuttyDescription {
+		font-size: 26px;
+		margin-bottom: 40px;
+	}
+
+	#MusicPuttyLearnMoreButton {
+		width: 160px;
+		height: 50px;
+		font-size: 19px;
+		padding: 9px 0;
+	}
+
+	#MusicPuttyAppleButton,
+	#NailThePitchAppleButton,
+	#PolyrhythmAppleButton {
+		width: 160px;
+	}
+
+	.AppStoreIconImg {
+		height: 50px;
+	}
+
+	.GooglePlayIconImg {
+		height: 50px;
+	}
+
+	.NailThePitchSection {
+		padding-bottom: 30px;
+	}
+
+	.NailThePitchTitle {
+		font-size: 60px;
+	}
+
+	.NailThePitchSubtitle {
+		font-size: 32px;
+		line-height: normal;
+	}
+
+	.NailThePitchDescription {
+		font-size: 26px;
+		margin-bottom: 40px;
+	}
+
+	#NailThePitchGoogleButton {
+		width: 160px;
+	}
+
+	.ShaperTitle {
+		font-size: 60px;
+	}
+
+	.ShaperSubtitle {
+		font-size: 32px;
+	}
+
+	.ShaperDescription {
+		font-size: 26px;
+		margin-bottom: 40px;
+	}
+
+	#ShaperAppleButton,
+	#ShaperGoogleButton {
+		width: 160px;
+	}
+
+	#ShaperLearnMoreButton {
+		width: 160px;
+		height: 50px;
+		font-size: 19px;
+		padding: 9px 0;
+	}
+
+	.PolyrhythmTitle {
+		font-size: 60px;
+	}
+
+	.PolyrhythmSubtitle {
+		font-size: 32px;
+	}
+
+	.PolyrhythmDescription {
+		font-size: 26px;
+		margin-bottom: 40px;
+	}
+
+	#PolyrhythmGoogleButton {
+		width: 160px;
+	}
+}
+
+@media only screen and (max-width:992px) {
+	.MusicPuttyIntroWrapper {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	.NailThePitchSection {
+		padding: 0;
+	}
+
+	.NailThePitchImgWrapper {
+		display: none;
+	}
+
+	.NailThePitchIntroWrapper {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	.NailThePitchImgWrapperSmall {
+		display: flex;
+		padding: 0;
+	}
+
+	.NailThePitchCardImgSmall {
+		width: 80%;
+		display: block;
+		margin: 0 auto;
+	}
+
+	.ShaperSection {
+		padding: 0;
+	}
+
+	.ShaperIntroWrapper {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	.ShaperLinkSection {
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	#ShaperAppleButton,
+	#ShaperGoogleButton,
+	#ShaperLearnMoreButton {
+		margin: 0 10px 20px 10px;
+	}
+
+	.PolyrhythmSection {
+		padding: 0;
+	}
+
+	.PolyrhythmIntroWrapper {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	.PolyrhythmImgWrapper {
+		display: none;
+	}
+
+	.PolyrhythmImgWrapperSmall {
+		display: flex;
+		padding: 0;
+	}
+
+	.PolyrhythmCardImgSmall {
+		width: 80%;
+		display: block;
+		margin: 0 auto;
+	}
+
+	.FooterContainer {
+		padding-top: 30px;
+	}
+
+	.FooterTitle {
+		font-size: 22px;
+	}
+
+	.ContactSectionTitle {
+		font-size: 20px;
+	}
+
+	.ContactList {
+		margin-left: 18px;
+	}
+
+	.SocialLinkIcon {
+		width: 50px;
+	}
+}
+
+@media only screen and (max-width:600px) {
+	.NavbarContainer {
+		padding: 16px 10px 16px 10px;
+	}
+
+	.HomeButton {
+		font-size: 20px;
+	}
+
+	.HomeButtonImg {
+		margin-left: 10px;
+	}
+
+	.MenuItem {
+		margin: 0 10px 0 10px;
+	}
+
+	.MenuItemLink {
+		font-size: 20px;
+	}
+
+	.MusicPuttyTitle,
+	.NailThePitchTitle,
+	.ShaperTitle,
+	.PolyrhythmTitle {
+		font-size: 40px;
+		margin-bottom: 20px;
+	}
+
+	.NailThePitchSubtitle,
+	.ShaperSubtitle,
+	.PolyrhythmSubtitle {
+		font-size: 26px;
+		margin-bottom: 20px;
+	}
+
+	.MusicPuttyDescription,
+	.NailThePitchDescription,
+	.ShaperDescription,
+	.PolyrhythmDescription {
+		font-size: 22px;
+	}
+
+	.ContactSection {
+		flex-direction: column;
+		align-items: start;
+	}
+
+	.ContactSectionTitle{
+		margin-bottom: 20px;
+	}
+
+	.ContactList {
+		margin: 0;
+	}
+}
